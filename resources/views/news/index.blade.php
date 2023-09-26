@@ -18,7 +18,7 @@
                 <a href="{{route('news.show',$news->id)}}" class="our_news__item">
                     <img class="news__img" src="{{asset($news->post_image)}}" alt="sample news bg">
                     <p class="news__title">{{$news->title_ru}}</p>
-                    <p class="news__date">{{$news->created_at->format('M D Y')}}</p>
+                    <p class="news__date">{{$news->created_at->format('d-m-20y')}}</p>
                 </a>
             @endforeach
 
