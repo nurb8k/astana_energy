@@ -204,30 +204,16 @@
             <img src="{{asset('images/logos/info.png')}}" alt="">
         </div>
         <div class="news__items">
-            <div class="news__item">
-                <div class="news__data">
-                    24 августа 2023
+            @foreach(\App\Models\News::take(4)->get() as $news)
+                <div class="news__item">
+                    <div class="news__data">
+                       {{$news->created_at->format('d-m-20y')}}
+                    </div>
+                    <a href="{{route('news.show',$news->id)}}" class="news__text">
+                        {{$news->title_ru}}
+                    </a>
                 </div>
-                <div class="news__text">
-                    Подготовка к осенне-зимнему периоду 2023-2024 по АО Астана Энергия»
-                </div>
-            </div>
-            <div class="news__item">
-                <div class="news__data">
-                    24 августа 2023
-                </div>
-                <div class="news__text">
-                    ТОО «А.Э.Ц-Стандарт» привлечен к административной ответственности за повреждение электрических сетей
-                </div>
-            </div>
-            <div class="news__item">
-                <div class="news__data">
-                    24 августа 2023
-                </div>
-                <div class="news__text">
-                    ТОО «NAK Development» привлечен к административной ответственности за проведения несогласованных земляных работ в охранных зонах линий электрических
-                </div>
-            </div>
+            @endforeach
             <div class="news__footer">
                 <a href="#" class="btn btn-history">
                     Подробнее
