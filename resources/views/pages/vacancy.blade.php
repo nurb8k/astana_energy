@@ -6,8 +6,9 @@
         <img class="header__bg" src="{{ asset('images/bg_3.jpg') }}" style="filter:brightness(85%)" alt="bg photo">
         <p class="header__news-header">Вакансии</p>
     </div>
-    <div>
-        <p style="margin-left: 460px; margin-top: 20px; font-weight: 400; font-size: 19px"><a href="#">О компании</a> / <a href="#">Вакансии</a> </p>
+    <div class="breadcrumbs">
+        <a class="breadcrumb" href="#">О компании</a> /
+        <span>Вакансии</span>
     </div>
     <div class="content">
         <div class="table-wrap">

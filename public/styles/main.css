@@ -1247,9 +1247,13 @@ a {
     height: 220px;
     margin-bottom: 20px;
 }
+.news__content-text {
+    font-size: 19px;
+}
+
 
 .news__title {
-    color: var(--theme-black-text-color);
+    color: #3b3a3a;
     font-family: Inter, sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -1454,4 +1458,16 @@ button[type="submit"]:hover {
 
 .upload-button:hover {
     background-color: var(--theme-primary-color);
+}
+
+.breadcrumbs {
+    margin-left: 460px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #424242;
+    font-weight: 400;
+}
+
+.breadcrumb:hover {
+    text-decoration: underline;
 }

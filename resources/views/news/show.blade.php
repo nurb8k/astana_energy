@@ -6,9 +6,10 @@
        <img class="header__bg" src="{{ asset('images/news.png') }}" alt="bg photo">
        <p class="header__news-header">{{$news->title_ru}}</p>
     </div>
-    <div>
-        <p style="margin-left: 460px; margin-top: 20px; font-weight: 400; font-size: 19px"><a href="{{route('press.index')}}">Пресс-центр</a> /
-        <a href="{{route('news.index')}}">Новости</a> / <a href="{{route('news.show', $news->id)}}">{{$news->title_ru}}</a> </p>
+    <div class="breadcrumbs">
+        <a class="breadcrumb" href="{{route('press.index')}}">Пресс-центр</a> /
+        <a class="breadcrumb" href="{{route('news.index')}}">Новости</a> /
+        <span >{{$news->title_ru}}</span>
     </div>
     <div class="content">
         <div style="display: flex;justify-content:center; margin-bottom: 50px;">

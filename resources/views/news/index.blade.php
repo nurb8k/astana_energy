@@ -11,6 +11,10 @@
             <p class="header__sub-title">События</p>
         </div>
     </div>
+    <div class="breadcrumbs">
+        <a class="breadcrumb" href="{{route('press.index')}}">Пресс-центр</a> /
+        <a class="breadcrumb" href="{{route('news.index')}}">Новости</a>
+    </div>
     <div class="content">
         <p class="content__title">Новости АО “Астана Энергия”</p>
         <div class="our_news__block">

@@ -6,8 +6,9 @@
         <img class="header__bg" src="{{ asset('images/IMG_2151.jpg')}}"  style="filter:brightness(82%);"  alt="bg photo">
         <p class="header__title">Руководство</p>
     </div>
-    <div>
-        <p style="margin-left: 460px; margin-top: 20px; font-weight: 400; font-size: 19px"><a href="#">О компании</a> / <a href="#">Структура компании</a> </p>
+    <div class="breadcrumbs">
+        <a class="breadcrumb" href="#">О компании</a> /
+        <span>Структура компании</span>
     </div>
     <div class="content employees">
         <div class="employees__block">
