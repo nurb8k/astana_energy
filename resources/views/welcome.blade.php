@@ -240,7 +240,7 @@
         </div>
     </div>
 
-    <div class="stats-contents">
+    <div class="stats-contents goto">
         <div class="stats-contents__daily">
             <div class="daily__title">
                 <p class="daily__title-text">
@@ -255,7 +255,7 @@
                     <div class="daily-stats__title">
                         Отпуск с шин (тыс.кВтч)
                     </div>
-                    <div class="daily-stats__number">
+                    <div class="daily-stats__number count" id="shiva">
                         8424
                     </div>
                 </div>
@@ -263,8 +263,8 @@
                     <div class="daily-stats__title">
                         Отпуск с шин (тыс.кВтч)
                     </div>
-                    <div class="daily-stats__number">
-                        8424
+                    <div class="daily-stats__number count" id="shiva">
+                       <p> 8424</p>
                     </div>
                 </div>
             </div>

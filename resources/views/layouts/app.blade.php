@@ -165,6 +165,28 @@
         $(this).next('ul').slideToggle();
     });
 
+    $(window).on('scroll', function(e) {
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        if ($(window).scrollTop() >= ($(".goto").offset().top - ($(window).height()))) {
+            if (!$(".goto").hasClass("animated")) {
+                $('.count').each(function() {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function(now) {                        $(this).text(numberWithCommas(Math.ceil(now)));
+                        }
+                    });
+                });
+                // $("#triggered").addClass("show");
+                $(".goto").addClass("animated");
+            }
+        }
+    });
+
 </script>
 </body>
 </html>

@@ -927,11 +927,11 @@ a {
 .daily-stats {
     display: flex;
     flex-direction: row;
-
     padding-top: 20px;
 }
 
 .daily-stat {
+    width: 700px;
     margin-right: 108px;
 }
 
