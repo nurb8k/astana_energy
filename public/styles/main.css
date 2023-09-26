@@ -8,8 +8,152 @@
 @font-face {
     font-family: 'RF Rufo', sans-serif;
     src: url("../fonts/Rufo/RFRufo-Regular.ttf");
-    font-weight: 600;
 }
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-Thin.eot');
+    src: local('RFRufo-Thin'),
+    url('../fonts/Rufo/RFRufo-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-Thin.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-Thin.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-BlackItalic.eot');
+    src: local('RF Rufo Black Italic'), local('RFRufo-BlackItalic'),
+    url('../fonts/Rufo/RFRufo-BlackItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-BlackItalic.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-BlackItalic.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-Regular.eot');
+    src: local('RFRufo-Regular'),
+    url('../fonts/Rufo/RFRufo-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-Regular.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-Regular.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-Italic.eot');
+    src: local('RF Rufo Italic'), local('RFRufo-Italic'),
+    url('../fonts/Rufo/RFRufo-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-Italic.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-Italic.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-LightItalic.eot');
+    src: local('RF Rufo Light Italic'), local('RFRufo-LightItalic'),
+    url('../fonts/Rufo/RFRufo-LightItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-LightItalic.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-LightItalic.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-Semibold.eot');
+    src: local('RFRufo-Semibold'),
+    url('../fonts/Rufo/RFRufo-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-Semibold.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-Semibold.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-Bold.eot');
+    src: local('RF Rufo Bold'), local('RFRufo-Bold'),
+    url('../fonts/Rufo/RFRufo-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-Bold.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-Bold.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-Light.eot');
+    src: local('RFRufo-Light'),
+    url('../fonts/Rufo/RFRufo-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-Light.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-Light.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-ThinItalic.eot');
+    src: local('RF Rufo Thin Italic'), local('RFRufo-ThinItalic'),
+    url('../fonts/Rufo/RFRufo-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-ThinItalic.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-ThinItalic.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-BoldItalic.eot');
+    src: local('RF Rufo Bold Bold Italic'), local('RFRufo-BoldItalic'),
+    url('../fonts/Rufo/RFRufo-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-BoldItalic.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-BoldItalic.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-SemiboldItalic.eot');
+    src: local('RF Rufo Semibold Italic'), local('RFRufo-SemiboldItalic'),
+    url('../fonts/Rufo/RFRufo-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-SemiboldItalic.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-SemiboldItalic.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'RF Rufo';
+    src: url('../fonts/Rufo/RFRufo-Black.eot');
+    src: local('RFRufo-Black'),
+    url('../fonts/Rufo/RFRufo-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rufo/RFRufo-Black.woff2') format('woff2'),
+    url('../fonts/Rufo/RFRufo-Black.woff') format('woff'),
+    url('../fonts/Rufo/RFRufo-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
 :root {
     --theme-primary-color: #F29646;
     --theme-white-text-color: #fff;
@@ -95,7 +239,7 @@ body button, body input, body textarea, body select {
 
 
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,table,  p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -111,6 +255,12 @@ body {
 }
 ol, ul {
     list-style: none;
+}
+th, td {
+    padding: 10px;
+}
+.table-wrap {
+    color: #000;
 }
 blockquote, q {
     quotes: none;
@@ -132,7 +282,7 @@ a {
 
 /* NAVBAR */
 .navbar {
-    width: 320px;
+    width: 420px;
     height: 100%;
     position: fixed;
     z-index: 99;
@@ -186,7 +336,11 @@ a {
     cursor: pointer;
 }
 .navbar-footer {
-    top: 0;
+    margin-top: 80vh;
+}
+
+.navbar-footer__phone {
+    padding: 20px 35px;
 }
 .search__input {
     border: 2px solid #F29646;
@@ -224,7 +378,7 @@ a {
     align-items: center;
     margin: 0;
     padding: 0;
-    width: 320px;
+    width: 420px;
 }
 
 .vertical-nav__active {
@@ -256,6 +410,13 @@ a {
     transition: background-color 0.2s ease;
     transition: border-left 0.1s ease;
 }
+.nav_active {
+    border-left: 4px solid var(--theme-primary-color);
+    background-color: var( --theme-gray-color);
+    transition: background-color 0.2s ease;
+    transition: border-left 0.1s ease;
+}
+
 
 .vertical-nav li:hover > .hover-menu,
 .vertical-nav li:focus-within > .hover-menu {
@@ -273,8 +434,8 @@ a {
     opacity: 0;
     display: none;
     position: absolute;
-    left: 316px;
-    min-width: 320px;
+    left: 415px;
+    min-width: 420px;
     margin: 0;
     padding: 0;
     top: 0;
@@ -285,23 +446,20 @@ a {
     margin: 0;
     padding: 0;
 }
-.vertical-nav li .hover-menu ul li {
+.vertical-nav li .hover-menu ul a {
     list-style: none;
     display: block;
     width: 100%;
-    text-align: center;
+    text-align: left;
+
 }
-.vertical-nav li .hover-menu ul li a {
+.vertical-nav li .hover-menu ul a {
     width: 100%;
     display: block !important;
     text-decoration: none;
     text-align: left;
     height: auto !important;
     font-weight: 400;
-}
-.vertical-nav li .hover-menu ul li a:hover {
-    background: #fafafa;
-    transition: 0.3s ease;
 }
 
 .menu-header {
@@ -367,12 +525,12 @@ a {
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    margin-left: 320px;
+    margin-left: 420px;
 }
 
 .slide-img {
-    width: 1440px;
-    height: 800px;
+    width: 100vh;
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -380,26 +538,34 @@ a {
 .text {
     position: absolute;
     top: 20%;
-    left: 11%;
+    left: 3%;
 }
 
 .text__header {
     color: var(--theme-white-text-color);
     font-family: RF Rufo, sans-serif;
-    font-size: 144px;
+    font-size: 197px;
     font-style: italic;
     font-weight: 700;
-    line-height: 130px; /* 128.88px */
+    line-height: 177px; /* Установите line-height в 1 или оставьте его по умолчанию */
     text-transform: uppercase;
 }
 .text__subheader {
     font-family: "RF Rufo", sans-serif;
     color: var(--theme-white-text-color);
-    font-size: 48px;
+
     font-style: normal;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
+
+    text-align: left;
+    margin-top: 20px;
+
+
+    font-size: 66px;
+
+    font-weight: 700;
+
+
+    line-height:60px;
 }
 
 /* Fading animation */
@@ -416,8 +582,10 @@ a {
 .text-slide {
     display: flex;
     flex-direction: column;
-    margin-top: 130px;
+    margin-top: 80px;
     width: 474px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
 }
 
 .text-slide__header {
@@ -444,21 +612,28 @@ a {
     font-family: Inter ,sans-serif;
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 22px;
+
 }
 
 
 /* History section */
 .section {
     padding: 100px 40px 0 40px;
-    margin-left: 320px;
+    margin-left: 420px;
+    /*max-width: 70%;*/
+    min-width: 70%;
 }
+
+
 
 .section__title {
     text-align: center;
     margin-bottom: 58px;
 }
+
+
 .history__title-text {
     font-family: "RF Rufo",sans-serif;
     font-size: 48px;
@@ -511,7 +686,7 @@ a {
 .btn {
     display: inline-flex;
     height: 30px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -521,6 +696,14 @@ a {
     border: 1px solid #F29646;
 }
 
+.btn:hover {
+    background-color: #F29646;
+    color: white;
+}
+
+.header__sub-title {
+
+}
 
 
 /* NEWS CONTENT */
@@ -528,9 +711,27 @@ a {
 .news__content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    gap: 30px;
+}
+.news__content-text > *{
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #000;
+
 }
 
+.header__news-header {
+    position: absolute;
+    top: 86px;
+    left: 40px;
+    color: #FFF;
+    font-family: RF Rufo, sans-serif;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 86px;
+}
 .news__items {
     display: flex;
     flex-direction: column;
@@ -580,13 +781,13 @@ a {
 .hyper-links {
     display: flex;
     flex-direction: row;
+    /*justify-content: space-around;*/
+    gap: 16px;
 }
 
 .hyper-link {
-    width: 438px;
-    height: 634px;
-
-    margin-right: 20px;
+    width: 460px;
+    height: 655px;
 }
 .hyper-link__head {
 
@@ -616,8 +817,8 @@ a {
 }
 
 .hyper-link__img {
-    width: 432px;
-    height: 600px;
+    width: 460px;
+    height: 590px;
     border: 1px solid var(--theme-primary-color);
 }
 
@@ -630,10 +831,10 @@ a {
     justify-content: flex-end;
     display: flex;
     align-items: flex-end;
-    margin: 100% 0;
+    margin-top: 430px;
     bottom: 0;
     left: 0;
-    width: 432px;
+    width: 460px;
     z-index: 2;
     position: relative;
     border: 1px solid var(--theme-primary-color);
@@ -658,7 +859,8 @@ a {
 .stats-contents {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    gap: 30px;
 }
 .stats-contents__daily {
     width: 900px;
@@ -790,20 +992,38 @@ a {
 /* FOOTER */
 
 .footer {
-    background-color: var(--theme-blue-color);
+    background-color: #2465A5;
     padding: 45px 40px;
-    width: 100%;
+    min-width: 70%;
     color: var(--theme-white-text-color);
-    margin-left: 320px;
+    margin-left: 420px;
+    flex-wrap: wrap;
+}
+
+
+@media (max-width: 1400px) {
+
+    .collapse-group {
+        display: none;
+    }
+    .footer_item {
+        margin-right: 20px;
+    }
+    .footer_items {
+        flex-wrap: wrap;
+        flex-direction: column-reverse !important;
+    }
 }
 
 .footer_items {
     display: flex;
     flex-direction: row;
 }
+
 .footer_item {
     margin-right: 64px;
 }
+
 .footer_item > * {
     width: 430px;
     margin-bottom: 40px;
@@ -822,6 +1042,9 @@ a {
     margin-bottom: 10px;
 }
 
+@media(max-width: 1320px) {
+
+}
 
 /* ANIMATION SHITS */
 
@@ -844,6 +1067,15 @@ a {
 }
 .active.fade-bottom3 {
     animation: fade-bottom 2s ease-in;
+}
+.drop-in_1 {
+    animation: fade-left 1s ease-in;
+}
+.drop-in_2 {
+    animation: fade-left 1.2s ease-in;
+}
+.drop-in_3 {
+    animation: fade-left 1.4s ease-in;
 }
 .active.fade-left {
     animation: fade-left 1s ease-in;
@@ -896,4 +1128,298 @@ a {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+/* HEADER IN EACH PANEL */
+.header {
+    min-width: 70%;
+    margin-left: 420px;
+    position: relative;
+}
+
+.header__bg {
+    width: 100%;
+    height: 395px;
+}
+.header__texts {
+    position: absolute;
+}
+
+.header__title {
+    position: absolute;
+    top: 86px;
+    left: 40px;
+    color: #FFF;
+    font-family: RF Rufo, sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 86px;
+}
+
+.header__sub-titles {
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    top: 190px;
+    left: 40px;
+    color: #FFF;
+    font-family: RF Rufo, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29px;
+    width: 70%;
+
+}
+
+.content {
+    min-width: 70%;
+    margin: 40px 30px 100px 460px;
+}
+.compliance {
+    color: #000;
+}
+.compliance > * {
+    margin-bottom: 16px;
+}
+
+.content__title {
+    color: var(--theme-black-text-color);
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    min-width: 100%;
+    margin-bottom: 40px;
+}
+
+.our_news__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.our_news__item {
+    width: 340px;
+    height: 285px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+
+}
+
+.news__img {
+    width: 340px;
+    height: 220px;
+    margin-bottom: 20px;
+}
+
+.news__title {
+    color: var(--theme-black-text-color);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%;
+    margin-bottom: 27px;
+}
+
+.news__date {
+    text-align: right;
+}
+
+
+/* EVENT BLOCK */
+.events__block {
+    display: flex;
+    min-width: 70%;
+    flex-direction: row;
+    gap: 35px;
+}
+.event {
+    /*width: 520px;*/
+    /*height: 345px;*/
+    width: 688px;
+    height: 217px;
+    display: flex;
+    flex-direction: column;
+
+}
+.event__img {
+    width: 100%;
+    height: 216px;
+}
+
+.event {
+    display: flex;
+    height: 460px;
+}
+
+.event__body {
+    margin-top: 25px;
+}
+
+.event__title {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    margin-bottom: 20px;
+}
+
+.event__desc {
+    color: #424242;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%;
+}
+
+.event__date {
+    color: #696969;
+    margin-top: 85px;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: right;
+}
+
+/* EMPLOYEES */
+.employees__block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 38px;
+}
+
+.employee {
+    display: flex;
+    flex-direction: row;
+    width: 685px;
+}
+
+.employee__img {
+    margin-right: 18px;
+}
+
+.employee__name {
+    color: #F29646;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.employee__work {
+    color: #000;
+    font-family: Inter, sans-serif;
+    font-size: 18.54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.employee_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+.employee_asd {
+    display: flex;
+    flex-direction: column;
+}
+.employee__phone {
+    color: var(--theme-black-text-color);
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#applicationForm > * {
+    margin-bottom: 20px;
+}
+.text-primary {
+    color: var(--theme-primary-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: var(--theme-primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--theme-primary-color);
+}
+.upload-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+/* Style the file input */
+.upload-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Style the "Upload PDF" button */
+.upload-button {
+    background-color: var(--theme-primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: var(--theme-primary-color);
 }
