@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function administration()
     {
 
-        return view('administration');
+        return view('pages.administration');
 
 
     }

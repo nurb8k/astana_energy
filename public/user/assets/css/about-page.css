@@ -1,0 +1,241 @@
+.about-history {
+    padding: 95px 0 40px 0;
+}
+
+.about-history-inner {
+    display: flex;
+    align-content: center;
+}
+
+.about-history-item {
+    width: 100%;
+    margin: 0 22px 0 0;
+    padding: 33px;
+    border-radius: 20px;
+}
+
+.about-history-item h2 {
+    margin-bottom: 36px;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 54px;
+}
+
+.us-history {
+    padding-bottom: 45px;
+}
+
+.us-history-inner {
+    padding: 36px 46px;
+    border-radius: 20px;
+}
+
+.us-history-inner p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+.us-history-inner p b {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.swiper-slide.managment-slider-item.swiper-slide-active {
+    text-align: center;
+}
+
+.managment {
+    padding: 0 0 70px 0;
+}
+
+.managment-slider {
+    padding: 0 50px !important;
+}
+
+.managment-slider .swiper-wrapper {
+    overflow: hidden;
+}
+
+.managment-slider-item.swiper-slide-prev .managment-slider-item-preview,
+.managment-slider-item.swiper-slide-next .managment-slider-item-preview {
+    width: 155px;
+    height: 155px;
+}
+
+.swiper-slide.managment-slider-item.swiper-slide-prev,
+.swiper-slide.managment-slider-item.swiper-slide-next {
+    /* align-items: flex-start; */
+}
+
+.swiper-slide.managment-slider-item:not(.swiper-slide-next, .swiper-slide-prev, .swiper-slide-active) {
+    /* align-items: flex-start; */
+}
+
+.managment-slider-item:not(.swiper-slide-next, .swiper-slide-prev, .swiper-slide-active) .managment-slider-item-preview {
+    width: 111px;
+    height: 111px;
+}
+
+.swiper-slide.managment-slider-item {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    height: auto;
+    justify-content: flex-end;
+}
+
+.managment-slider-item-preview {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.managment-slider-item-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: flex;
+    width: 26px !important;
+    height: 26px !important;
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.managment-slider-item-article h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.managment-slider-item-article p {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 15px;
+    color: #ABACB4;
+    white-space: nowrap;
+}
+
+.managment-inner {
+    padding: 40px 0;
+    border-radius: 20px;
+}
+
+.managment-article {
+    padding: 0 0 23px 23px;
+}
+
+.about-more-inner {
+    padding: 60px 0 100px 0;
+    border-top: 1px solid #ABACB4;
+}
+
+.grid-group {
+    display: flex;
+}
+
+.grid-group-left,
+.grid-group-right {
+    width: 100%;
+}
+
+.grid-group-left {
+    margin-right: 16px;
+}
+
+.grid-group-item {
+    border-radius: 20px;
+}
+
+.grid-group-left .grid-group-item {
+    display: flex;
+    align-items: center;
+}
+
+.about-more-comp {
+    display: flex;
+    padding: 33px;
+}
+
+.about-more-comp-preview {
+    height: auto;
+    width: 240px;
+    margin-right: 26px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.about-more-article > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.about-more-article h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.about-more-article ul {
+    padding-left: 12px;
+}
+
+.about-more-article ul li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+}
+
+.grid-group-right {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+}
+
+.grid-group-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.about-more-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px;
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.about-more-link .about-more-link-icon {
+    transition: all 0.3s ease;
+}
+
+.about-more-link:hover {
+    color: var(--primary);
+}
+
+.about-more-link:hover .about-more-link-icon {
+    transform: translateX(5px);
+}
+
+:root {
+    --swiper-navigation-top-offset: 65%;
+}

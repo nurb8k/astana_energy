@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #F29646;
+    --text: #1B1C25;
+    --white: #FFFFFF;
+    --grey: #BABABA;
+    --blue: #1D4189;
+    --bg-grey: #F4F5F6;
+    --blue-border: #153AFE;
+
+    --header: 142px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color: var(--text);
+}
+
+html * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    max-width: calc(100% - 100px);
+    margin: 0 auto;
+}
+
+.container-md {
+    max-width: 1190px;
+    margin: 0 auto;
+}
+
+.btn, button {
+    outline: none;
+    border: none;
+    padding: 10px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    color: var(--white);
+    background-color: var(--primary);
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.btn.btn-outline,
+button.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn.btn-icon-right,
+button.btn-icon-right {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.btn.btn-icon-right span,
+button.btn.btn-icon-right span {
+    margin-right: 10px;
+}
+
+.btn-hover-fil {
+    background: linear-gradient(to right, var(--primary) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+}
+
+.btn-hover-fil svg path {
+    transition: all 0.3s ease;
+}
+
+.btn-hover-fil:hover {
+    background-position: left bottom;
+}
+
+.btn-hover-fil:hover {
+    color: var(--white);
+}
+
+.btn-hover-fil:hover svg path {
+    fill: var(--white)
+}
+
+.detail-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.detail-link span {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.detail-link-icon {
+    transition: all 0.4s ease;
+}
+
+.detail-link:hover .detail-link-icon {
+    transform: translateX(5px);
+}
+
+a {
+    text-decoration: none;
+}
+
+b {
+    font-weight: 600;
+}
+
+.text-white {
+    color: var(--white) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-blue {
+    color: var(--blue) !important;
+}
+
+.bg-grey {
+    background-color: var(--bg-grey);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bd-primary {
+    border: 1px solid var(--primary);
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-group input {
+    padding: 10px 20px;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    border-radius: 80px;
+    background-color: var(--bg-grey);
+    border: none;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: #ABACB4;
+}
+
+.form-group.form-group-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group-upload-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #ABACB4;
+}
+
+.form-group.form-group-upload .form-group-file {
+    margin-right: 10px;
+}
+
+.form-group-file {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #153AFE1A;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group-file .form-group-file-icon {
+    margin-right: 10px;
+}
+
+.form-group-file span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--blue);
+}
+
+.form-group-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group-check .form-group-check-input {
+    margin-right: 10px;
+}
+
+.form-group-check-input span {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+    border: 1px solid var(--primary);
+}
+
+.form-group-check-input input:checked + span {
+    background-color: var(--primary);
+    background-image: url('data:image/svg+xml,<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8.05426L5.5244 12.7895L17 1" stroke="%23FFFDFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\NewsController;
-use \App\Http\Controllers\PressController;
-use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\Auth\Login;
+use \App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,26 +15,27 @@ use \App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name("home");
-
-Route::get('/G@#FAW#F@#', function () {
-    return view('login');
-});
-
 Route::get('language/{locale}', function ($locale) {
     app()->setLocale($locale);
     session()->put('locale', $locale);
     return redirect()->back();
 });
 
-Route::get('/news', [NewsController::class, 'index'])->name('news.index');
-Route::get('/news/{id}',[NewsController::class, 'show'])->name('news.show');
+Route::get('/', function () {
+    return view('welcome');
+})->name("home");
 
-Route::get('/press',[PressController::class, 'index'])->name('press.index');
-Route::get('/rukovodstvo',[HomeController::class, 'administration'])->name('home.administration');
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name("contact");
 
-Route::get('/structure',[HomeController::class,'structure'])->name('home.structure');
-Route::get('/compliance',[HomeController::class,'compliance'])->name('home.compliance');
-Route::get('/vacancy',[HomeController::class,'vacancy'])->name('home.vacancy');
+Route::get('/about', function () {
+    return view('pages.about');
+})->name("about");
+
+Route::get('/admin', [Login::class,'index'])->name('login');
+Route::post('/login', [Login::class, 'create'])->name('login.post');
+
+Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+});
