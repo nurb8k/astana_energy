@@ -81,17 +81,6 @@
                                     <p>Председатель Правления <br> АО "Астана-Энергия"</p>
                                 </div>
                             </div>
-
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/seo-2.png')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Гармонщиков Олег Геннадьевич</h4>
-                                    <p>Председатель Правления <br> АО "Астана-Энергия"</p>
-                                </div>
-                            </div>
-
                             <div class="swiper-slide managment-slider-item">
                                 <div class="managment-slider-item-preview">
                                     <img src="{{asset('user/assets/img/seo-3.png')}}" alt="">
@@ -121,6 +110,18 @@
                                     <p>Заместитель Председателя <br> Правления по развитию</p>
                                 </div>
                             </div>
+
+                            <div class="swiper-slide managment-slider-item">
+                                <div class="managment-slider-item-preview">
+                                    <img src="{{asset('user/assets/img/seo-6.jpeg')}}" alt="">
+                                </div>
+                                <div class="managment-slider-item-article">
+                                    <h4>Аскарбеков Уалихан Дайрашевич</h4>
+                                    <p>Директор ТЭЦ-2</p>
+                                </div>
+                            </div>
+
+
                         </div>
                         <div class="swiper-button-prev">
                             <img src="{{asset('user/assets/img/left-btn.svg')}}" alt="" class="swiper-button-icon">
