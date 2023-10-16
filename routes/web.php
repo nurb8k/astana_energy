@@ -35,6 +35,7 @@ Route::get('/about', function () {
 
 Route::get('/admin', [Login::class,'index'])->name('login');
 Route::post('/login', [Login::class, 'create'])->name('login.post');
+Route::post('/logout', [Login::class, 'logout'])->name('logout');
 
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');

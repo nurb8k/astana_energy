@@ -23,7 +23,7 @@ class Login extends Controller
             return redirect()->route('admin.dashboard.index');
         }
 
-        return redirect()->route('login.index')->with('error', 'Invalid credentials');
+        return redirect()->route('login')->with('error', 'Invalid credentials');
     }
 
     public function logout()
