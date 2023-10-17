@@ -24,7 +24,7 @@
         <section class="director bg-grey">
             <div class="container">
                 <div class="director-inner">
-                    <img src="{{asset('user/assets/img/director.png')}}" alt="Director preview" class="director-preview">
+                    <img src="{{asset('user/assets/img/ceo.jpeg')}}" alt="Director preview" class="director-preview">
                     <div class="director-article">
                         <div class="director-description">
                             <p>
