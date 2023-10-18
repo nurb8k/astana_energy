@@ -46,6 +46,7 @@ Route::get('/compliance',function (){
 })->name('compliance');
 
 
+
 Route::get('/documentation',function (){
     return view('pages.documentation.documentation');
 })->name('documentation.index');
@@ -63,6 +64,7 @@ Route::get('/infographic',function (){
 })->name('infographic');
 
 Route::get('/news',[NewsController::class,'index'])->name('news');
+Route::get('/news/{id}',[NewsController::class,'show'])->name('news.show');
 
 
 
@@ -73,4 +75,6 @@ Route::post('/logout', [Login::class, 'logout'])->name('logout');
 
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/create-news',[NewsController::class,'create'])->name('dashboard.news.index');
+    Route::post('/create-news-post',[NewsController::class,'store'])->name('dashboard.news.store');
 });

@@ -7,17 +7,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Астана Энергия</title>
-    <link rel="stylesheet" href="{{asset('user/assets/css/documentation-pages.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/global.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/header.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/footer.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/home-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/contact-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/about-page.css')}}">
-    <link rel="stylesheet" href="{{asset('user/assets/css/news-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/infographic-page.css')}}">
-
+    <link rel="stylesheet" href="{{asset('user/assets/css/documentation-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('user/assets/css/news-show.css')}}">
     <link rel="icon" href="{{asset('favicon-32x32.png')}}">
 </head>
 <body>

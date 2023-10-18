@@ -111,7 +111,7 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item active">
-                            <a href="#" class="menu-link">
+                            <a href="{{route('admin.dashboard.news.index')}}" class="menu-link">
                                 <div data-i18n="Analytics">Новости</div>
                             </a>
                         </li>

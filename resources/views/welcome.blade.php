@@ -143,6 +143,7 @@
                         </div>
                         <a href="#" class="btn">Все новости</a>
                     </div>
+
                 </div>
             </div>
         </section>

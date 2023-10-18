@@ -1,0 +1,38 @@
+.news-inner {
+    padding: 40px 120px;
+    border-bottom: 1px solid;
+}
+
+.news-inner * {
+    padding-bottom: 30px;
+}
+.news-title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.news-img {
+    width: 860px;
+    height: 570px;
+}
+.news-text {
+    line-height: 24px;
+}
+.mt-1 {
+    margin-top: 10px;
+}
+
+.news-date {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #ABACB4;
+}
+
+.other_news_inner {
+
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 40px 120px;
+
+}
