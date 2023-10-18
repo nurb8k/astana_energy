@@ -24,6 +24,7 @@
     <div class="container">
         <div class="header-inner">
             <div class="header-top">
+
                 <a href="{{route('home')}}">
                     <img src="{{asset('user/assets/img/logo.svg')}}" alt="Astana Energy" class="header-logo">
                 </a>
@@ -43,7 +44,7 @@
                             <a href="{{route('infographic')}}" class="header-nav-link {{ \Request::route()->getName() == 'infographic' ? 'active' : ''}}">Инфорграфика</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('news')}}" class="header-nav-link {{ \Request::route()->getName() == 'news' ? 'active' : ''}}">Новости</a>
+                            <a href="{{route('news.index')}}" class="header-nav-link {{ \Request::routeIs('news.*') ? 'active' : '' }}">Новости</a>
                         </li>
                         <li class="header-nav-item">
                             <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">Контакты</a>

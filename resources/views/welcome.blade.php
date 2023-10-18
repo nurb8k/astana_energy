@@ -132,7 +132,7 @@
 
                             </div>
                         </div>
-                        <a href="{{route('news')}}" class="btn">Все новости</a>
+                        <a href="{{route('news.index')}}" class="btn">Все новости</a>
                     </div>
 
                 </div>
