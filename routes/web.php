@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Auth\Login;
 use \App\Http\Controllers\Admin\DashboardController;
 use \App\Http\Controllers\NewsController;
+use \App\Http\Controllers\HomeController;
 use App\Livewire\Counter;
 
 
@@ -28,9 +29,7 @@ Route::get('language/{locale}', function ($locale) {
 });
 
 # Home page
-Route::get('/', function () {
-    return view('welcome');
-})->name("home");
+Route::get('/',[HomeController::class,'index'])->name("home");
 
 # Static pages
 Route::get('/contact', function () {

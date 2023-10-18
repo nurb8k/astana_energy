@@ -2,28 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function structure()
+    public function index()
     {
-        return view('pages.structure');
-    }
-    public function administration()
-    {
+        $ln = News::latest('time_publish')->first();
+        $on = News::where('id','!=',$ln->id)->take(2)->get();
 
-        return view('pages.administration');
-
-
-    }
-    public function compliance()
-    {
-        return view('pages.compliance');
-    }
-
-    public function vacancy()
-    {
-        return view('pages.vacancy');
+        return view('welcome',compact('ln','on'));
     }
 }

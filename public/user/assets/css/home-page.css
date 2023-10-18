@@ -54,7 +54,7 @@
 }
 
 .director {
-    padding: 46px 0 10px 0;
+    padding: 46px 0 46px 0;
 }
 
 .director-inner {
@@ -67,7 +67,8 @@
 .director-preview {
     width: 230px;
     height: 230px;
-    margin-right: 56px;
+    margin-right: 85px;
+    border-radius: 20px;
 }
 
 .director-description {

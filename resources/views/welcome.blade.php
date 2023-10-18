@@ -103,11 +103,11 @@
                         <div class="news-list">
                             <div class="news-list-left">
                                 <div class="news-item bg-grey">
-                                    <img src="{{asset('user/assets/img/news-1.png')}}" alt="News preview" class="news-item-preview">
+                                    <img src="{{asset('storage/' . $ln->image)}}" alt="News preview" class="news-item-preview">
                                     <div class="news-detail">
-                                        <h4 class="news-detail-title">Об изменении тарифа на производство тепловой энергии с 1 октября 2023 года.</h4>
+                                        <h4 class="news-detail-title">{{$ln->title_ru}}</h4>
                                         <div class="news-detail-date">24 августа 2023 </div>
-                                        <a href="#" class="detail-link">
+                                        <a href="{{route('news.show',$ln->id)}}" class="detail-link">
                                             <span>Перейти</span>
                                             <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
                                         </a>
@@ -115,33 +115,24 @@
                                 </div>
                             </div>
                             <div class="news-list-right">
+                                @foreach($on as $other_news)
                                 <div class="news-item bg-grey">
                                     <div class="news-detail">
-                                        <h4 class="news-detail-title">Подготовка к осенне-зимнему периоду 2023-2024 по АО Астана Энергия»</h4>
+                                        <h4 class="news-detail-title">{{$other_news->title_ru}}</h4>
                                         <div class="news-detail-bottom">
                                             <div class="news-detail-date">23 августа 2023 </div>
-                                            <a href="#" class="detail-link">
+                                            <a href="{{route('news.show',$other_news->id)}}" class="detail-link">
                                                 <span>Перейти</span>
                                                 <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="news-item bg-grey">
-                                    <div class="news-detail">
-                                        <h4 class="news-detail-title">Подготовка к осенне-зимнему периоду 2023-2024 по АО Астана Энергия»</h4>
-                                        <div class="news-detail-bottom">
-                                            <div class="news-detail-date">23 августа 2023 </div>
-                                            <a href="#" class="detail-link">
-                                                <span>Перейти</span>
-                                                <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
+
                             </div>
                         </div>
-                        <a href="#" class="btn">Все новости</a>
+                        <a href="{{route('news')}}" class="btn">Все новости</a>
                     </div>
 
                 </div>
