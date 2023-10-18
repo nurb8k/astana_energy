@@ -62,7 +62,6 @@ Route::get('/infographic',function (){
 Route::get('/news',[NewsController::class,'index'])->name('news');
 
 
-Route::get('/counter', Counter::class);
 
 # Admin panels
 Route::get('/admin', [Login::class,'index'])->name('login');
