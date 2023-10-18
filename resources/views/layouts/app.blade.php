@@ -41,10 +41,10 @@
                             <a href="{{route('documentation.index')}} " class="header-nav-link {{ \Request::route()->getName() == 'documentation.index' ? 'active' : ''}}">Документация</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('infographic')}}" class="header-nav-link">Инфорграфика</a>
+                            <a href="{{route('infographic')}}" class="header-nav-link {{ \Request::route()->getName() == 'infographic' ? 'active' : ''}}">Инфорграфика</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('news')}}" class="header-nav-link">Новости</a>
+                            <a href="{{route('news')}}" class="header-nav-link {{ \Request::route()->getName() == 'news' ? 'active' : ''}}">Новости</a>
                         </li>
                         <li class="header-nav-item">
                             <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">Контакты</a>
