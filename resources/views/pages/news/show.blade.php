@@ -22,7 +22,7 @@
                     <div class="news-list">
                         @foreach($other_news as $on)
                             <div class="news-item bg-grey">
-                                <div class="news-item-preview" style="background-image: url(http://localhost:8001/storage/news_images/e602OkGJ4t0dGS2iOhbNXGAz65d7noVSEfCjgk4z.png);"></div>
+                                <div class="news-item-preview" style="background-image: url({{asset('storage/' . $on->image)}});"></div>
                                 <div class="news-item-article">
                                     <h5 class="news-item-title">{{ Str::limit($on->title_ru, 40, '...') }}</h5>
                                     <div class="news-item-date">{{ \Carbon\Carbon::parse($on->time_publish)->format('d.m.Y') }} г</div>
