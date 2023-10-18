@@ -26,7 +26,7 @@
                                 <div class="news-item-article">
                                     <h5 class="news-item-title">{{ Str::limit($on->title_ru, 40, '...') }}</h5>
                                     <div class="news-item-date">{{ \Carbon\Carbon::parse($on->time_publish)->format('d.m.Y') }} г</div>
-                                    <a href="http://localhost:8001/news/1" class="detail-link">
+                                    <a href="{{route('news.show',$on->id)}}" class="detail-link">
                                         <span>Перейти</span>
                                         <img src="http://localhost:8001/user/assets/img/icons/right-arrow.svg" alt="News link icon" class="detail-link-icon">
                                     </a>
