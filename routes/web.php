@@ -5,8 +5,6 @@ use \App\Http\Controllers\Auth\Login;
 use \App\Http\Controllers\Admin\DashboardController;
 use \App\Http\Controllers\NewsController;
 
-# Livewires
-use App\Livewire\Counter;
 
 /*
 |--------------------------------------------------------------------------
