@@ -7,16 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Астана Энергия</title>
-    <link rel="stylesheet" href="{{asset('user/assets/css/documentation-pages.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/global.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/header.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/footer.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/home-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/contact-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/about-page.css')}}">
-    <link rel="stylesheet" href="{{asset('user/assets/css/news-page.css')}}">
-    <link rel="stylesheet" href="{{asset('user/assets/css/infographic-page.css')}}">
-
     <link rel="stylesheet" href="{{asset('user/assets/css/swiper-bundle.min.css')}}">
     <link rel="icon" href="{{asset('favicon-32x32.png')}}">
 </head>
@@ -31,23 +27,22 @@
                 <nav class="header-nav">
                     <ul class="header-nav-list">
                         <li class="header-nav-item">
-                            <a href="{{route('about')}}" class="header-nav-link {{ \Request::route()->getName() == 'about' ? 'active' : ''}}">О компании</a>
-
+                            <a href="{{route('about')}}" class="header-nav-link">О компании</a>
                         </li>
                         <li class="header-nav-item">
                             <a href="#" class="header-nav-link">Отчетность</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('documentation.index')}} " class="header-nav-link {{ \Request::route()->getName() == 'documentation.index' ? 'active' : ''}}">Документация</a>
+                            <a href="#" class="header-nav-link">Документация</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('infographic')}}" class="header-nav-link">Инфорграфика</a>
+                            <a href="#" class="header-nav-link">Инфорграфика</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('news')}}" class="header-nav-link">Новости</a>
+                            <a href="#" class="header-nav-link">Новости</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">Контакты</a>
+                            <a href="{{route('contact')}}" class="header-nav-link">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -77,8 +72,7 @@
         </div>
     </div>
 </header>
-@yield('content')
-
+{{ $slot }}
 <footer class="footer">
     <div class="container">
         <div class="footer-inner">
@@ -104,7 +98,7 @@
                         <a href="#" class="footer-item-link">Главная</a>
                         <a href="#" class="footer-item-link">О Компании</a>
                         <a href="#" class="footer-item-link">Отчеты</a>
-                        <a href="{{route('documentation.index')}}" class="footer-item-link">Документация</a>
+                        <a href="#" class="footer-item-link">Документация</a>
                         <a href="#" class="footer-item-link">Инфографика</a>
                         <a href="#" class="footer-item-link">Новости</a>
                         <a href="#" class="footer-item-link">События</a>

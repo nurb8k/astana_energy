@@ -9,9 +9,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        return view('news.index', [
-            'news' => News::all()
-        ]);
+        return view('pages.news');
     }
 
     public function show($id)

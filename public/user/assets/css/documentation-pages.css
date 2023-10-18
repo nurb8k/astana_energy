@@ -1,0 +1,64 @@
+.docs__items {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.docs__item {
+    padding: 51px 290px 22px 36px;
+    width: 569px;
+    height: 166px;
+}
+
+.docs__item-text {
+    color: #FFF;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 19px;
+}
+
+.gov {
+    background-image: url('../img/gov.png');
+    background-size: cover;
+    background-position: center;
+}
+.rules {
+    background-image: url("../img/rules.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.docs-inner {
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.flag-container {
+    display: flex;
+    justify-content: center;
+    margin:20px;
+}
+.flag-kz {
+
+}
+.gov__description {
+    margin-top: 20px;
+}
+.gov__description  p{
+    color:  #1B1C25;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 1rem;
+}
+.govs-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}

@@ -20,7 +20,9 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        \App\Models\User::create(['name' => 'Admin','email' => 'admin@ae.kz','password' => '$2a$10$sBKDI1ipnSK42O/v.0VIReM5J.uqRJbzPhNSrSCIBXWWh4o3ILHhy']);
     }
+
 
     /**
      * Reverse the migrations.
