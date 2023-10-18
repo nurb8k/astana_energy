@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{asset('user/assets/css/infographic-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/documentation-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/swiper-bundle.min.css')}}">
-    <link rel="stylesheet" href="{{asset('user/assets/css/news-show.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('user/assets/css/news-page.css')}}">--}}
     <link rel="icon" href="{{asset('favicon-32x32.png')}}">
 </head>
 <body>
