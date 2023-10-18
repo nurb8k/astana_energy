@@ -16,6 +16,9 @@ use \App\Http\Controllers\NewsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Livewire\Counter;
+
+Route::get('/counter', Counter::class);
 
 # For change local lang
 Route::get('language/{locale}', function ($locale) {
