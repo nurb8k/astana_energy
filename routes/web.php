@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Auth\Login;
 use \App\Http\Controllers\Admin\DashboardController;
 use \App\Http\Controllers\NewsController;
+use App\Livewire\Counter;
 
 
 /*
@@ -16,7 +17,6 @@ use \App\Http\Controllers\NewsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-use App\Livewire\Counter;
 
 Route::get('/counter', Counter::class);
 
