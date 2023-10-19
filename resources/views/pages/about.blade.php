@@ -121,6 +121,45 @@
                                 </div>
                             </div>
 
+                            <div class="swiper-slide managment-slider-item">
+                                <div class="managment-slider-item-preview">
+                                    <img src="{{asset('user/assets/img/avatar.jpg')}}" alt="">
+                                </div>
+                                <div class="managment-slider-item-article">
+                                    <h4>Султанбеков Нурлан Сарсенбекович</h4>
+                                    <p>Директор ТЭЦ-1</p>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide managment-slider-item">
+                                <div class="managment-slider-item-preview">
+                                    <img src="{{asset('user/assets/img/direc3.jpeg')}}" alt="">
+                                </div>
+                                <div class="managment-slider-item-article">
+                                    <h4>Селезнев Константин Александрович</h4>
+                                    <p>Директор ТЭЦ-3</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide managment-slider-item">
+                                <div class="managment-slider-item-preview">
+                                    <img src="{{asset('user/assets/img/dir_r_k.png')}}" alt="">
+                                </div>
+                                <div class="managment-slider-item-article">
+                                    <h4>Актаев Жанайдар Кабашович</h4>
+                                    <p>Директор Районной котельной</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide managment-slider-item">
+                                <div class="managment-slider-item-preview">
+                                    <img src="{{asset('user/assets/img/Eldar.png')}}" alt="">
+                                </div>
+                                <div class="managment-slider-item-article">
+                                    <h4>Мусабиев Эльдар Мусабиевич</h4>
+                                    <p>Директор по внутренней безопасности
+                                    </p>
+                                </div>
+                            </div>
+
 
                         </div>
                         <div class="swiper-button-prev">
