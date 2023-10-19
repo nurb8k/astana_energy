@@ -28,7 +28,7 @@
                                     <div class="news-item-date">{{ \Carbon\Carbon::parse($on->time_publish)->format('d.m.Y') }} г</div>
                                     <a href="{{route('news.show',$on->id)}}" class="detail-link">
                                         <span>Перейти</span>
-                                        <img src="http://localhost:8001/user/assets/img/icons/right-arrow.svg" alt="News link icon" class="detail-link-icon">
+                                        <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
                                     </a>
                                 </div>
                             </div>
