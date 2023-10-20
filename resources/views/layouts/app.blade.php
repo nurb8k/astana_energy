@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('user/assets/css/infographic-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/documentation-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/swiper-bundle.min.css')}}">
+    <link rel="stylesheet" href="{{asset('user/assets/css/reports-page.css')}}">
 {{--    <link rel="stylesheet" href="{{asset('user/assets/css/news-page.css')}}">--}}
     <link rel="icon" href="{{asset('favicon-32x32.png')}}">
 </head>
@@ -35,13 +36,13 @@
 
                         </li>
                         <li class="header-nav-item">
-                            <a href="#" class="header-nav-link">Отчетность</a>
+                            <a href="{{route('reports')}}" class="header-nav-link">Отчетность</a>
                         </li>
                         <li class="header-nav-item">
                             <a href="{{route('documentation.index')}} " class="header-nav-link {{ \Request::route()->getName() == 'documentation.index' ? 'active' : ''}}">Документация</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('infographic')}}" class="header-nav-link {{ \Request::route()->getName() == 'infographic' ? 'active' : ''}}">Инфорграфика</a>
+                            <a href="{{route('infographic')}}" class="header-nav-link {{ \Request::route()->getName() == 'infographic' ? 'active' : ''}}">Инфографика</a>
                         </li>
                         <li class="header-nav-item">
                             <a href="{{route('news.index')}}" class="header-nav-link {{ \Request::routeIs('news.*') ? 'active' : '' }}">Новости</a>

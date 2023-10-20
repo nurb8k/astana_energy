@@ -44,6 +44,10 @@ Route::get('/compliance',function (){
     return view('pages.compliance');
 })->name('compliance');
 
+Route::get('/otchetnost',function (){
+    return view('pages.reports');
+})->name('reports');
+
 
 
 Route::get('/documentation',function (){
