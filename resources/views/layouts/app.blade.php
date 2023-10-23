@@ -34,7 +34,7 @@
                             <a href="{{route('about')}}" class="header-nav-link {{ \Request::route()->getName() == 'about' ? 'active' : ''}}">О компании</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('reports')}}" class="header-nav-link">Отчетность</a>
+                            <a href="{{route('reports')}}" class="header-nav-link {{ \Request::route()->getName() == 'reports' ? 'active' : ''}}">Отчетность</a>
                         </li>
                         <li class="header-nav-item">
                             <a href="{{route('documentation.index')}} " class="header-nav-link {{ \Request::route()->getName() == 'documentation.index' ? 'active' : ''}}">Документация</a>
@@ -100,14 +100,13 @@
                     </div>
                     <div class="footer-item">
                         <div class="footer-item-title">Навигация</div>
-                        <a href="#" class="footer-item-link">Главная</a>
-                        <a href="#" class="footer-item-link">О Компании</a>
-                        <a href="#" class="footer-item-link">Отчеты</a>
+                        <a href="{{route('home')}}" class="footer-item-link">Главная</a>
+                        <a href="{{route('about')}}" class="footer-item-link">О Компании</a>
+                        <a href="{{route('reports')}}" class="footer-item-link">Отчеты</a>
                         <a href="{{route('documentation.index')}}" class="footer-item-link">Документация</a>
-                        <a href="#" class="footer-item-link">Инфографика</a>
-                        <a href="#" class="footer-item-link">Новости</a>
-                        <a href="#" class="footer-item-link">События</a>
-                        <a href="#" class="footer-item-link">Контакты</a>
+                        <a href="{{route('infographic')}}" class="footer-item-link">Инфографика</a>
+                        <a href="{{route('news.index')}}" class="footer-item-link">Новости</a>
+                        <a href="{{route('contact')}}" class="footer-item-link">Контакты</a>
                     </div>
                     <div class="footer-item">
                         <div class="footer-item-title">Полезные ссылки</div>

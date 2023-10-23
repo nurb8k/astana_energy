@@ -11,7 +11,7 @@
 }
 
 .reports__item {
-    width: 800px;
+    width: 1100px;
     border-radius: 20px;
     background: #F4F5F6;
     padding: 28px 20px 28px 41px;
@@ -25,7 +25,7 @@
     color: #1D4189;
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .report__files {
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -102,12 +102,13 @@
     color: #1D4189;
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
 }
 
 .report__files {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .tab__active {
     color: #F29646;

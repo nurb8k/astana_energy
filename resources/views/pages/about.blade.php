@@ -212,7 +212,7 @@
                                 </a>
                             </div>
                             <div class="grid-group-item bg-grey">
-                                <a href="#" class="about-more-link">
+                                <a href="{{route('vacancies')}}" class="about-more-link">
                                     <h4>Вакансии</h4>
                                     <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="about-more-link-icon">
                                 </a>
