@@ -33,7 +33,6 @@
                     <ul class="header-nav-list">
                         <li class="header-nav-item">
                             <a href="{{route('about')}}" class="header-nav-link {{ \Request::route()->getName() == 'about' ? 'active' : ''}}">О компании</a>
-
                         </li>
                         <li class="header-nav-item">
                             <a href="{{route('reports')}}" class="header-nav-link">Отчетность</a>
@@ -49,6 +48,9 @@
                         </li>
                         <li class="header-nav-item">
                             <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">Контакты</a>
+                        </li>
+                        <li class="header-nav-item">
+                            <a href="{{route('compliance')}}" class="header-nav-link {{ \Request::route()->getName() == 'compliance' ? 'active' : ''}}">Комплеанс</a>
                         </li>
                     </ul>
                 </nav>

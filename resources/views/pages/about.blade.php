@@ -179,7 +179,7 @@
                         <div class="grid-group-left">
                             <div class="grid-group-item bg-grey">
                                 <div class="about-more-comp">
-                                    <div class="about-more-comp-preview" style="background-image: url('user/assets/img/comp.png');"></div>
+                                    <div class="about-more-comp-preview" style="background-image: url('{{asset('user/assets/img/comp.png')}}');"></div>
                                     <div class="about-more-article">
                                         <h4>Комплаенс</h4>
                                         <ul>
@@ -196,7 +196,7 @@
                                                 Документы
                                             </li>
                                         </ul>
-                                        <a href="#" class="detail-link">
+                                        <a href="{{route('compliance')}}" class="detail-link">
                                             <span>Перейти</span>
                                             <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
                                         </a>

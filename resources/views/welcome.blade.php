@@ -180,7 +180,7 @@
                     <h3 class="text-blue">Вакансии</h3>
                     <div class="vacance-grid">
                         <div class="vacance-grid-preview">
-                            <img src="{{asset('user/assets/img/vacance-bg.png')}}" alt="Vacance preview" class="vacance-grid-preview-img">
+                            <img src="{{asset('user/assets/img/vac.png')}}" alt="Vacance preview" class="vacance-grid-preview-img">
                         </div>
                         <div class="vacance-list">
                             <div class="vacance-item bg-grey">
@@ -207,7 +207,7 @@
         <section class="partner">
             <div class="container">
                 <div class="partner-inner">
-                    <h3>Наши партнеры</h3>
+                    <h3 class="text-blue">Наши партнеры</h3>
                     <div class="partner-list">
                         <a href="#" class="partner-item">
                             <img src="{{asset('user/assets/img/partner-1.svg')}}" alt="Partner icon" class="partner-item-logo">
