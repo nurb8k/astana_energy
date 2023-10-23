@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="{{asset('user/assets/css/documentation-page.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/swiper-bundle.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/reports-page.css')}}">
-{{--    <link rel="stylesheet" href="{{asset('user/assets/css/news-page.css')}}">--}}
     <link rel="icon" href="{{asset('favicon-32x32.png')}}">
 </head>
 <body>
@@ -48,9 +47,6 @@
                         </li>
                         <li class="header-nav-item">
                             <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">Контакты</a>
-                        </li>
-                        <li class="header-nav-item">
-                            <a href="{{route('compliance')}}" class="header-nav-link {{ \Request::route()->getName() == 'compliance' ? 'active' : ''}}">Комплеанс</a>
                         </li>
                     </ul>
                 </nav>

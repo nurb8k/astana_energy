@@ -45,7 +45,7 @@
                         <b>Наша история</b> <br>
                         В конце декабря 1961 года была введена Акмолинская ТЭЦ-1 с пуском в эксплуатацию первой турбины и первого котла. Этот факт ста...
                     </p>
-                    <a href="#" class="btn btn-outline btn-icon-right btn-hover-fil">
+                    <a href="{{route('history')}}" class="btn btn-outline btn-icon-right btn-hover-fil">
                         <span>Читать все</span>
                         <svg class="btn-icon" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.7071 8.70711C19.0976 8.31658 19.0976 7.68342 18.7071 7.29289L12.3431 0.928932C11.9526 0.538408 11.3195 0.538408 10.9289 0.928932C10.5384 1.31946 10.5384 1.95262 10.9289 2.34315L16.5858 8L10.9289 13.6569C10.5384 14.0474 10.5384 14.6805 10.9289 15.0711C11.3195 15.4616 11.9526 15.4616 12.3431 15.0711L18.7071 8.70711ZM0 9H18V7H0L0 9Z" fill="#F29646"/>
@@ -218,7 +218,7 @@
                                 </a>
                             </div>
                             <div class="grid-group-item bg-grey">
-                                <a href="#" class="about-more-link">
+                                <a href="{{route('plan')}}" class="about-more-link">
                                     <h4>Планы закупок</h4>
                                     <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="about-more-link-icon">
                                 </a>

@@ -58,6 +58,19 @@ Route::get('/goverment',function (){
     return view('pages.documentation.goverment');
 })->name('goverment');
 
+Route::get('/nasha-istoriya',function (){
+    return view('pages.documentation.history');
+})->name('history');
+
+Route::get('/plan-zakupok',function (){
+    return view('pages.documentation.plan');
+})->name('plan');
+
+Route::get('/vakansii',function (){
+    return view('pages.documentation.vacancies');
+})->name('vacancies');
+
+
 Route::get('/rules',function (){
     return view('pages.documentation.rules');
 })->name('rules');

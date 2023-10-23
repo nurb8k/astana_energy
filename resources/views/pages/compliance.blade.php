@@ -108,28 +108,4 @@
             </div>
         </div>
     </section>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            $(".reports__item-content").not(":first").hide(); // Hide all content except the first
-
-            $(".reports__item").click(function() {
-                var $content = $(this).next(".reports__item-content");
-                var $icon = $(this).find(".custom-icon"); // Get the custom icon within the clicked item
-
-                $content.slideToggle();
-
-
-                if ($content.is(":visible")) {
-                    $icon.removeClass("bi-chevron-down").addClass("bi-chevron-up");
-                } else {
-                    $icon.removeClass("bi-chevron-up").addClass("bi-chevron-down");
-                }
-
-                $(".reports__item-content").not($content).slideUp();
-            });
-        });
-    </script>
 @endsection
