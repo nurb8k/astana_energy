@@ -48,10 +48,6 @@ Route::get('/otchetnost',function (){
     return view('pages.reports');
 })->name('reports');
 
-Route::get('/otchetnost/{id}',function (){
-    return view('pages.reports.show');
-})->name('reports.show');
-
 
 Route::get('/struktura-kompanii',function (){
     return view('pages.structure');
