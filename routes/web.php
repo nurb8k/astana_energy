@@ -5,6 +5,7 @@ use \App\Http\Controllers\Auth\Login;
 use \App\Http\Controllers\Admin\DashboardController;
 use \App\Http\Controllers\NewsController;
 use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\LanguageController;
 use App\Livewire\Counter;
 
 
@@ -21,12 +22,7 @@ use App\Livewire\Counter;
 
 Route::get('/counter', Counter::class);
 
-# For change local lang
-Route::get('language/{locale}', function ($locale) {
-    app()->setLocale($locale);
-    session()->put('locale', $locale);
-    return redirect()->back();
-});
+Route::post('locale',[LanguageController::class,'switch'])->name('lang.switch');
 
 # Home page
 Route::get('/',[HomeController::class,'index'])->name("home");

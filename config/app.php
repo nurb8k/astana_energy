@@ -108,9 +108,8 @@ return [
     */
 
     'available_locales' => [
-        'Kazakh' => 'kz',
-        'Russian' => 'ru',
-        'English' => 'en',
+        'Русский' => 'ru',
+        'Қазақша' => 'kz',
     ],
 
     /*
