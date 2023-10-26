@@ -8,14 +8,12 @@
                 <div class="first-slide-inner text-white">
                     <div class="first-slide-left">
                         <h1>AO «Астана- Энергия»</h1>
-                        <p>Тепло и свет в каждый дом</p>
-                        <a href="{{route('structure')}}" class="btn">Структура компании</a>
+                        <p>{{__('messages.lozung')}}</p>
+                        <a href="{{route('structure')}}" class="btn">{{__('messages.struc')}}</a>
                     </div>
                     <div class="first-slide-right">
                         <p>
-                            <b>Астана - Энергия</b> - технологический лидер в энергетической сфере Казахстана.
-                            Наше стремление к инновациям позволяет нам постоянно повышать эффективность
-                            производства и снижать негативное воздействие на окружающую среду.
+                            <b>Астана - Энергия</b>{{__('messages.main_text')}}
                         </p>
                     </div>
                     <img src="{{asset('user/assets/img/bg.jpeg')}}" alt="First slide background image" class="first-slide-bg">
@@ -28,11 +26,7 @@
                     <img src="{{asset('user/assets/img/ceo.jpeg')}}" alt="Director preview" class="director-preview">
                     <div class="director-article">
                         <div class="director-description">
-                            <p>
-                                Астана - Энергия - технологический лидер в энергетической сфере Казахстана.
-                                Наше стремление к инновациям позволяет нам постоянно повышать эффективность
-                                производства и снижать негативное воздействие на окружающую среду.
-                            </p>
+                            <p>{{__('messages.dir_text')}}</p>
                             <div class="director-description-quotes">
                                 <img src="{{asset('user/assets/img/icons/quotes.svg')}}" alt="quote" class="director-description-quote" />
                                 <img src="{{asset('user/assets/img/icons/quotes.svg')}}" alt="quote" class="director-description-quote" />
@@ -40,7 +34,7 @@
                         </div>
                         <div class="director-info">
                             <p class="director-info-name text-primary">Кажкенов Казбек Алимсуринович</p>
-                            <p class="director-info-position">Председатель Правления АО "Астана-Энергия"</p>
+                            <p class="director-info-position">{{__('messages.pos')}}</p>
                         </div>
                     </div>
                 </div>
@@ -52,11 +46,11 @@
                     <div class="news-day">
                         <div class="news-day-top">
                             <div class="news-day-info">
-                                <h3 class="text-blue">Наши ежедневные показания</h3>
-                                <p>По выработке электроэнергии и тепла.</p>
+                                <h3 class="text-blue">{{__('messages.daily_rec')}}</h3>
+                                <p>{{__('messages.daily_text')}}</p>
                             </div>
                             <h3 class="news-day-date text-blue">
-                                03 СЕН 2023
+                                {{__('messages.daily_data')}}
                             </h3>
                         </div>
                         <div class="news-day-bottom">
@@ -86,10 +80,10 @@
                                 <div class="news-day-item bd-primary">
                                     <div class="news-day-report">
                                         <div class="news-day-report-title">
-                                            Отчеты по выроботке электроэнергии и тепла за весь период
+{{__('messages.rep_text')}}
                                         </div>
                                         <a href="{{route('infographic')}}" class="btn btn-outline btn-icon-right btn-hover-fil">
-                                            <span>Перейти</span>
+                                            <span>{{__('messages.open')}}</span>
                                             <svg class="btn-icon" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M18.7071 8.70711C19.0976 8.31658 19.0976 7.68342 18.7071 7.29289L12.3431 0.928932C11.9526 0.538408 11.3195 0.538408 10.9289 0.928932C10.5384 1.31946 10.5384 1.95262 10.9289 2.34315L16.5858 8L10.9289 13.6569C10.5384 14.0474 10.5384 14.6805 10.9289 15.0711C11.3195 15.4616 11.9526 15.4616 12.3431 15.0711L18.7071 8.70711ZM0 9H18V7H0L0 9Z" fill="#F29646"/>
                                             </svg>
@@ -100,7 +94,7 @@
                         </div>
                     </div>
                     <div class="news-last">
-                        <h3 class="text-blue text-center">Последние новости</h3>
+                        <h3 class="text-blue text-center">{{__('messages.last_news')}}</h3>
                         <div class="news-list">
                             <div class="news-list-left">
                                 <div class="news-item bg-grey">
@@ -109,7 +103,7 @@
                                         <h4 class="news-detail-title">{{$ln->title_ru}}</h4>
                                         <div class="news-detail-date">24 августа 2023 </div>
                                         <a href="{{route('news.show',$ln->id)}}" class="detail-link">
-                                            <span>Перейти</span>
+                                            <span>{{__('messages.open')}}</span>
                                             <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
                                         </a>
                                     </div>
@@ -123,7 +117,7 @@
                                         <div class="news-detail-bottom">
                                             <div class="news-detail-date">23 августа 2023 </div>
                                             <a href="{{route('news.show',$other_news->id)}}" class="detail-link">
-                                                <span>Перейти</span>
+                                                <span>{{__('messages.open')}}</span>
                                                 <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
                                             </a>
                                         </div>
@@ -133,7 +127,7 @@
 
                             </div>
                         </div>
-                        <a href="{{route('news.index')}}" class="btn">Все новости</a>
+                        <a href="{{route('news.index')}}" class="btn">{{__('messages.all_news')}}</a>
                     </div>
 
                 </div>

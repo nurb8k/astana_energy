@@ -4,10 +4,10 @@
     <main>
         <section class="report">
             <div class="container-md">
-                <h2>Отчетность</h2>
+                <h2>{{__('messages.reports')}}</h2>
                 <div  class="reports__items">
                     <div class="reports__item active">
-                        <p class="reports__item-text">Годовая финансовая отчетность</p>
+                        <p class="reports__item-text">{{__('messages.year_rep')}}</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                             <path d="M1 6.79681L6 2L8.6087 4.3984L11 6.79681" stroke="#ABACB4" stroke-width="2" stroke-linecap="round"/>
                         </svg>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="reports__item" >
-                        <p class="reports__item-text">Отчеты по исполнению тарифной сметы</p>
+                        <p class="reports__item-text">{{__('messages.rep_tarif')}}</p>
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                             <path d="M1 6.79681L6 2L8.6087 4.3984L11 6.79681" stroke="#ABACB4" stroke-width="2" stroke-linecap="round"/>
@@ -122,7 +122,7 @@
                     </div>
 
                     <div class="reports__item" >
-                        <p class="reports__item-text">Отчеты по исполнение инвестиционной программы</p>
+                        <p class="reports__item-text">{{__('messages.rep_ins')}}</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                             <path d="M1 6.79681L6 2L8.6087 4.3984L11 6.79681" stroke="#ABACB4" stroke-width="2" stroke-linecap="round"/>
                         </svg>
@@ -217,7 +217,7 @@
                     </div>
 
                     <div class="reports__item" >
-                        <p class="reports__item-text">Отчеты перед потребителями и иными заинтересованными лицами</p>
+                        <p class="reports__item-text">{{__('messages.rep_inv')}}</p>
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                             <path d="M1 6.79681L6 2L8.6087 4.3984L11 6.79681" stroke="#ABACB4" stroke-width="2" stroke-linecap="round"/>
                         </svg>
@@ -479,7 +479,7 @@
                     </div>
 
                     <div class="reports__item" >
-                        <p class="reports__item-text">Режимная карта</p>
+                        <p class="reports__item-text">{{__('messages.rep_map')}}</p>
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                             <path d="M1 6.79681L6 2L8.6087 4.3984L11 6.79681" stroke="#ABACB4" stroke-width="2" stroke-linecap="round"/>

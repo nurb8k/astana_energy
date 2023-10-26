@@ -31,23 +31,24 @@
                 <nav class="header-nav">
                     <ul class="header-nav-list">
                         <li class="header-nav-item">
-                            <a href="{{route('about')}}" class="header-nav-link {{ \Request::route()->getName() == 'about' ? 'active' : ''}}">О компании</a>
+                            <a href="{{route('about')}}" class="header-nav-link {{ \Request::route()->getName() == 'about' ? 'active' : ''}}">{{__('messages.about')}}</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('reports')}}" class="header-nav-link {{ \Request::route()->getName() == 'reports' ? 'active' : ''}}">Отчетность</a>
+                            <a href="{{route('reports')}}" class="header-nav-link {{ \Request::route()->getName() == 'reports' ? 'active' : ''}}">{{__('messages.reports')}}</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('documentation.index')}} " class="header-nav-link {{ \Request::route()->getName() == 'documentation.index' ? 'active' : ''}}">Документация</a>
+                            <a href="{{route('documentation.index')}} " class="header-nav-link {{ \Request::route()->getName() == 'documentation.index' ? 'active' : ''}}">{{__('messages.docs')}}</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('infographic')}}" class="header-nav-link {{ \Request::route()->getName() == 'infographic' ? 'active' : ''}}">Инфографика</a>
+                            <a href="{{route('infographic')}}" class="header-nav-link {{ \Request::route()->getName() == 'infographic' ? 'active' : ''}}">{{__('messages.infog')}}</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('news.index')}}" class="header-nav-link {{ \Request::routeIs('news.*') ? 'active' : '' }}">Новости</a>
+                            <a href="{{route('news.index')}}" class="header-nav-link {{ \Request::routeIs('news.*') ? 'active' : '' }}">{{__('messages.news')}}</a>
                         </li>
                         <li class="header-nav-item">
-                            <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">Контакты</a>
+                            <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">{{__('messages.contacts')}}</a>
                         </li>
+
                     </ul>
                 </nav>
                 <div class="header-action">
@@ -56,10 +57,13 @@
                         <img src="{{asset('user/assets/img/icons/search.svg')}}" alt="Search Icon" class="header-search-icon">
                     </div>
                     <div class="lang-select">
-                        <select>
-                            <option value="">Русский</option>
-                            <option value="">Казахский</option>
-                        </select>
+                        <form id="language-form" action="{{ route('lang.switch') }}" method="POST">
+                            @csrf
+                            <select id="language-select" name="locale">
+                                <option @if(Session::get('locale') == 'ru') selected @endif      value="ru">Русский</option>
+                                <option   @if(Session::get('locale') == 'kz') selected @endif   value="kz">Қазақша</option>
+                            </select>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -70,7 +74,7 @@
                 </a>
                 <div class="header-eye">
                     <img src="{{asset('user/assets/img/icons/eye.svg')}}" alt="Eye Icon" class="header-eye-icon">
-                    <span>Версия для слабовидящих</span>
+                    <span>{{__('messages.bad_vis')}}</span>
                 </div>
             </div>
         </div>
@@ -84,10 +88,10 @@
             <div class="footer-top">
                 <div class="footer-list">
                     <div class="footer-item">
-                        <p class="footer-item-title">Контакты</p>
+                        <p class="footer-item-title">{{__('messages.contacts')}}</p>
                         <img src="{{asset('user/assets/img/logo-footer.svg')}}" alt="Footer logo" class="footer-logo">
                         <p class="footer-address">
-                            <img src="{{asset('user/assets/img/icons/address.svg')}}" alt="Address icon"> 010000, Республика Казахстан г. Астана, «Байқоңыр» Промзона ТЭЦ-2
+                            <img src="{{asset('user/assets/img/icons/address.svg')}}" alt="Address icon"> {{__('messages.address')}}
                         </p>
                         <a href="mailto:ae@astana-energy.kz" class="footer-mail">
                             <img src="{{asset('user/assets/img/icons/mail.svg')}}" alt="Mail icon">
@@ -100,16 +104,16 @@
                     </div>
                     <div class="footer-item">
                         <div class="footer-item-title">Навигация</div>
-                        <a href="{{route('home')}}" class="footer-item-link">Главная</a>
-                        <a href="{{route('about')}}" class="footer-item-link">О Компании</a>
-                        <a href="{{route('reports')}}" class="footer-item-link">Отчеты</a>
-                        <a href="{{route('documentation.index')}}" class="footer-item-link">Документация</a>
-                        <a href="{{route('infographic')}}" class="footer-item-link">Инфографика</a>
-                        <a href="{{route('news.index')}}" class="footer-item-link">Новости</a>
-                        <a href="{{route('contact')}}" class="footer-item-link">Контакты</a>
+                        <a href="{{route('home')}}" class="footer-item-link">{{__('messages.home')}}</a>
+                        <a href="{{route('about')}}" class="footer-item-link">{{__('messages.about')}}</a>
+                        <a href="{{route('reports')}}" class="footer-item-link">{{__('messages.reports')}}</a>
+                        <a href="{{route('documentation.index')}}" class="footer-item-link">{{__('messages.docs')}}</a>
+                        <a href="{{route('infographic')}}" class="footer-item-link">{{__('messages.infog')}}</a>
+                        <a href="{{route('news.index')}}" class="footer-item-link">{{__('messages.news')}}</a>
+                        <a href="{{route('contact')}}" class="footer-item-link">{{__('messages.contacts')}}</a>
                     </div>
                     <div class="footer-item">
-                        <div class="footer-item-title">Полезные ссылки</div>
+                        <div class="footer-item-title">{{__('messages.links')}}</div>
                         <a href="#" class="footer-item-link">Сайт Президента Республики Казахстан</a>
                         <a href="#" class="footer-item-link">АО «СОЦИАЛЬНО-ПРЕДПРИНИМАТЕЛЬСКАЯ КОРПОРАЦИЯ «ASTANA»</a>
                         <a href="#" class="footer-item-link">Акимат города Астана</a>
@@ -127,6 +131,15 @@
         </div>
     </div>
 </footer>
+<script>
+    const languageSelect = document.getElementById('language-select');
+    const languageForm = document.getElementById('language-form');
+
+    languageSelect.addEventListener('change', function () {
+        languageForm.submit();
+    });
+</script>
+
 <script src="{{asset('user/assets/js/script.js')}}"></script>
 <script src="{{asset('user/assets/js/swiper-bundle.min.js')}}"></script>
 </body>
