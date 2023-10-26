@@ -206,7 +206,7 @@
                         </div>
                         <div class="grid-group-right">
                             <div class="grid-group-item bg-grey">
-                                <a href="#" class="about-more-link">
+                                <a href="{{route('structure')}}" class="about-more-link">
                                     <h4>Структура компании</h4>
                                     <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="about-more-link-icon">
                                 </a>

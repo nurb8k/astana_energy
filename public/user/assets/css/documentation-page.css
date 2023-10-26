@@ -120,6 +120,7 @@
 }
 
 .docs__title {
+    max-width: 1000px;
     color: #2d2d30;
     font-size: 16px;
     font-style: normal;
