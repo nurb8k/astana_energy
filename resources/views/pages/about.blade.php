@@ -10,29 +10,19 @@
                     <div class="about-history-item bg-grey">
                         <h2 class="text-blue">1961</h2>
                         <p>
-                            В конце декабря 1961 года была
-                            введена Акмолинская ТЭЦ-1 с пуском
-                            в эксплуатацию первой турбины и первого
-                            котла.
+                            {{__('messages.his-1')}}
                         </p>
                     </div>
                     <div class="about-history-item bg-grey">
                         <h2 class="text-blue">1971</h2>
                         <p>
-                            29 июня 1971 года было принято
-                            специальное решение Министерства
-                            энергетики СССР по разработке
-                            технического проекта Целиноградской ТЭЦ-2.
+                            {{__('messages.his-2')}}
                         </p>
                     </div>
                     <div class="about-history-item bg-grey">
                         <h2 class="text-blue">2004</h2>
                         <p>
-                            04 ноября 2004 года ГУ «Департамент
-                            юстиции г.Астаны» регистрационным номером
-                            №17550-1901-АО была произведена
-                            государственная регистрация АО «Астана-Энергия»
-                            в качестве юридического лица.
+                            {{__('messages.his-3')}}
                         </p>
                     </div>
                 </div>
@@ -42,11 +32,11 @@
             <div class="container-md">
                 <div class="us-history-inner bd-primary">
                     <p>
-                        <b>Наша история</b> <br>
-                        В конце декабря 1961 года была введена Акмолинская ТЭЦ-1 с пуском в эксплуатацию первой турбины и первого котла. Этот факт ста...
+                        <b>{{__('messages.our_his')}}</b> <br>
+                        {{__('messages.our_his-text')}}
                     </p>
                     <a href="{{route('history')}}" class="btn btn-outline btn-icon-right btn-hover-fil">
-                        <span>Читать все</span>
+                        <span>{{__('messages.read_all')}}</span>
                         <svg class="btn-icon" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18.7071 8.70711C19.0976 8.31658 19.0976 7.68342 18.7071 7.29289L12.3431 0.928932C11.9526 0.538408 11.3195 0.538408 10.9289 0.928932C10.5384 1.31946 10.5384 1.95262 10.9289 2.34315L16.5858 8L10.9289 13.6569C10.5384 14.0474 10.5384 14.6805 10.9289 15.0711C11.3195 15.4616 11.9526 15.4616 12.3431 15.0711L18.7071 8.70711ZM0 9H18V7H0L0 9Z" fill="#F29646"/>
                         </svg>
@@ -58,7 +48,7 @@
             <div class="container-md">
                 <div class="managment-inner bg-grey">
                     <div class="managment-article">
-                        <h3>Руководство</h3>
+                        <h3>{{__('messages.rukovodstvo')}}</h3>
                     </div>
                     <div class="managment-slider swiper">
                         <div class="swiper-wrapper">
@@ -207,19 +197,19 @@
                         <div class="grid-group-right">
                             <div class="grid-group-item bg-grey">
                                 <a href="{{route('structure')}}" class="about-more-link">
-                                    <h4>Структура компании</h4>
+                                    <h4>{{__('messages.struc')}}</h4>
                                     <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="about-more-link-icon">
                                 </a>
                             </div>
                             <div class="grid-group-item bg-grey">
                                 <a href="{{route('vacancies')}}" class="about-more-link">
-                                    <h4>Вакансии</h4>
+                                    <h4>{{__('messages.vacs')}}</h4>
                                     <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="about-more-link-icon">
                                 </a>
                             </div>
                             <div class="grid-group-item bg-grey">
                                 <a href="{{route('plan')}}" class="about-more-link">
-                                    <h4>Планы закупок</h4>
+                                    <h4>{{__('messages.buy_plan')}}</h4>
                                     <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="about-more-link-icon">
                                 </a>
                             </div>

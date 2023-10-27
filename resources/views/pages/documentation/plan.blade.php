@@ -4,7 +4,7 @@
     <section class="report">
         <div class="container-md">
             <div class="container-md">
-                <h2>План закупок</h2>
+                <h2>{{__('messages.buy_plan')}}</h2>
 
             </div>
 
