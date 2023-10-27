@@ -137,42 +137,35 @@
             <img src="{{asset('user/assets/img/history-bg.png')}}" alt="History background" class="history-bg">
             <div class="container">
                 <div class="history-inner">
-                    <h3 class="text-white">История создания</h3>
+                    <h3 class="text-white">{{__('messages.history')}}</h3>
                     <div class="history-list text-white">
                         <div class="history-item">
                             <div class="history-item-title">1961</div>
                             <div class="history-item-description">
-                                В конце декабря 1961 года была введена
-                                Акмолинская ТЭЦ-1 с пуском в эксплуатацию
-                                первой турбины и первого котла.
+                                {{__('messages.his-1')}}
                             </div>
                         </div>
                         <div class="history-item">
                             <div class="history-item-title">1971</div>
                             <div class="history-item-description">
-                                29 июня 1971 года было принято специальное
-                                решение Министерства энергетики СССР по разработке
-                                технического проекта Целиноградской ТЭЦ-2.
+                                {{__('messages.his-2')}}
                             </div>
                         </div>
                         <div class="history-item">
                             <div class="history-item-title">2004</div>
                             <div class="history-item-description">
-                                04 ноября 2004 года ГУ «Департамент юстиции г.Астаны»
-                                регистрационным номером №17550-1901-АО была произведена г
-                                осударственная регистрация АО «Астана-Энергия» в качестве
-                                юридического лица.
+                                {{__('messages.his-3')}}
                             </div>
                         </div>
                     </div>
-                    <a href="{{route('about')}}" class="btn">О компании</a>
+                    <a href="{{route('about')}}" class="btn">{{__('messages.about')}}</a>
                 </div>
             </div>
         </section>
         <section class="vacance">
             <div class="container">
                 <div class="vacance-inner">
-                    <h3 class="text-blue">Вакансии</h3>
+                    <h3 class="text-blue">{{__('messages.vacs')}}</h3>
                     <div class="vacance-grid">
                         <div class="vacance-grid-preview">
                             <img src="{{asset('user/assets/img/vac.png')}}" alt="Vacance preview" class="vacance-grid-preview-img">
@@ -193,8 +186,8 @@
                         </div>
                     </div>
                     <div class="vacance-actions">
-                        <a href="{{route('contact')}}" class="btn btn-outline btn-hover-fil">Отправить заявку</a>
-                        <a href="{{route('vacancies')}}" class="btn">Все вакансии</a>
+                        <a href="{{route('contact')}}" class="btn btn-outline btn-hover-fil">{{__('messages.send_apply')}}</a>
+                        <a href="{{route('vacancies')}}" class="btn">{{__('messages.all_vacs')}}</a>
                     </div>
                 </div>
             </div>
@@ -202,7 +195,7 @@
         <section class="partner">
             <div class="container">
                 <div class="partner-inner">
-                    <h3 class="text-blue">Наши партнеры</h3>
+                    <h3 class="text-blue">{{__('messages.our_par')}}</h3>
                     <div class="partner-list">
                         <a href="#" class="partner-item">
                             <img src="{{asset('user/assets/img/partner-1.svg')}}" alt="Partner icon" class="partner-item-logo">
