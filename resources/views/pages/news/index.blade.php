@@ -10,10 +10,10 @@
                 <div class="single-news-inner">
                     <div class="single-news-preview" style="background-image: url({{asset('storage/' . $latest->image)}});"></div>
                     <div class="single-news-article">
-                        <h3>{{$latest->title_ru}}</h3>
-                        <div class="single-news-date">{{__('messages.published')}}: {{ \Carbon\Carbon::parse($latest->time_publish)->format('d.m.Y') }}
+                        <h3>{{$latest->title}}</h3>
+                        <div class="single-news-date">{{__('messages.published')}}: {{ $latest->publish }}
                             г.</div>
-                        <p class="single-news-description">{!! Str::limit($latest->desc_ru, 180, '...') !!}</p>
+                        <p class="single-news-description">{!! Str::limit($latest->desc, 180, '...') !!}</p>
                         <a href="{{route('news.show',$latest->id)}}" class="btn btn-outline btn-icon-right btn-hover-fil" style="margin-top: 15px;">
                             <span>{{__('messages.more')}}</span>
                             <svg class="btn-icon" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@
                             <div class="news-item bg-grey">
                                 <div class="news-item-preview" style="background-image: url({{asset('storage/' . $n->image)}});"></div>
                                 <div class="news-item-article">
-                                    <h5 class="news-item-title">{{$n->title_ru}}</h5>
+                                    <h5 class="news-item-title">{{$n->title}}</h5>
                                     <div class="news-item-date">{{ $n->publish }} г</div>
                                     <a href="{{route('news.show',$n->id)}}" class="detail-link">
                                         <span>{{__('messages.open')}}</span>
