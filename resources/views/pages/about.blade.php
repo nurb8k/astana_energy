@@ -172,6 +172,22 @@
                                     <div class="about-more-comp-preview" style="background-image: url('{{asset('user/assets/img/comp.png')}}');"></div>
                                     <div class="about-more-article">
                                         <h4>Комплаенс</h4>
+                                        @if(app()->getLocale() == 'kz')
+                                            <ul>
+                                                <li>
+                                                    Комплаенс-офицер қызметінің мақсаты
+                                                </li>
+                                                <li>
+                                                    Тапсырмалар
+                                                </li>
+                                                <li>
+                                                    Сыбайлас жемқорлықтың алдын алу және оған қарсы іс-қимыл жөніндегі шаралар
+                                                </li>
+                                                <li>
+                                                    Құжаттар
+                                                </li>
+                                            </ul>
+                                        @else
                                         <ul>
                                             <li>
                                                 Цель деятельности Комплаенс-офицера
@@ -186,6 +202,7 @@
                                                 Документы
                                             </li>
                                         </ul>
+                                        @endif
                                         <a href="{{route('compliance')}}" class="detail-link">
                                             <span>{{__('messages.open')}}</span>
                                             <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
