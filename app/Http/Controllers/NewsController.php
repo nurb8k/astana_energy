@@ -10,7 +10,7 @@ class NewsController extends Controller
     public function index()
     {
         $latest_news = News::latest('time_publish')->first();
-        $other_news = News::where('id','!=',$latest_news->id)->take(4)->get();
+        $other_news = News::where('id','!=',$latest_news->id)->get();
         return view('pages.news.index',['latest' => $latest_news,'other_news' => $other_news]);
     }
 
