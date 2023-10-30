@@ -23,6 +23,7 @@
                         @foreach($other_news as $on)
                             <div class="news-item bg-grey">
                                 <div class="news-item-preview" style="background-image: url({{asset('storage/' . $on->image)}});"></div>
+                                <div class="news-item-preview" style="background-image: @if($on->image != null) url({{asset('storage/' . $on->image)}}) @else url({{asset('user/assets/img/news-default.jpg')}}) @endif;"></div>
                                 <div class="news-item-article">
                                     <h5 class="news-item-title">{{ Str::limit($on->title, 50, '...') }}</h5>
                                     <div class="news-item-date">{{ $on->publish }} г</div>
