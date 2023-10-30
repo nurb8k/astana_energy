@@ -36,7 +36,7 @@
                                 <span>{{__('messages.upload_file')}}</span>
                             </label>
                             <label class="form-group-upload-label">
-                                Вы можете прикрепить 4 файла, объёмом до 2 Мб
+                                {{__('messages.contacts_file_text')}}
                             </label>
                         </div>
 
@@ -46,10 +46,10 @@
                                 <span></span>
                             </label>
                             <label for="ag" class="form-group-check-label text-primary">
-                                Даю своё согласие на обработку информации
+                                {{__('messages.contacts_info')}}
                             </label>
                         </div>
-                        <button class="btn">Отправить заявку</button>
+                        <button class="btn">{{__('messages.send_apply')}}</button>
                     </form>
                 </div>
             </div>

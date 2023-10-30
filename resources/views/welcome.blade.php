@@ -116,7 +116,7 @@
                                 <div class="news-item bg-grey">
                                     <img src="{{asset('storage/' . $ln->image)}}" alt="News preview" class="news-item-preview">
                                     <div class="news-detail">
-                                        <h4 class="news-detail-title">{{$ln->title_ru}}</h4>
+                                        <h4 class="news-detail-title">{{$ln->title}}</h4>
                                         <div class="news-detail-date">{{ \Carbon\Carbon::parse($ln->time_publish)->locale('ru_RU')->isoFormat('D MMMM YYYY') }}</div>
                                         <a href="{{route('news.show',$ln->id)}}" class="detail-link">
                                             <span>{{__('messages.open')}}</span>
@@ -129,9 +129,9 @@
                                 @foreach($on as $other_news)
                                 <div class="news-item bg-grey">
                                     <div class="news-detail">
-                                        <h4 class="news-detail-title">{{$other_news->title_ru}}</h4>
+                                        <h4 class="news-detail-title">{{$other_news->title}}</h4>
                                         <div class="news-detail-bottom">
-                                            <div class="news-detail-date">{{ \Carbon\Carbon::parse($ln->time_publish)->locale('ru_RU')->isoFormat('D MMMM YYYY') }}</div>
+                                            <div class="news-detail-date">{{ $other_news->time_publish }}</div>
                                             <a href="{{route('news.show',$other_news->id)}}" class="detail-link">
                                                 <span>{{__('messages.open')}}</span>
                                                 <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
