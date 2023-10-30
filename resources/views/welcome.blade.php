@@ -7,16 +7,16 @@
             <div class="container">
                 <div class="first-slide-inner text-white">
                     <div class="first-slide-left">
-                        <h1>AO «Астана- Энергия»</h1>
-                        <p>{{__('messages.lozung')}}</p>
+                        <h1>{{__('messages.astana_ao')}}</h1>
+
                         <a href="{{route('structure')}}" class="btn">{{__('messages.struc')}}</a>
                     </div>
                     <div class="first-slide-right">
                         <p>
-                            <b>Астана - Энергия</b>{{__('messages.main_text')}}
+                           <b>  {{__('messages.main_text')}}</b>
                         </p>
                     </div>
-                    <img src="{{asset('user/assets/img/bg.jpeg')}}" alt="First slide background image" class="first-slide-bg">
+                    <img src="{{asset('user/assets/img/IMG_2198.jpg')}}" alt="First slide background image" class="first-slide-bg">
                 </div>
             </div>
         </section>
@@ -26,7 +26,18 @@
                     <img src="{{asset('user/assets/img/ceo.jpeg')}}" alt="Director preview" class="director-preview">
                     <div class="director-article">
                         <div class="director-description">
-                            <p>{{__('messages.dir_text')}}</p>
+                            @if(app()->getLocale() == 'ru')
+                                <p style="margin-bottom: 8px;"> Уважаемый посетитель!<br></p> <p>
+                                    Я рад приветствовать Вас на страницах сайта АО «Астана-Энергия». На этом сайте Вы найдете информацию о наших услугах, сведения о вакансиях, контактную информацию для связи с нами и многое другое.
+                                    Мы гордимся тем, что являемся частью сообщества и стремимся к тому, чтобы сделать его более устойчивым и комфортным для всех. Спасибо за проявленный интерес к нашей работе, и надеемся, что этот сайт поможет Вам узнать больше о нашей деятельности.
+                                </p>
+                            @else
+                                <p style="margin-bottom: 8px;"> Құрметті қонақ!<br></p> <p>
+                                    Мен сіздерді "Астана-Энергия" АҚ сайтының беттерінде қарсы алғаныма қуаныштымын. Бұл сайтта сіз біздің қызметтеріміз туралы ақпаратты, жұмыс туралы мәліметтерді, бізбен байланысу үшін байланыс ақпаратын және т.б. таба аласыз.
+                                    Біз қоғамдастықтың бір бөлігі болғанымызды мақтан тұтамыз және оны барлығына тұрақты және жайлы етуге тырысамыз. Біздің жұмысымызға қызығушылық танытқаныңыз үшін рахмет және бұл сайт Біздің қызметіміз туралы көбірек білуге көмектеседі деп үміттенеміз.
+                                </p>
+                            @endif
+
                             <div class="director-description-quotes">
                                 <img src="{{asset('user/assets/img/icons/quotes.svg')}}" alt="quote" class="director-description-quote" />
                                 <img src="{{asset('user/assets/img/icons/quotes.svg')}}" alt="quote" class="director-description-quote" />
@@ -50,7 +61,12 @@
                                 <p>{{__('messages.daily_text')}}</p>
                             </div>
                             <h3 class="news-day-date text-blue">
-                                {{__('messages.daily_data')}}
+                                @if(app()->getLocale() == 'kz')
+                                    {{ \Carbon\Carbon::now()->locale('kk_KZ')->isoFormat('D MMM YYYY') }}
+                                @else
+                                    {{ \Carbon\Carbon::now()->locale('ru_RU')->isoFormat('D MMM YYYY') }}
+                                @endif
+
                             </h3>
                         </div>
                         <div class="news-day-bottom">
@@ -58,21 +74,21 @@
                                 <div class="news-day-item bg-primary text-white">
                                     <div class="news-day-params">
                                         <div class="news-day-params-item">
-                                            <div class="news-day-params-item-subtitle">Отпуск с шин</div>
+                                            <div class="news-day-params-item-subtitle">{{__('messages.output')}}</div>
                                             <div class="news-day-params-item-title">
                                                 <div class="news-day-params-item-title-num" data-animate>
                                                     8424
                                                 </div>
-                                                <div class="news-day-params-item-title-unit">тыс.кВтч</div>
+                                                <div class="news-day-params-item-title-unit">{{__('messages.perHour')}}</div>
                                             </div>
                                         </div>
                                         <div class="news-day-params-item">
-                                            <div class="news-day-params-item-subtitle">Законтрактованная</div>
+                                            <div class="news-day-params-item-subtitle">{{__('messages.zakontrak')}}</div>
                                             <div class="news-day-params-item-title">
                                                 <div class="news-day-params-item-title-num" data-animate>
                                                     8424
                                                 </div>
-                                                <div class="news-day-params-item-title-unit">тыс.кВтч</div>
+                                                <div class="news-day-params-item-title-unit">{{__('messages.perHour')}}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -101,7 +117,7 @@
                                     <img src="{{asset('storage/' . $ln->image)}}" alt="News preview" class="news-item-preview">
                                     <div class="news-detail">
                                         <h4 class="news-detail-title">{{$ln->title_ru}}</h4>
-                                        <div class="news-detail-date">24 августа 2023 </div>
+                                        <div class="news-detail-date">{{ \Carbon\Carbon::parse($ln->time_publish)->locale('ru_RU')->isoFormat('D MMMM YYYY') }}</div>
                                         <a href="{{route('news.show',$ln->id)}}" class="detail-link">
                                             <span>{{__('messages.open')}}</span>
                                             <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
@@ -115,7 +131,7 @@
                                     <div class="news-detail">
                                         <h4 class="news-detail-title">{{$other_news->title_ru}}</h4>
                                         <div class="news-detail-bottom">
-                                            <div class="news-detail-date">23 августа 2023 </div>
+                                            <div class="news-detail-date">{{ \Carbon\Carbon::parse($ln->time_publish)->locale('ru_RU')->isoFormat('D MMMM YYYY') }}</div>
                                             <a href="{{route('news.show',$other_news->id)}}" class="detail-link">
                                                 <span>{{__('messages.open')}}</span>
                                                 <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
@@ -172,16 +188,16 @@
                         </div>
                         <div class="vacance-list">
                             <div class="vacance-item bg-grey">
-                                <div class="vacance-item-title">Инженер по ремонту 10 разряда</div>
-                                <div class="vacance-item-subtitle">Отдел ремонтов</div>
+                                <div class="vacance-item-title">{{__('messages.vac1')}}</div>
+                                <div class="vacance-item-subtitle">{{__('messages.dep1')}}</div>
                             </div>
                             <div class="vacance-item bg-grey">
-                                <div class="vacance-item-title">Инженер 9 разряда</div>
-                                <div class="vacance-item-subtitle">Режимно-наладочная группа</div>
+                                <div class="vacance-item-title">{{__('messages.vac2')}}</div>
+                                <div class="vacance-item-subtitle">{{__('messages.dep2')}}</div>
                             </div>
                             <div class="vacance-item bg-grey">
-                                <div class="vacance-item-title">Инженер-металловед 10 разряда</div>
-                                <div class="vacance-item-subtitle">Лаборатория металлов</div>
+                                <div class="vacance-item-title">{{__('messages.vac3')}}</div>
+                                <div class="vacance-item-subtitle">{{__('messages.dep3')}}</div>
                             </div>
                         </div>
                     </div>

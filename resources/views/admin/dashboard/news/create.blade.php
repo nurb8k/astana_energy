@@ -40,7 +40,7 @@
             <!-- FormValidation -->
             <div class="col-12">
                 <div class="card">
-                    <h5 class="card-header">Форма для создание новости</h5>
+                    <h5 class="card-header">Форма для создания новости</h5>
                     <div class="card-body">
                         <form action="{{route('admin.dashboard.news.store')}}" method="post" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" enctype="multipart/form-data" novalidate="novalidate">
                            @csrf
@@ -69,7 +69,7 @@
                                 <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                             </div>
                             <div class="col-md-6 fv-plugins-icon-container">
-                                <label class="form-label" >Описание на казахском</label>
+                                <label class="form-label" >Описание на русском</label>
                                 <textarea class="form-control" required name="desc_ru" rows="10"></textarea>
                                 <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                             </div>
@@ -80,9 +80,33 @@
 
                             <div class="col-md-12 fv-plugins-icon-container">
                                 <label for="formValidationFile" class="form-label">Фото новости</label>
-                                <input class="form-control" type="file" id="formValidationFile" name="image">
+                                <input class="form-control" type="file" accept="image/png, image/jpeg, image/webp, image/jpg, image/svg" id="formValidationFile" name="image">
                                 <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                             </div>
+
+                            <div class="col-12">
+                                <h6 class="mt-2">4. Фоты новости (на всех языках одинаково)</h6>
+                                <hr class="mt-0">
+                            </div>
+
+                            <div class="verify-sub-box">
+                                <div class="file-loading">
+                                    <input id="multiplefileupload" type="file" accept=".jpg,.gif,.png" multiple>
+                                </div>
+                            </div>
+                            <section class="bg-diffrent">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="verify-sub-box">
+                                                <div class="file-loading">
+                                                    <input id="multiplefileupload" type="file" accept=".jpg,.gif,.png" multiple>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
 
                             <div class="col-md-12 fv-plugins-icon-container">
                                 <label for="formValidationFile" class="form-label">Дата новости</label>
@@ -99,6 +123,26 @@
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+        // ----------multiplefile-upload---------
+        $("#multiplefileupload").fileinput({
+            'theme': 'fa',
+            'uploadUrl': '#',
+            showRemove: false,
+            showUpload: false,
+            showZoom: false,
+            showCaption: false,
+            browseClass: "btn btn-danger",
+            browseLabel: "",
+            browseIcon: "<i class='fa fa-plus'></i>",
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+            fileActionSettings :{
+                showUpload: false,
+                showZoom: false,
+                removeIcon: "<i class='fa fa-times'></i>",
+            }
+        });
 
-
+    </script>
 @endsection

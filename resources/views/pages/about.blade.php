@@ -187,7 +187,7 @@
                                             </li>
                                         </ul>
                                         <a href="{{route('compliance')}}" class="detail-link">
-                                            <span>Перейти</span>
+                                            <span>{{__('messages.open')}}</span>
                                             <img src="{{asset('user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
                                         </a>
                                     </div>

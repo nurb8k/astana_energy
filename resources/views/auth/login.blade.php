@@ -51,10 +51,21 @@
                             <span class="app-brand-text text-body fw-bold">Astana Energy</span>
                         </div>
 
-                        <h4 class="mb-2">Добро пожаловать! 👋</h4>
+
+                        <h4 class="mb-2">Добро пожаловать!</h4>
                         <p class="mb-4">Админ панель доступна исключительно для сотрудников компании
                             и любые попытки несанкционированного доступа
                             будут пресекаться в соответствии с законодательством РК.</p>
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form id="formAuthentication" class="mb-3" action="{{route('login.post')}}" method="POST">
                             @csrf
                             <div class="mb-3">

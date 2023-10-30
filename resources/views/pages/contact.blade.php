@@ -8,8 +8,8 @@
             <div class="contact-inner">
                 <div class="contact-left">
                     <div class="contact-article">
-                        <p class="contact-addr">Акционерное общество «Астана-Энергия»</p>
-                        <p class="contact-description">010000, Республика Казахстан г. Астана, район «Байқоңыр» Промзона ТЭЦ-2</p>
+                        <p class="contact-addr">"Астана-Энергия" акционерлік қоғамы</p>
+                        <p class="contact-description">{{__('messages.address')}}</p>
                     </div>
                     <div class="contact-map">
                         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A82b2bc384cfb703c5aa954b94af4cc58ad92a36df1365e9d77f129d4b7968273&amp;source=constructor" width="400" height="300" frameborder="0"></iframe>
@@ -19,7 +19,7 @@
                     <form class="contact-form">
                         <div class="contact-form-top">
                             <div class="form-group">
-                                <input type="text" placeholder="ФИО">
+                                <input type="text" placeholder="{{__('messages.fio')}}">
                             </div>
                             <div class="form-group">
                                 <input type="phone" placeholder="+7 (___) ___-__-__">
@@ -33,7 +33,7 @@
                             <label class="form-group-file">
                                 <input type="file" style="display: none;">
                                 <img src="{{asset('user/assets/img/icons/upload.svg')}}" alt="Upload icon" class="form-group-file-icon">
-                                <span>Загрузить файл</span>
+                                <span>{{__('messages.upload_file')}}</span>
                             </label>
                             <label class="form-group-upload-label">
                                 Вы можете прикрепить 4 файла, объёмом до 2 Мб

@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Auth;
 
 class Login extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
     public function index()
     {
         return view('auth.login');
@@ -23,14 +27,14 @@ class Login extends Controller
             return redirect()->route('admin.dashboard.index');
         }
 
-        return redirect()->route('login')->with('error', 'Invalid credentials');
+        return redirect()->route('login')->withErrors(['errors'=>'Эти учетные данные не соответствуют нашим записям.']);
     }
 
     public function logout()
     {
         \Auth::logout();
 
-        return redirect(route('/login'));
+        return redirect(route('home'));
     }
 
 }

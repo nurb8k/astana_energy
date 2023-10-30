@@ -50,7 +50,7 @@
 }
 
 .first-slide-left h1 {
-    margin-bottom: 8px;
+    margin-bottom: 25px;
 }
 .first-slide-left p {
     margin-bottom: 25px;
@@ -71,8 +71,8 @@
 }
 
 .director-preview {
-    width: 230px;
-    height: 230px;
+    width: 260px;
+    height: 260px;
     margin-right: 85px;
     border-radius: 20px;
 }
@@ -84,7 +84,7 @@
 }
 
 .director-description p {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 400;
     line-height: 24px;
 }
@@ -505,4 +505,8 @@
 
 .partner-item:not(:last-child) {
     margin-right: 50px;
+}
+
+.news-day-date {
+    text-transform: uppercase;
 }
