@@ -24,7 +24,7 @@
                             <div class="news-item bg-grey">
                                 <div class="news-item-preview" style="background-image: url({{asset('storage/' . $on->image)}});"></div>
                                 <div class="news-item-article">
-                                    <h5 class="news-item-title">{{ Str::limit($on->title_ru, 40, '...') }}</h5>
+                                    <h5 class="news-item-title">{{ Str::limit($on->title, 50, '...') }}</h5>
                                     <div class="news-item-date">{{ $on->publish }} г</div>
                                     <a href="{{route('news.show',$on->id)}}" class="detail-link">
                                         <span>{{__('messages.open')}}</span>
