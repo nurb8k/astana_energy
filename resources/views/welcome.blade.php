@@ -213,10 +213,10 @@
                 <div class="partner-inner">
                     <h3 class="text-blue">{{__('messages.our_par')}}</h3>
                     <div class="partner-list">
-                        <a href="#" class="partner-item">
+                        <a href="https://astrec.kz/ru" class="partner-item">
                             <img src="{{asset('user/assets/img/partner-1.svg')}}" alt="Partner icon" class="partner-item-logo">
                         </a>
-                        <a href="#" class="partner-item">
+                        <a href="https://a-tranzit.kz/" class="partner-item">
                             <img src="{{asset('user/assets/img/partner-2.svg')}}" alt="Partner icon" class="partner-item-logo">
                         </a>
                     </div>
