@@ -26,8 +26,8 @@
                     Бес бұрышты жұлдызша Елтаңбаны тәж етеді. Әр адамның өз, жетекші жұлдызы бар. Мұндай жұлдыз мемлекетте болуы керек.<br>
                     Қазақстан Республикасының Мемлекеттік елтаңбасының авторлары сәулетшілер Шота Уәлиханов пен Жандарбек Мәлібеков болып табылады.</p>
                 <p class="text-center">ҚАЗАҚСТАН РЕСПУБЛИКАСЫНЫҢ МЕМЛЕКЕТТІК ӘНҰРАНЫ</p>
-                <p >Авторы слов:<strong> Жұмекен Нажимеденов, Нұрсұлтан Назарбаев</strong></p>
-                <p >Автор музыки:<strong> Шәмші Қалдаяқов</strong></p>
+                <p >Сөз авторлары:<strong> Жұмекен Нажимеденов, Нұрсұлтан Назарбаев</strong></p>
+                <p >Музыка авторы:<strong> Шәмші Қалдаяқов</strong></p>
                 <p align="center" style="text-align:center; margin:0cm 0cm 10pt"><span style="font-size:11pt"><span style="line-height:normal"><span style="font-family:Calibri,sans-serif;sans-serif&quot;"><span style="font-size:12.0pt"><span style="font-family:Times New Roman,sans-serif;;,&quot;serif&quot;">Алтын күн аспаны,&nbsp;<br>
 Алтын дән даласы,<br>
 Ерліктің дастаны,<br>
