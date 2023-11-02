@@ -493,7 +493,7 @@
                             <div class="docs">
                                 <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                                 <div class="docs__property">
-                                    <a class="docs__title" href="{{asset('user/assets/files/reports/реж карта 2022-2023.pdf')}}">Режимная карта 2022-2023</a>
+                                    <a class="docs__title" href="{{asset('user/assets/files/reports/реж карта 2022-2023.pdf')}}">{{__('messages.rep_map')}} 2022-2023</a>
                                     <p class="docs__file-text">PDF (440 KB)</p>
                                 </div>
                             </div>
