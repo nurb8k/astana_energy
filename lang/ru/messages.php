@@ -75,5 +75,8 @@ return [
 
     'published' => 'Опубликовано',
     'more' => 'Подробнее',
+
+    'pagination.next' => 'Следующий',
+    'pagination.previous' => 'Предудущий',
 ];
 ?>

@@ -99,7 +99,8 @@
     </div>
 </header>
 
-@yield('content')
+
+{{ $slot }}
 
 <footer class="footer">
     <div class="container">

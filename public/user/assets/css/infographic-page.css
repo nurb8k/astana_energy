@@ -131,7 +131,10 @@
     display: flex;
     align-items: center;
 }
-
+.disabled {
+    pointer-events: none;
+    filter: grayscale(100%);
+}
 .pagination-item {
     width: 30px;
     height: 30px;

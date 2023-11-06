@@ -70,5 +70,7 @@ return [
 
     'published' => 'Жарияланды',
     'more' => 'Толығырақ',
+    'pagination.next' => 'Келесі',
+    'pagination.previous' => 'Алдыңғы',
 ];
 ?>

@@ -59,7 +59,7 @@
                         <div class="graphic-list-row">
                             <div class="graphic-list-item">
                                 <div class="graphic-date">
-                                    31.10.2023
+                                    07.11.2023
                                 </div>
                             </div>
                             <div class="graphic-list-item">

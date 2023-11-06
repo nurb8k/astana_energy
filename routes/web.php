@@ -6,7 +6,7 @@ use \App\Http\Controllers\Admin\DashboardController;
 use \App\Http\Controllers\NewsController;
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\LanguageController;
-use App\Livewire\Counter;
+use App\Livewire\InfographicComponent;
 
 
 /*
@@ -20,7 +20,8 @@ use App\Livewire\Counter;
 |
 */
 
-Route::get('/counter', Counter::class);
+# Livewire components
+Route::get('/infographic', InfographicComponent::class)->name('infographic');;
 
 Route::post('locale',[LanguageController::class,'switch'])->name('lang.switch');
 
@@ -75,9 +76,7 @@ Route::get('/rules',function (){
     return view('pages.documentation.rules');
 })->name('rules');
 
-Route::get('/infographic',function (){
-    return view('pages.infographic');
-})->name('infographic');
+
 
 Route::get('/news',[NewsController::class,'index'])->name('news.index');
 Route::get('/news/{id}',[NewsController::class,'show'])->name('news.show');

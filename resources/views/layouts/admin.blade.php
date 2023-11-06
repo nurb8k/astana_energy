@@ -219,6 +219,7 @@
                 </div>
             @endif
             @yield('content')
+            {{ $slot }}
             <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->
