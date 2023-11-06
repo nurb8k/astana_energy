@@ -25,8 +25,8 @@
 
     /*Слайд*/
     .slider-content__item {
-        flex: 1 0 580px;
-        width: 580px;
+        flex: 1 0 590px;
+        width: 590px;
         height: 100%;
         background-repeat: no-repeat;
         background-position: center;
