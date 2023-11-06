@@ -21,7 +21,7 @@ use App\Livewire\InfographicComponent;
 */
 
 # Livewire components
-Route::get('/infographic', InfographicComponent::class)->name('infographic');;
+Route::get('/infographic', InfographicCompofnent::class)->name('infographic');;
 
 Route::post('locale',[LanguageController::class,'switch'])->name('lang.switch');
 

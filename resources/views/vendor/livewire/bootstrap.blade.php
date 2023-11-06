@@ -46,11 +46,8 @@ $scrollIntoViewJsSnippet = ($scrollTo !== false)
                             <div class="pagination-item active" wire:key="paginator-{{ $paginator->getPageName() }}-page-{{ $page }}" aria-current="page">
                                 {{ $page }}
                             </div>
-
                             @else
-
 {{--                            <li class="page-item" wire:key="paginator-{{ $paginator->getPageName() }}-page-{{ $page }}"><button type="button" class="page-link" wire:click="gotoPage({{ $page }}, '{{ $paginator->getPageName() }}')" x-on:click="{{ $scrollIntoViewJsSnippet }}">{{ $page }}</button></li>--}}
-
                             <div class="pagination-item" wire:key="paginator-{{ $paginator->getPageName() }}-page-{{ $page }}" wire:click="gotoPage({{ $page }}, '{{ $paginator->getPageName() }}')" x-on:click="{{ $scrollIntoViewJsSnippet }}">
                                 {{ $page }}
                             </div>
@@ -58,13 +55,11 @@ $scrollIntoViewJsSnippet = ($scrollTo !== false)
                         @endforeach
                     @endif
                 @endforeach
-
                 {{-- Next Page Link --}}
                 @if ($paginator->hasMorePages())
 {{--                    <li class="page-item">--}}
 {{--                        <button type="button" dusk="nextPage{{ $paginator->getPageName() == 'page' ? '' : '.' . $paginator->getPageName() }}" class="page-link" wire:click="nextPage('{{ $paginator->getPageName() }}')" x-on:click="{{ $scrollIntoViewJsSnippet }}" wire:loading.attr="disabled" rel="next" aria-label="@lang('pagination.next')">&rsaquo;</button>--}}
 {{--                    </li>--}}
-
                 <div dusk="nextPage{{ $paginator->getPageName() == 'page' ? '' : '.' . $paginator->getPageName() }}" class="pagination-item pagination-item-next" wire:click="nextPage('{{ $paginator->getPageName() }}')" x-on:click="{{ $scrollIntoViewJsSnippet }}" wire:loading.attr="disabled" rel="next" aria-label="@lang('pagination.next')">
                     <img src="{{asset('user/assets/img/icons/next.svg')}}" alt="">
                 </div>
