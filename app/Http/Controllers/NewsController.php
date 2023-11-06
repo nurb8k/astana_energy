@@ -11,7 +11,7 @@ class NewsController extends Controller
     {
         $latest_news = News::latest('time_publish')->first();
         $other_news = News::where('id','!=',$latest_news->id)->take(4)->get();
-        $pop_news = News::where('id','!=',$latest_news->id)->where('is_popular', 1)->get();
+        $pop_news = News::where('is_popular', 1)->get();
         return view('pages.news.index',['latest' => $latest_news,'other_news' => $other_news,'pop_news' => $pop_news]);
     }
 
