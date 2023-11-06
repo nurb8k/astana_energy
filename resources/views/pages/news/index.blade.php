@@ -49,6 +49,30 @@
                 </div>
             </div>
         </section>
+        <section class="news" style="padding-top: 0px">
+            <div class="container-md">
+                <div class="news-inner">
+                    <div class="news-article">
+                        <h3 class="text-blue text-center">{{__('messages.pop_news')}}</h3>
+                    </div>
+                    <div class="news-list">
+                        @foreach($pop_news as $n)
+                            <div class="news-item bg-grey">
+                                <div class="news-item-preview" style="background-image: url({{asset('storage/' . $n->image)}});"></div>
+                                <div class="news-item-article">
+                                    <h5 class="news-item-title">{{$n->title}}</h5>
+                                    <div class="news-item-date">{{ $n->publish }} г</div>
+                                    <a href="{{route('news.show',$n->id)}}" class="detail-link">
+                                        <span>{{__('messages.open')}}</span>
+                                        <img src="{{asset('/user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">
+                                    </a>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 @endsection
