@@ -82,8 +82,6 @@ Route::get('/infographic',function (){
 Route::get('/news',[NewsController::class,'index'])->name('news.index');
 Route::get('/news/{id}',[NewsController::class,'show'])->name('news.show');
 
-
-
 # Admin panels
 Route::get('/admin', [Login::class,'index'])->name('login');
 Route::post('/login', [Login::class, 'create'])->name('login.post');
@@ -92,5 +90,6 @@ Route::post('/logout', [Login::class, 'logout'])->name('logout');
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/create-news',[NewsController::class,'create'])->name('dashboard.news.index');
+    Route::get('/list-news',[NewsController::class,'list'])->name('dashboard.news.list');
     Route::post('/create-news-post',[NewsController::class,'store'])->name('dashboard.news.store');
 });

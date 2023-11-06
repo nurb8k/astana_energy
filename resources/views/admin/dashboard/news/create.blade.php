@@ -3,41 +3,10 @@
 @section('content')
 
     <div class="container-xxl flex-grow-1 container-p-y">
-
-        <style>
-            [type="date"] {
-                background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
-            }
-            [type="date"]::-webkit-inner-spin-button {
-                display: none;
-            }
-            [type="date"]::-webkit-calendar-picker-indicator {
-                opacity: 0;
-            }
-
-            /* custom styles */
-            body {
-                padding: 4em;
-                background: #e5e5e5;
-                font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
-            }
-            label {
-                display: block;
-            }
-            input {
-                border: 1px solid #c4c4c4;
-                border-radius: 5px;
-                background-color: #fff;
-                padding: 3px 5px;
-                box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
-                width: 190px;
-            }
-        </style>
         <h4 class="py-3 mb-4">
             <span class="text-muted fw-light">Новости /</span> Добавить новости
         </h4>
         <div class="row">
-            <!-- FormValidation -->
             <div class="col-12">
                 <div class="card">
                     <h5 class="card-header">Форма для создания новости</h5>
@@ -88,29 +57,9 @@
                                 <h6 class="mt-2">4. Фоты новости (на всех языках одинаково)</h6>
                                 <hr class="mt-0">
                             </div>
-
-                            <div class="verify-sub-box">
-                                <div class="file-loading">
-                                    <input id="multiplefileupload" type="file" accept=".jpg,.gif,.png" multiple>
-                                </div>
-                            </div>
-                            <section class="bg-diffrent">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="verify-sub-box">
-                                                <div class="file-loading">
-                                                    <input id="multiplefileupload" type="file" accept=".jpg,.gif,.png" multiple>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
                             <div class="col-md-12 fv-plugins-icon-container">
                                 <label for="formValidationFile" class="form-label">Дата новости</label>
-                                <input type="date" class="input" name="time_publish" id="dateofbirth">
+                                <input type="date" class="input form-control" name="time_publish" id="dateofbirth">
                                 <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                             </div>
                             <div class="col-12">

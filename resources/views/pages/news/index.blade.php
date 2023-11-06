@@ -189,7 +189,6 @@
                         <div id="slider" class="slider">
                             <div class="slider-content">
                                 <div class="slider-content-wrapper">
-
                                     @foreach($pop_news as $n)
                                         <div class="slider-content__item news-item">
                                             <div class="news-item bg-grey" style="width: 100%;height: 200px">
