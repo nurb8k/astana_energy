@@ -115,8 +115,8 @@
                             </a>
                         </li>
                         <li class="menu-item active">
-                            <a href="{{route('admin.dashboard.news.index')}}" class="menu-link">
-                                <div data-i18n="Analytics">Список новости</div>
+                            <a href="{{route('admin.dashboard.infographic.create')}}" class="menu-link">
+                                <div data-i18n="Analytics">Инфографика</div>
                             </a>
                         </li>
                     </ul>
@@ -219,7 +219,7 @@
                 </div>
             @endif
             @yield('content')
-            {{ $slot }}
+
             <!-- Content wrapper -->
         </div>
         <!-- / Layout page -->

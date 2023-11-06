@@ -5,6 +5,7 @@ use \App\Http\Controllers\Auth\Login;
 use \App\Http\Controllers\Admin\DashboardController;
 use \App\Http\Controllers\NewsController;
 use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\InfographicController;
 use \App\Http\Controllers\LanguageController;
 use App\Livewire\InfographicComponent;
 
@@ -21,7 +22,7 @@ use App\Livewire\InfographicComponent;
 */
 
 # Livewire components
-Route::get('/infographic', InfographicCompofnent::class)->name('infographic');;
+Route::get('/infographic', InfographicComponent::class)->name('infographic');;
 
 Route::post('locale',[LanguageController::class,'switch'])->name('lang.switch');
 
@@ -89,6 +90,8 @@ Route::post('/logout', [Login::class, 'logout'])->name('logout');
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/create-news',[NewsController::class,'create'])->name('dashboard.news.index');
+    Route::get('/infographic',[InfographicController::class,'create'])->name('dashboard.infographic.create');
+    Route::post('/infographic-store',[InfographicController::class,'store'])->name('dashboard.infographic.store');
     Route::get('/list-news',[NewsController::class,'list'])->name('dashboard.news.list');
     Route::post('/create-news-post',[NewsController::class,'store'])->name('dashboard.news.store');
 });
