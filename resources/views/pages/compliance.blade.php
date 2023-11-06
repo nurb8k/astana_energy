@@ -94,38 +94,36 @@
                     <div class="docs">
                         <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/politic.docx')}}">СЫБАЙЛАС ЖЕМҚОРЛЫҚҚА ҚАРСЫ САЯСАТ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/anticor1.docx')}}">ПОЛИТИКА ПРОТИВОДЕЙСТВИЯ КОРРУПЦИИ</a>
                             <p class="docs__file-text">DOCX (178 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/plan.docx')}}">
-                                ПОЛИТИКА ПРОТИВОДЕЙСТВИЯ КОРРУПЦИИ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp2.docx')}}">
+                                ПЛАН МЕРОПРИЯТИЙ ПО ПРОТИВОДЕЙСТВИЮ КОРРУПЦИИ</a>
                             <p class="docs__file-text">DOCX (182 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/politic.docx')}}">
-                                ПЛАН МЕРОПРИЯТИЙ ПО ПРОТИВОДЕЙСТВИЮ КОРРУПЦИИ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp3.docx')}}">ПРАВИЛА УРЕГУЛИРОВАНИЯ КОНФЛИКТА</a>
                             <p class="docs__file-text">DOCX (158 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/rules1.docx')}}">
-                                ПРАВИЛА УРЕГУЛИРОВАНИЯ КОНФЛИКТА</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp4.docx')}}">ПРАВИЛА ПРОВЕДЕНИЯ ВНУТРЕННЕГО АНАЛИЗА КОРРУПЦИОННЫХ РИСКОВ</a>
                             <p class="docs__file-text">DOCX (278 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/polozheniye.pdf')}}">ПРАВИЛА ПРОВЕДЕНИЯ ВНУТРЕННЕГО АНАЛИЗА КОРРУПЦИОННЫХ РИСКОВ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp5.pdf')}}">ПОЛОЖЕНИЕ О КОМПЛАЕНС-ОФИЦЕРЕ АО "АСТАНА-ЭНЕРГИЯ"</a>
                             <p class="docs__file-text">PDF (423 KB)</p>
                         </div>
                     </div>
@@ -133,14 +131,15 @@
                     <div class="docs">
                         <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/codex1.pdf')}}">ПОЛОЖЕНИЕ О КОМПЛАЕНС-ОФИЦЕРЕ АО "АСТАНА-ЭНЕРГИЯ"</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp6.pdf')}}">
+                                КОДЕКС ДЕЛОВОЙ ЭТИКИ</a>
                             <p class="docs__file-text">PDF (478 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/planmt3.pdf')}}">КОДЕКС ДЕЛОВОЙ ЭТИКИ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/vakr.pdf')}}">ПЛАН МЕРОПРИЯТИЙ ВАКР</a>
                             <p class="docs__file-text">PDF (538 KB)</p>
                         </div>
                     </div>
@@ -148,9 +147,16 @@
                     <div class="docs">
                         <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/prp3.pdf')}}">
-                                ПРОТОКОЛ СОВЕЩАНИЯ ОТ 29.06.2023</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/290623.pdf')}}">ПРОТОКОЛ СОВЕЩАНИЯ ОТ 29.06.2023</a>
                             <p class="docs__file-text">PDF (456 KB)</p>
+                        </div>
+                    </div>
+
+                    <div class="docs">
+                        <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
+                        <div class="docs__property">
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/analis.docx')}}">АНАЛИТИЧЕСКАЯ СПРАВКА</a>
+                            <p class="docs__file-text">DOCX (178 KB)</p>
                         </div>
                     </div>
                 </div>
@@ -160,35 +166,36 @@
                     <div class="docs">
                         <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/politic.docx')}}">СЫБАЙЛАС ЖЕМҚОРЛЫҚҚА ҚАРСЫ САЯСАТ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/anticor1.docx')}}">СЫБАЙЛАС ЖЕМҚОРЛЫҚҚА ҚАРСЫ САЯСАТ</a>
                             <p class="docs__file-text">DOCX (178 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/plan.docx')}}">СЫБАЙЛАС ЖЕМҚОРЛЫҚҚА ҚАРСЫ ІС-ШАРАЛАР ЖОСПАРЫ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp2.docx')}}">СЫБАЙЛАС ЖЕМҚОРЛЫҚҚА ҚАРСЫ ІС-ШАРАЛАР ЖОСПАРЫ</a>
                             <p class="docs__file-text">DOCX (182 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/politic.docx')}}">ЖАНЖАЛДЫ РЕТТЕУ ЕРЕЖЕЛЕРІ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp3.docx')}}">ЖАНЖАЛДЫ РЕТТЕУ ЕРЕЖЕЛЕРІ</a>
                             <p class="docs__file-text">DOCX (158 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/rules1.docx')}}">СЫБАЙЛАС ЖЕМҚОРЛЫҚ ТӘУЕКЕЛДЕРІНЕ ІШКІ ТАЛДАУ ЖҮРГІЗУ ҚАҒИДАЛАРЫ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp4.docx')}}">СЫБАЙЛАС ЖЕМҚОРЛЫҚ ТӘУЕКЕЛДЕРІНЕ ІШКІ ТАЛДАУ ЖҮРГІЗУ ҚАҒИДАЛАРЫ</a>
                             <p class="docs__file-text">DOCX (278 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/polozheniye.pdf')}}">"АСТАНА-ЭНЕРГИЯ"АҚ КОМПЛАЕНС-ОФИЦЕРІ ТУРАЛЫ ЕРЕЖЕ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp5.pdf')}}">
+                                "АСТАНА-ЭНЕРГИЯ"АҚ КОМПЛАЕНС-ОФИЦЕРІ ТУРАЛЫ ЕРЕЖЕ</a>
                             <p class="docs__file-text">PDF (423 KB)</p>
                         </div>
                     </div>
@@ -196,14 +203,14 @@
                     <div class="docs">
                         <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/codex1.pdf')}}">ІСКЕРЛІК ЭТИКА КОДЕКСІ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/comp6.pdf')}}">ІСКЕРЛІК ЭТИКА КОДЕКСІ</a>
                             <p class="docs__file-text">PDF (478 KB)</p>
                         </div>
                     </div>
                     <div class="docs">
                         <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/planmt3.pdf')}}"> ІС-ШАРАЛАР ЖОСПАРЫ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/vakr.pdf')}}"> ІС-ШАРАЛАР ЖОСПАРЫ</a>
                             <p class="docs__file-text">PDF (538 KB)</p>
                         </div>
                     </div>
@@ -211,8 +218,15 @@
                     <div class="docs">
                         <img src="{{asset('user/assets/img/icons/pdf.jpg')}}" style="width: 26px;height: 26px">
                         <div class="docs__property">
-                            <a class="docs__title" href="{{asset('user/assets/files/prp3.pdf')}}"> КЕҢЕСТІҢ 29.06.2023 ЖЫЛҒЫ ХАТТАМАСЫ</a>
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/290623.pdf')}}">КЕҢЕСТІҢ 29.06.2023 ЖЫЛҒЫ ХАТТАМАСЫ</a>
                             <p class="docs__file-text">PDF (456 KB)</p>
+                        </div>
+                    </div>
+                    <div class="docs">
+                        <img src="{{asset('user/assets/img/docx.png')}}" style="width: 26px;height: 26px">
+                        <div class="docs__property">
+                            <a class="docs__title" href="{{asset('user/assets/files/compliance/ru/analis.docx')}}"> ТАЛДАМАЛЫҚ АНЫҚТАМА</a>
+                            <p class="docs__file-text">DOCX (178 KB)</p>
                         </div>
                     </div>
                 </div>
