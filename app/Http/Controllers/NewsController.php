@@ -51,7 +51,7 @@ class NewsController extends Controller
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('admin.dashboard.news.index')->with('success', 'News item created successfully');
+        return redirect()->route('admin.dashboard.news.index')->with('success', 'Новости успешно добавлен');
     }
 
 
