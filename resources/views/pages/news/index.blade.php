@@ -46,11 +46,11 @@
 
     /* Блок с контролами внутри окна */
     .slider-content__controls {
-        position:absolute;
-        top:0;left:0;
-        width: 100%;
-        height: 100%;
-        z-index:1;
+        /*position:absolute;*/
+        /*top:0;left:0;*/
+        /*width: 100%;*/
+        /*height: 100%;*/
+        /*z-index:1;*/
         /*transform: translateY(-50%);*/
         /*padding:0 15px;*/
     }
@@ -192,10 +192,10 @@
 
                                     @foreach($pop_news as $n)
                                         <div class="slider-content__item news-item">
-                                            <div class="news-item bg-grey" style="width: 100%">
+                                            <div class="news-item bg-grey" style="width: 100%;height: 200px">
                                                 <div class="news-item-preview" style="background-image: url({{asset('storage/' . $n->image)}});height:140px;"></div>
                                                 <div class="news-item-article">
-                                                    <h5 class="news-item-title">{{$n->title}}</h5>
+                                                    <h5 class="news-item-title">{{ Str::limit($n->title, 25, '...') }}</h5>
                                                     <div class="news-item-date">{{ $n->publish }} г</div>
                                                     <a href="{{route('news.show',$n->id)}}" class="detail-link">
                                                         <span>{{__('messages.open')}}</span>
@@ -208,19 +208,7 @@
                                 </div>
                             </div>
                         </div>
-{{--                        @foreach($pop_news as $n)--}}
-{{--                            <div class="news-item bg-grey">--}}
-{{--                                <div class="news-item-preview" style="background-image: url({{asset('storage/' . $n->image)}});"></div>--}}
-{{--                                <div class="news-item-article">--}}
-{{--                                    <h5 class="news-item-title">{{$n->title}}</h5>--}}
-{{--                                    <div class="news-item-date">{{ $n->publish }} г</div>--}}
-{{--                                    <a href="{{route('news.show',$n->id)}}" class="detail-link">--}}
-{{--                                        <span>{{__('messages.open')}}</span>--}}
-{{--                                        <img src="{{asset('/user/assets/img/icons/right-arrow.svg')}}" alt="News link icon" class="detail-link-icon">--}}
-{{--                                    </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        @endforeach--}}
+
                     </div>
                 </div>
             </div>
