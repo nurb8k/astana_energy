@@ -1,16 +1,13 @@
 <div>
-
     <main>
         <section class="graphic">
             <div class="container-md">
                 <div class="graphic-inner">
                     <div class="graphic-top">
                         <h5 class="graphic-top-title">Информация по отпуску <br> электрической энергии</h5>
-                        <label class="calendar-input bd-primary">
-                            <input type="date" style="display: none;">
-                            <span>По дате</span>
-                            <img src="{{asset('user/assets/img/icons/calendar.svg')}}" alt="calendar icon">
-                        </label>
+                        <form action="">
+                        <input wire:model.live="date" type="date" style="background:#fff url({{asset('user/assets/img/icons/calendar.svg')}})  85% 50% no-repeat ;" class="calendar-input bd-primary" name="date" id="date">
+                        </form>
                     </div>
                     <div class="graphic-list">
                         <div class="graphic-list-header bg-grey">
@@ -76,26 +73,9 @@
                         </div>
                     </div>
                     {{ $data->links() }}
-{{--                    <div class="pagination">--}}
-
-{{--                        <div class="pagination-item pagination-item-prev">--}}
-{{--                            <img src="{{asset('user/assets/img/icons/prev.svg')}}" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="pagination-item active">--}}
-{{--                            1--}}
-{{--                        </div>--}}
-{{--                        <div class="pagination-item">--}}
-{{--                            2--}}
-{{--                        </div>--}}
-{{--                        <div class="pagination-item">--}}
-{{--                            3--}}
-{{--                        </div>--}}
-{{--                        <div class="pagination-item pagination-item-next">--}}
-{{--                            <img src="{{asset('user/assets/img/icons/next.svg')}}" alt="">--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
                 </div>
             </div>
         </section>
     </main>
+
 </div>
