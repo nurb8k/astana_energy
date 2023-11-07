@@ -56,10 +56,6 @@
                                 <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                             </div>
 
-                            <div class="col-12">
-                                <h6 class="mt-2">4. Фоты новости (на всех языках одинаково)</h6>
-                                <hr class="mt-0">
-                            </div>
                             <div class="col-md-12 fv-plugins-icon-container">
                                 <label for="formValidationFile" class="form-label">Дата новости</label>
                                 <input type="date" class="input form-control" name="time_publish" id="dateofbirth">
