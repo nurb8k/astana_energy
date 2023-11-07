@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
     <script src="https://cdn.tiny.cloud/1/xis0mu4j2hn3400rjuju6oa431eum7in53zvdivpu6l5qp8z/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/buffer.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/filetype.min.js" type="text/javascript"></script>
 
@@ -112,7 +111,7 @@
                     <ul class="menu-sub">
                         <li class="menu-item active">
                             <a href="{{route('admin.dashboard.news.index')}}" class="menu-link">
-                                <div data-i18n="Analytics">Добавить новости</div>
+                                <div data-i18n="Analytics">Новости</div>
                             </a>
                         </li>
                         <li class="menu-item active">
