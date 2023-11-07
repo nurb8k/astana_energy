@@ -78,5 +78,6 @@ return [
 
     'pagination.next' => 'Следующий',
     'pagination.previous' => 'Предудущий',
+    'show.more' => 'Показать еще',
 ];
 ?>

@@ -267,7 +267,7 @@
 
 .news-list {
     display: flex;
-    /*margin-bottom: 45px;*/
+    margin-bottom: 45px;
 }
 
 .news-list-left,

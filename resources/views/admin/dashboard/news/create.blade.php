@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('title', 'Новости')
 @section('content')
-
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="py-3 mb-4">
             <span class="text-muted fw-light">Новости /</span> Добавить новости
@@ -36,15 +35,14 @@
                                 <h6 class="mt-2">2. Описание новости (текст новости)</h6>
                                 <hr class="mt-0">
                             </div>
-
                             <div class="col-md-6 fv-plugins-icon-container">
                                 <label class="form-label" >Описание на казахском</label>
-                                <textarea class="form-control"  required name="desc_kz" rows="10"></textarea>
+                                <textarea id="mytextarea" class="form-control mytextarea" required name="desc_kz" rows="20" ></textarea>
                                 <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                             </div>
                             <div class="col-md-6 fv-plugins-icon-container">
                                 <label class="form-label" >Описание на русском</label>
-                                <textarea class="form-control" required name="desc_ru" rows="10"></textarea>
+                                <textarea class="form-control" required name="desc_ru" rows="20"></textarea>
                                 <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                             </div>
                             <div class="col-12">
@@ -76,27 +74,18 @@
             </div>
         </div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-        // ----------multiplefile-upload---------
-        $("#multiplefileupload").fileinput({
-            'theme': 'fa',
-            'uploadUrl': '#',
-            showRemove: false,
-            showUpload: false,
-            showZoom: false,
-            showCaption: false,
-            browseClass: "btn btn-danger",
-            browseLabel: "",
-            browseIcon: "<i class='fa fa-plus'></i>",
-            overwriteInitial: false,
-            initialPreviewAsData: true,
-            fileActionSettings :{
-                showUpload: false,
-                showZoom: false,
-                removeIcon: "<i class='fa fa-times'></i>",
-            }
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+                { value: 'First.Name', title: 'First Name' },
+                { value: 'Email', title: 'Email' },
+            ],
+            ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
         });
-
     </script>
 @endsection

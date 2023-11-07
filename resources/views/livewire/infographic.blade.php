@@ -5,9 +5,7 @@
                 <div class="graphic-inner">
                     <div class="graphic-top">
                         <h5 class="graphic-top-title">Информация по отпуску <br> электрической энергии</h5>
-                        <form action="">
                         <input wire:model.live="date" type="date" style="background:#fff url({{asset('user/assets/img/icons/calendar.svg')}})  85% 50% no-repeat ;" class="calendar-input bd-primary" name="date" id="date">
-                        </form>
                     </div>
                     <div class="graphic-list">
                         <div class="graphic-list-header bg-grey">

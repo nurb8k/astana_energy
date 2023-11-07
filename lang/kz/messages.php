@@ -72,5 +72,6 @@ return [
     'more' => 'Толығырақ',
     'pagination.next' => 'Келесі',
     'pagination.previous' => 'Алдыңғы',
+    'show.more' => 'Тағы көрсету',
 ];
 ?>
