@@ -109,16 +109,20 @@
                         <div data-i18n="Dashboards">Менеджер материалов</div>
                     </a>
                     <ul class="menu-sub">
-                        <li class="menu-item active">
-                            <a href="{{route('admin.dashboard.news.index')}}" class="menu-link">
-                                <div data-i18n="Analytics">Новости</div>
-                            </a>
-                        </li>
-                        <li class="menu-item active">
-                            <a href="{{route('admin.dashboard.infographic.create')}}" class="menu-link">
-                                <div data-i18n="Analytics">Инфографика</div>
-                            </a>
-                        </li>
+                        @if( auth()->user()->role_id  == 1)
+                            <li class="menu-item active">
+                                <a href="{{route('admin.dashboard.news.index')}}" class="menu-link">
+                                    <div data-i18n="Analytics">Новости</div>
+                                </a>
+                            </li>
+                        @endif
+                        @if( auth()->user()->role_id  == 2)
+                            <li  class="menu-item active">
+                                <a  href="{{route('admin.dashboard.infographic.create')}}" class="menu-link">
+                                    <div data-i18n="Analytics">Инфографика </div>
+                                </a>
+                            </li>
+                        @endif
                     </ul>
                 </li>
 
