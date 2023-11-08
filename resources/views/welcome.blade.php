@@ -77,7 +77,7 @@
                                             <div class="news-day-params-item-subtitle">{{__('messages.output')}}</div>
                                             <div class="news-day-params-item-title">
                                                 <div class="news-day-params-item-title-num" data-animate>
-                                                    8424
+                                                    {{$lastInfo->output}}
                                                 </div>
                                                 <div class="news-day-params-item-title-unit">{{__('messages.perHour')}}</div>
                                             </div>
@@ -86,7 +86,7 @@
                                             <div class="news-day-params-item-subtitle">{{__('messages.zakontrak')}}</div>
                                             <div class="news-day-params-item-title">
                                                 <div class="news-day-params-item-title-num" data-animate>
-                                                    8424
+                                                    {{$lastInfo->contacted}}
                                                 </div>
                                                 <div class="news-day-params-item-title-unit">{{__('messages.perHour')}}</div>
                                             </div>
