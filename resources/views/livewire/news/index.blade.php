@@ -52,7 +52,7 @@
                         @endif
                         @foreach($other_news as $n)
                             <div class="news-item bg-grey">
-                                <div class="news-item-preview" style="background-image: url({{asset('storage/' . $n->image)}}); "></div>
+                                <div class="news-item-preview" style=" background-image: @if(!empty($n->image))  url({{asset('storage/' . $n->image)}}); @else  url({{asset('user/assets/img/news-default.jpg')}}) @endif"></div>
                                 <div class="news-item-article">
                                     <h5 class="news-item-title">{{$n->title}}</h5>
                                     <div class="news-item-date">{{ $n->publish }} г</div>
@@ -83,7 +83,7 @@
                                     @foreach($pop_news as $n)
                                         <div class="slider-content__item news-item">
                                             <div class="news-item bg-grey" style="width: 100%; height: 200px;">
-                                                <div class="news-item-preview" style="background-image: url({{asset('storage/' . $n->image)}});height:140px;"></div>
+                                                <div class="news-item-preview" style="background-image: @if(!empty($n->image))  url({{asset('storage/' . $n->image)}}); @else  url({{asset('user/assets/img/news-default.jpg')}}) @endif"></div>
                                                 <div class="news-item-article">
                                                     <h5 class="news-item-title">{{ Str::limit($n->title, 25, '...') }}</h5>
                                                     <div class="news-item-date">{{ $n->publish }} г</div>
