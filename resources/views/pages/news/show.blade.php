@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 @endif
-                @if(is_null($news->image))
+                @if(!is_null($news->image))
                     <div class="item-center">
                         <img class="news-img" src="{{asset('storage/' . $news->image)}}" alt="news img">
                     </div>
