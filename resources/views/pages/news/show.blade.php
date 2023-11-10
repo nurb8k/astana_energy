@@ -32,7 +32,7 @@
                         <img class="news-img" src="{{asset('storage/' . $news->image)}}" alt="news img">
                     </div>
                 @endif
-                <p class="news-text">{!! $news->desc !!}</p>
+                <div class="news-text">{!! $news->desc !!}</div>
             </div>
         </section>
         <section class="news">
