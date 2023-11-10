@@ -3,33 +3,23 @@
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="py-3 mb-4">
-            <span class="text-muted fw-light">Новости /</span> Список новости
+            <span class="text-muted fw-light">Менеджер новости /</span> Список новости
         </h4>
+        @if(session('success'))
+            <div class="btn btn-success">
+                Новости успешно добавлен
+            </div>
+        @endif
         <div class="row">
-
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        @livewire('news-list-component')
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-        // ----------multiplefile-upload---------
-        $("#multiplefileupload").fileinput({
-            'theme': 'fa',
-            'uploadUrl': '#',
-            showRemove: false,
-            showUpload: false,
-            showZoom: false,
-            showCaption: false,
-            browseClass: "btn btn-danger",
-            browseLabel: "",
-            browseIcon: "<i class='fa fa-plus'></i>",
-            overwriteInitial: false,
-            initialPreviewAsData: true,
-            fileActionSettings :{
-                showUpload: false,
-                showZoom: false,
-                removeIcon: "<i class='fa fa-times'></i>",
-            }
-        });
 
-    </script>
 @endsection

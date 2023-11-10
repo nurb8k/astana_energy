@@ -91,7 +91,7 @@
                   </g>
                 </svg>
               </span>
-                    <span class="app-brand-text demo menu-text fw-bold ms-2">ae admin</span>
+                    <span class="app-brand-text demo menu-text fw-bold ms-2">AE Admin</span>
                 </a>
 
                 <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -103,28 +103,41 @@
 
             <ul class="menu-inner py-1">
                 <!-- Dashboards -->
+                @if( auth()->user()->role_id  == 3)
                 <li class="menu-item active open">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Dashboards">Менеджер материалов</div>
+                        <div data-i18n="Dashboards">Менеджер новостей</div>
                     </a>
                     <ul class="menu-sub">
-                        @if( auth()->user()->role_id  == 1)
-                            <li class="menu-item active">
-                                <a href="{{route('admin.dashboard.news.index')}}" class="menu-link">
-                                    <div data-i18n="Analytics">Новости</div>
-                                </a>
-                            </li>
-                        @endif
-                        @if( auth()->user()->role_id  == 2)
-                            <li  class="menu-item active">
-                                <a  href="{{route('admin.dashboard.infographic.create')}}" class="menu-link">
-                                    <div data-i18n="Analytics">Инфографика </div>
-                                </a>
-                            </li>
-                        @endif
+                        <li class="menu-item {{ \Request::route()->getName() == 'admin.news.news.index' ? 'active' : ''}}">
+                            <a href="{{route('admin.news.index')}}" class="menu-link">
+                                <div data-i18n="Analytics">Добавить новость</div>
+                            </a>
+                        </li>
+                        <li class="menu-item {{ \Request::route()->getName() == 'admin.news.news.list' ? 'active' : ''}}">
+                            <a href="{{route('admin.news.list')}}" class="menu-link">
+                                <div data-i18n="Analytics">Список новостей</div>
+                            </a>
+                        </li>
                     </ul>
                 </li>
+                @endif
+                @if( auth()->user()->role_id  == 3)
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                        <div data-i18n="Dashboards">Менеджер инфографики</div>
+                    </a>
+                    <ul class="menu-sub">
+                        <li  class="menu-item {{ \Request::route()->getName() == 'admin.infographic.create' ? 'active' : ''}}">
+                            <a  href="{{route('admin.infographic.create')}}" class="menu-link">
+                                <div data-i18n="Analytics">Инфографика </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                @endif
 
                 <li class="menu-header small text-uppercase">
                     <span class="menu-header-text">Управления кодами</span>

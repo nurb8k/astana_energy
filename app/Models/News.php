@@ -34,4 +34,12 @@ class News extends Model
 
       return  \Carbon\Carbon::parse($this->time_publish)->locale($locale)->isoFormat('D MMMM YYYY');
     }
+
+    public function tags()
+    {
+         return $this->belongsToMany(Tag::class,'news_tags');
+    }
+
+
+
 }

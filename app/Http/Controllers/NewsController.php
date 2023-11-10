@@ -17,8 +17,7 @@ class NewsController extends Controller
 
     public function list()
     {
-//        $news = News::latest('time_publish')->paginate(10);
-//        return view('admin.dashboard.news.index', compact('news'));
+        return view('admin.dashboard.news.list');
     }
 
     public function create()

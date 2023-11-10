@@ -103,17 +103,7 @@
 
                             <div class="swiper-slide managment-slider-item">
                                 <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/seo-6.jpeg')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Аскарбеков Уалихан Дайрашевич</h4>
-                                    <p>Директор ТЭЦ-2</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/avatar.jpg')}}" alt="">
+                                    <img src="{{asset('user/assets/img/dir_tec_1.jpeg')}}" alt="">
                                 </div>
                                 <div class="managment-slider-item-article">
                                     <h4>Султанбеков Нурлан Сарсенбекович</h4>
@@ -123,10 +113,22 @@
 
                             <div class="swiper-slide managment-slider-item">
                                 <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/direc3.jpeg')}}" alt="">
+                                    <img src="{{asset('user/assets/img/seo-6.jpeg')}}" alt="">
                                 </div>
                                 <div class="managment-slider-item-article">
-                                    <h4>Селезнев Константин Александрович</h4>
+                                    <h4>Аскарбеков Уалихан Дайрашевич</h4>
+                                    <p>Директор ТЭЦ-2</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="swiper-slide managment-slider-item">
+                                <div class="managment-slider-item-preview">
+                                    <img src="{{asset('user/assets/img/dir_tec_3.jpg')}}" alt="">
+                                </div>
+                                <div class="managment-slider-item-article">
+                                    <h4>Есенжолов Еркегалий Темиргалиевич</h4>
                                     <p>Директор ТЭЦ-3</p>
                                 </div>
                             </div>

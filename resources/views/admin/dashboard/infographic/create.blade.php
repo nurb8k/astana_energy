@@ -15,7 +15,7 @@
                                 Инфографика успешно добавлен
                             </div>
                         @endif
-                        <form action="{{route('admin.dashboard.infographic.store')}}" method="post" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" enctype="multipart/form-data" novalidate="novalidate">
+                        <form action="{{route('admin.infographic.store')}}" method="post" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" enctype="multipart/form-data" novalidate="novalidate">
                            @csrf
                             <div class="col-md-6 fv-plugins-icon-container">
                                 <label class="form-label" >Дата</label>

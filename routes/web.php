@@ -89,10 +89,19 @@ Route::post('/login', [Login::class, 'create'])->name('login.post');
 Route::post('/logout', [Login::class, 'logout'])->name('logout');
 
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
+
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-    Route::get('/create-news',[NewsController::class,'create'])->name('dashboard.news.index');
-    Route::get('/infographic',[InfographicController::class,'create'])->name('dashboard.infographic.create');
-    Route::post('/infographic-store',[InfographicController::class,'store'])->name('dashboard.infographic.store');
-    Route::get('/list-news',[NewsController::class,'list'])->name('dashboard.news.list');
-    Route::post('/create-news-post',[NewsController::class,'store'])->name('dashboard.news.store');
+
+    Route::prefix('news')->as('news.')->group(function () {
+        Route::get('/create-news',[NewsController::class,'create'])->name('index');
+        Route::get('/list-news',[NewsController::class,'list'])->name('list');
+        Route::post('/create-news-post',[NewsController::class,'store'])->name('store');
+    });
+
+    Route::prefix('infographic')->as('infographic.')->group(function () {
+        Route::get('/infographic', [InfographicController::class, 'create'])->name('create');
+        Route::post('/infographic-store', [InfographicController::class, 'store'])->name('store');
+        Route::post('/infographic{id}', [InfographicController::class, 'destroy'])->name('destroy');
+    });
+
 });

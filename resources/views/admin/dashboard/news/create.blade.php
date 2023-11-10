@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="py-3 mb-4">
-            <span class="text-muted fw-light">Новости /</span> Добавить новости
+            <span class="text-muted fw-light">Менеджер новости /</span> Добавить новости
         </h4>
         @if(session('success'))
             <div class="btn btn-success">
@@ -15,7 +15,7 @@
                 <div class="card">
                     <h5 class="card-header">Форма для создания новости</h5>
                     <div class="card-body">
-                        <form action="{{route('admin.dashboard.news.store')}}" method="post" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" enctype="multipart/form-data" novalidate="novalidate">
+                        <form action="{{route('admin.news.store')}}" method="post" class="row g-3 fv-plugins-bootstrap5 fv-plugins-framework" enctype="multipart/form-data" novalidate="novalidate">
                            @csrf
                             <div class="col-12">
                                 <h6 class="mt-2">1. Заголовок новости</h6>

@@ -36,3 +36,27 @@
     padding: 40px 120px;
 
 }
+
+
+.tags-section {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.tags {
+    gap: 13px;
+    display: flex;
+}
+
+.tag {
+    padding: 5px 12px;
+    border-radius: 7px;
+    background: rgba(29, 65, 137, 0.10);
+    color: #1D4189;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+
+}
