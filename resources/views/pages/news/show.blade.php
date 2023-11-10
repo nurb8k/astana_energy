@@ -9,7 +9,7 @@
             <div class="news-inner">
                 <h3 class="news-title">{{$news->title}}</h3>
                 <div class="news-date">{{__('messages.published')}}: {{ \Carbon\Carbon::parse($news->time_publish)->format('d.m.Y') }} г.</div>
-                @if(is_null($news->tags))
+                @if(!is_null($news->tags))
                     <div style="padding:0" class="tags-section">
 
                         <div class="tags__icon" alt="Тэги">
