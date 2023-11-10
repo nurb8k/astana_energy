@@ -27,9 +27,11 @@
                         </div>
                     </div>
                 @endif
-                <div class="item-center">
-                    <img class="news-img" src="{{asset('storage/' . $news->image)}}" alt="news img">
-                </div>
+                @if(is_null($news->image))
+                    <div class="item-center">
+                        <img class="news-img" src="{{asset('storage/' . $news->image)}}" alt="news img">
+                    </div>
+                @endif
                 <p class="news-text">{!! $news->desc !!}</p>
             </div>
         </section>
@@ -42,7 +44,7 @@
                     <div class="news-list">
                         @foreach($other_news as $on)
                             <div class="news-item bg-grey">
-                                <div class="news-item-preview" style="background-image: url({{asset('storage/' . $on->image)}});"></div>
+                                <div class="news-item-preview" style=" background-image: @if(isset($on->image))  url({{asset('storage/' . $on->image)}}); @else  url('asdasd') @endif"></div>
                                 <div class="news-item-article">
                                     <h5 class="news-item-title">{{ Str::limit($on->title, 55, '...') }}</h5>
                                     <div class="news-item-date">{{ $on->publish }} г</div>
