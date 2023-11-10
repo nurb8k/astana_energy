@@ -4,11 +4,11 @@
         <section class="single-news">
             <div class="container-md">
                 <div class="single-news-inner">
-                    <div class="single-news-preview" style="background-image: url({{asset('storage/' . $latest->image)}});"></div>
+                    <div class="single-news-preview"  style="background-image: @if(!empty($latest->image))  url({{asset('storage/' . $latest->image)}}); @else  url({{asset('user/assets/img/news-default.jpg')}}) @endif"></div>
                     <div class="single-news-article">
                         <h3>{{$latest->title}}</h3>
                         <div class="single-news-date">{{__('messages.published')}}: {{ $latest->publish }} г.</div>
-                        @if(!is_null($latest->tags))
+                        @if(!$latest->tags->isEmpty())
                             <div class="tags-section">
                                 <div class="tags__icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22" fill="none">
