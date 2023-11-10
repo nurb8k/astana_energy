@@ -121,8 +121,6 @@
                                 </div>
                             </div>
 
-
-
                             <div class="swiper-slide managment-slider-item">
                                 <div class="managment-slider-item-preview">
                                     <img src="{{asset('user/assets/img/dir_tec_3.jpg')}}" alt="">
