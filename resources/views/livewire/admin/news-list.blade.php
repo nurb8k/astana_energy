@@ -43,15 +43,12 @@
                         <td><span class="badge bg-label-success me-1">Опубликован</span></td>
                         <td>
                             <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" wire:click="edit({{$n->id}})"><i class="bx bx-edit-alt me-1"></i> Изменить</a>
-                                    <a class="dropdown-item"   type="button"
 
-                                       wire:confirm="Вы точно хотите удалить этот новости?" wire:click="delete({{$n->id}})"><i class="bx bx-trash me-1"></i> Delete</a>
-                                </div>
+                                    <a class="btn btn-sm btn-primary text-white" wire:click="edit({{$n->id}})"><i class="bx bx-edit-alt me-1"></i> Изменить</a>
+                                    <a class="btn btn-sm btn-danger text-white"   type="button"
+
+                                       wire:confirm="Вы точно хотите удалить этот новости?" wire:click="delete({{$n->id}})"><i class="bx bx-trash me-1"></i> Удалить</a>
+
                             </div>
                         </td>
                     </tr>
