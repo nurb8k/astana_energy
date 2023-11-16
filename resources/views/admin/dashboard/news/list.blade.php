@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('title', 'Новости')
 @section('content')
+    <link rel="stylesheet" href="{{asset('user/assets/css/infographic-page.css')}}">
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="py-3 mb-4">
             <span class="text-muted fw-light">Менеджер новости /</span> Список новости
@@ -17,6 +18,7 @@
                         @livewire('news-list-component')
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

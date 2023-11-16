@@ -8,14 +8,10 @@ use Livewire\WithPagination;
 
 class NewsListComponent extends Component
 {
-//    use WithPagination;
-    public $news;
+    use WithPagination;
 
 
-    public function mount()
-    {
-        $this->news = News::query()->get();
-    }
+
 
     public function edit(News $news)
     {
@@ -27,12 +23,11 @@ class NewsListComponent extends Component
         $news->delete();
 
         session()->flash('message', 'Новость успешно удалена!');
-        $this->mount();
     }
 
     public function render()
     {
-
-        return view('livewire.admin.news-list');
+        $news = News::query()->latest()->paginate(10);
+        return view('livewire.admin.news-list', compact('news'));
     }
 }

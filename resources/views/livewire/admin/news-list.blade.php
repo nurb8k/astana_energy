@@ -43,18 +43,19 @@
                         <td><span class="badge bg-label-success me-1">Опубликован</span></td>
                         <td>
                             <div class="dropdown">
-
                                     <a class="btn btn-sm btn-primary text-white" wire:click="edit({{$n->id}})"><i class="bx bx-edit-alt me-1"></i> Изменить</a>
                                     <a class="btn btn-sm btn-danger text-white"   type="button"
-
                                        wire:confirm="Вы точно хотите удалить этот новости?" wire:click="delete({{$n->id}})"><i class="bx bx-trash me-1"></i> Удалить</a>
-
                             </div>
                         </td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
+
         </div>
+    </div>
+    <div class="my-2">
+        {{$news->links()}}
     </div>
 </div>
