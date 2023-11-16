@@ -104,18 +104,18 @@
             <ul class="menu-inner py-1">
                 <!-- Dashboards -->
                 @if( auth()->user()->role_id  == 3)
-                <li class="menu-item active open">
+                <li class="menu-item {{ \Request::routeIs('admin.news.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Dashboards">Менеджер новостей</div>
                     </a>
                     <ul class="menu-sub">
-                        <li class="menu-item {{ \Request::route()->getName() == 'admin.news.news.index' ? 'active' : ''}}">
+                        <li class="menu-item {{ \Request::route()->getName() == 'admin.news.index' ? 'active ' : ''}}">
                             <a href="{{route('admin.news.index')}}" class="menu-link">
                                 <div data-i18n="Analytics">Добавить новость</div>
                             </a>
                         </li>
-                        <li class="menu-item {{ \Request::route()->getName() == 'admin.news.news.list' ? 'active' : ''}}">
+                        <li class="menu-item {{ \Request::route()->getName() == 'admin.news.list' ? 'active' : ''}}">
                             <a href="{{route('admin.news.list')}}" class="menu-link">
                                 <div data-i18n="Analytics">Список новостей</div>
                             </a>
@@ -123,16 +123,22 @@
                     </ul>
                 </li>
                 @endif
+
                 @if( auth()->user()->role_id  == 3)
-                <li class="menu-item">
+                <li class="menu-item {{ \Request::routeIs('admin.infographic.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                        <div data-i18n="Dashboards">Менеджер инфографики</div>
+                        <div data-i18n="Dashboards">Управление инфографикой</div>
                     </a>
                     <ul class="menu-sub">
                         <li  class="menu-item {{ \Request::route()->getName() == 'admin.infographic.create' ? 'active' : ''}}">
                             <a  href="{{route('admin.infographic.create')}}" class="menu-link">
-                                <div data-i18n="Analytics">Инфографика </div>
+                                <div data-i18n="Analytics">Добавить новую инфографику</div>
+                            </a>
+                        </li>
+                        <li  class="menu-item {{ \Request::route()->getName() == 'admin.infographic.list' ? 'active' : ''}}">
+                            <a  href="{{route('admin.infographic.list')}}" class="menu-link">
+                                <div data-i18n="Analytics">Список инфографика</div>
                             </a>
                         </li>
                     </ul>
@@ -170,7 +176,7 @@
                         <li class="nav-item navbar-dropdown dropdown-user dropdown">
                             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                                 <div class="avatar avatar-online">
-                                    <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                    <img src="{{asset('assets/img/avatars/1.png')}}" alt class="w-px-40 h-auto rounded-circle" />
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
@@ -179,7 +185,7 @@
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 me-3">
                                                 <div class="avatar avatar-online">
-                                                    <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                                    <img src="{{asset('assets/img/avatars/1.png')}}" alt class="w-px-40 h-auto rounded-circle" />
                                                 </div>
                                             </div>
                                             <div class="flex-grow-1">
@@ -228,7 +234,7 @@
                             <li>{{ $error }}</li>
                         @endforeach
                     </ul>
-                </div>а
+                </div>
             @endif
             @if (session('status'))
                 <div class="alert alert-success" role="alert">
@@ -253,9 +259,38 @@
 <script src="{{asset('assets/vendor/js/bootstrap.js')}}"></script>
 <script src="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
 <script src="{{asset('assets/vendor/js/menu.js')}}"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    // Hide all item in .carousel-item initially
+    $(".carousel-item *").addClass("d-none");
+
+    // Animate the first slide
+    setTimeout(function() {
+        $(".carousel-item.active *")
+            .removeClass("d-none")
+            .addClass("animated");
+    }, 700);
+
+    // Animate after the slider changes
+    $("#mainBanner").on("slid.bs.carousel", function(e) {
+        // Add .d-none to previous shown slide
+        $(".carousel-item *").addClass("d-none");
+
+        // Element for new slide
+        var c = e["relatedTarget"];
+
+        // After 0.7 sec slide changes, then make the animation for new slide
+        setTimeout(function() {
+            $(c)
+                .find("*")
+                .removeClass("d-none")
+                .addClass("animated");
+            console.log("c");
+        }, 700);
+    });
+</script>
 {{--<script src="{{asset('assets/js/multiselect.js')}}" type="text/javascript"></script>--}}
-
-
 <!-- endbuild -->
 
 <!-- Vendors JS -->

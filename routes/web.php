@@ -94,6 +94,8 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
 
     Route::prefix('news')->as('news.')->group(function () {
         Route::get('/create-news',[NewsController::class,'create'])->name('index');
+        Route::get('/edit-news/{id}',[NewsController::class,'edit'])->name('edit');
+        Route::post('/update-news',[NewsController::class,'update'])->name('update');
         Route::get('/list-news',[NewsController::class,'list'])->name('list');
         Route::post('/create-news-post',[NewsController::class,'store'])->name('store');
     });
@@ -101,6 +103,7 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::prefix('infographic')->as('infographic.')->group(function () {
         Route::get('/infographic', [InfographicController::class, 'create'])->name('create');
         Route::post('/infographic-store', [InfographicController::class, 'store'])->name('store');
+        Route::get('/infographic-list', [InfographicController::class, 'list'])->name('list');
         Route::post('/infographic{id}', [InfographicController::class, 'destroy'])->name('destroy');
     });
 

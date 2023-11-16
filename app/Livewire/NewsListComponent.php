@@ -17,9 +17,9 @@ class NewsListComponent extends Component
         $this->news = News::query()->get();
     }
 
-    public function edit()
+    public function edit(News $news)
     {
-
+        return redirect()->route('admin.news.edit', ['id' => $news->id]);
     }
 
     public function delete(News $news)

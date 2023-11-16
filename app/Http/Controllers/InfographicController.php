@@ -32,4 +32,9 @@ class InfographicController extends Controller
 
         return redirect()->back()->with('success','Инфографика успешно добавлен!');
     }
+
+    public function list()
+    {
+        return view('admin.dashboard.infographic.list');
+    }
 }
