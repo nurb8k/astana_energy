@@ -103,7 +103,7 @@
 
             <ul class="menu-inner py-1">
                 <!-- Dashboards -->
-                @if( auth()->user()->role_id  == 3)
+                @if( auth()->user()->role_id  == 1)
                 <li class="menu-item {{ \Request::routeIs('admin.news.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
@@ -124,7 +124,7 @@
                 </li>
                 @endif
 
-                @if( auth()->user()->role_id  == 3)
+                @if( auth()->user()->role_id  == 2)
                 <li class="menu-item {{ \Request::routeIs('admin.infographic.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
