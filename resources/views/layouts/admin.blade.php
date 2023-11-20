@@ -108,7 +108,7 @@
                     <ul class="menu-sub">
                         <li class="menu-item {{ \Request::route()->getName() == 'admin.news.index' ? 'active ' : ''}}">
                             <a href="{{route('admin.news.index')}}" class="menu-link">
-                                <div data-i18n="Analytics">Добавить новость</div>
+                                <div data-i18n="Analytics">Добавить новости</div>
                             </a>
                         </li>
                         <li class="menu-item {{ \Request::route()->getName() == 'admin.news.list' ? 'active' : ''}}">
