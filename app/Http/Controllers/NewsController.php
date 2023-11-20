@@ -143,7 +143,6 @@ class NewsController extends Controller
             NewsImage::create([
                 'news_id' => $news->id,
                 'name' => $img->name,
-                'order' => $img->order,
                 'path' => $img->folder . '/' . $img->name
             ]);
             \Storage::deleteDirectory('images/tmp/'.$img->folder);
