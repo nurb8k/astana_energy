@@ -1,4 +1,5 @@
 <div>
+    <link rel="stylesheet" href="{{asset('user/assets/css/infographic-page.css')}}">
     <div class="card">
         <div class="table-responsive text-nowrap">
             @if (session()->has('message'))
