@@ -34,7 +34,7 @@
                             @endforeach
                         </td>
                         <td>
-                            {!! Str::limit($n->desc, 35, '...') !!}
+                            {{ Str::limit($n->desc, 35, '...') }}
                         </td>
                         <td>
                             <div style="display: flex;justify-content:center;">
