@@ -38,7 +38,7 @@
                         </td>
                         <td>
                             <div style="display: flex;justify-content:center;">
-                                @if($n->image->isNotEmpty())
+                                @if(!empty($n->image))
                                     <img class="news-img" style="width: 120px" src="{{ asset('storage/' . $n->image) }}" alt="news img">
                                 @else
                                     <p class="text-warning">Фото не загружена</p>
