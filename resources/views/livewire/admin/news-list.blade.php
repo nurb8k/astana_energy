@@ -17,7 +17,7 @@
                     </th>
                     <th>Описание</th>
                     <th>Главный изображение новости</th>
-                    <th>Статус</th>
+
                     <th>Действия</th>
                 </tr>
                 </thead>
@@ -33,14 +33,18 @@
                             @endforeach
                         </td>
                         <td>
-                            {!! Str::limit($n->desc, 40, '...') !!}
+                            {!! Str::limit($n->desc, 35, '...') !!}
                         </td>
                         <td>
                             <div style="display: flex;justify-content:center;">
-                                <img class="news-img" style="width: 140px" src="{{asset('storage/' . $n->image)}}" alt="news img">
+                                @if(isset($n->image))
+                                    <img class="news-img" style="width: 120px" src="{{asset('storage/' . $n->image)}}" alt="news img">
+                                @else
+                                    <p class="text-warning">Фото не загружена</p>
+                                @endif
                             </div>
                         </td>
-                        <td><span class="badge bg-label-success me-1">Опубликован</span></td>
+
                         <td>
                             <div class="dropdown">
                                     <a class="btn btn-sm btn-primary text-white" wire:click="edit({{$n->id}})"><i class="bx bx-edit-alt me-1"></i> Изменить</a>

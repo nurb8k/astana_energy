@@ -10,9 +10,6 @@ class NewsListComponent extends Component
 {
     use WithPagination;
 
-
-
-
     public function edit(News $news)
     {
         return redirect()->route('admin.news.edit', ['id' => $news->id]);

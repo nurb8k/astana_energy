@@ -9,19 +9,6 @@
                    </div>
                @endforeach
             @endif
-            @error('errors')
-                {{ $message }}
-            @enderror
-            @if (session()->has('error'))
-                <div class="alert alert-danger">
-                    {{ session('error') }}
-                </div>
-            @endif
-            @if (session()->has('message'))
-                <div class="alert alert-success">
-                    {{ session('message') }}
-                </div>
-            @endif
             <table class="table">
                 <thead>
                 <tr>
@@ -73,16 +60,12 @@
                                 {{$i->free}}
                             </td>
                             <td>
-                                <div class="dropdown">
-                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow " data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item"   wire:click="edit({{$i->id}})"><i class="bx bx-edit-alt me-1"></i> Изменить</a>
-                                        <a class="dropdown-item"   type="button"
+
+                                        <a class="btn btn-sm btn-warning text-white"   wire:click="edit({{$i->id}})"><i class="bx bx-edit-alt me-1"></i> Изменить</a>
+                                        <a class="btn btn-sm btn-danger text-white"   type="button"
                                            wire:confirm="Вы точно хотите удалить?" wire:click="delete({{$i->id}})"><i class="bx bx-trash me-1"></i> Удалить</a>
-                                    </div>
-                                </div>
+
+
                             </td>
                         </tr>
                     @endif

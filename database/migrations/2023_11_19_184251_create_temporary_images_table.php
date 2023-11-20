@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('news', function (Blueprint $table) {
-            $table->json('images');
+        Schema::create('temporary_images', function (Blueprint $table) {
+            $table->id();
+            $table->string('folder');
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('news', function (Blueprint $table) {
-            $table->dropColumn('images');
-        });
+        Schema::dropIfExists('temporary_images');
     }
 };

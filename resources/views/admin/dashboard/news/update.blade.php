@@ -1,79 +1,12 @@
 @extends('layouts.admin')
 @section('title', 'Новости')
 @section('content')
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <style>
-        .preview-images-zone {
-            width: 100%;
-            border: 1px solid #ddd;
-            min-height: 180px;
-            /* display: flex; */
-            padding: 5px 5px 0px 5px;
-            position: relative;
-            overflow:auto;
-        }
-        .preview-images-zone > .preview-image:first-child {
-            height: 185px;
-            width: 185px;
-            position: relative;
-            margin-right: 5px;
-        }
-        .preview-images-zone > .preview-image {
-            height: 90px;
-            width: 90px;
-            position: relative;
-            margin-right: 5px;
-            float: left;
-            margin-bottom: 5px;
-        }
-        .preview-images-zone > .preview-image > .image-zone {
-            width: 100%;
-            height: 100%;
-        }
-        .preview-images-zone > .preview-image > .image-zone > img {
-            width: 100%;
-            height: 100%;
-        }
-        .preview-images-zone > .preview-image > .tools-edit-image {
-            position: absolute;
-            z-index: 100;
-            color: #fff;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            margin-bottom: 10px;
-            display: none;
-        }
-        .preview-images-zone > .preview-image > .image-cancel {
-            font-size: 18px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-weight: bold;
-            margin-right: 10px;
-            cursor: pointer;
-            display: none;
-            z-index: 100;
-        }
-        .preview-image:hover > .image-zone {
-            cursor: move;
-            opacity: .5;
-        }
-        .preview-image:hover > .tools-edit-image,
-        .preview-image:hover > .image-cancel {
-            display: block;
-        }
-        .ui-sortable-helper {
-            width: 90px !important;
-            height: 90px !important;
-        }
-
-        .container {
-            padding-top: 50px;
-        }
-    </style>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://cdn.tiny.cloud/1/xis0mu4j2hn3400rjuju6oa431eum7in53zvdivpu6l5qp8z/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/buffer.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/filetype.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet" />
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="py-3 mb-4">
             <span class="text-muted fw-light">Менеджер новости /</span> Добавить новости
@@ -83,6 +16,7 @@
                 Новости успешно обновлен
             </div>
         @endif
+
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -128,12 +62,11 @@
                             <div class="col-md-12 fv-plugins-icon-container">
                                 <label for="formValidationFile" class="form-label">Текущий фото новости, <strong class="text-primary"> если хотите заменить загрузите новый </strong>, если хотите оставить фоту не ничего не загрузите!</label>
                                 <br>
-                                @if($news->image)
-                                    <img class="news-img" style="width: 300px; margin-bottom: 10px;margin-top: 10px;" src="{{asset('storage/' . $news->image)}}" alt="news img">
-                                @else
-                                    <p class="text-warning">Фото не загружена</p>
-                                @endif
-
+                                    @if($news->image)
+                                        <img class="news-img" style="width: 300px; margin-bottom: 10px;margin-top: 10px;" src="{{asset('storage/' . $news->image)}}" alt="news img">
+                                    @else
+                                        <p class="text-warning">Фото не загружена</p>
+                                    @endif
                                 <br>
                                 <input class="form-control" type="file" accept="image/png, image/jpeg, image/webp, image/jpg, image/svg" name="image">
                                 <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
@@ -146,29 +79,18 @@
                             </div>
 
                             <div class="col-md-12 fv-plugins-icon-container">
-                                <label for="formValidationFile" class="form-label">
-                                    Загружайте фото с <strong class="text-primary">CTRL (macOS command)</strong>
-                                </label>
-                                <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
-                                    <label class="btn btn-primary mb-2">
-                                        Загрузить фото
-                                        <input type="file" id="pro-image" name="photos[]" style="display: none;" multiple>
-                                    </label>
-                                    <div class="preview-images-zone">
-                                        @if($news->images)
-                                            @foreach($news->images as $image)
-                                                <div class="preview-image preview-show-5" style="position: relative;left: 0px; top: 0px;">
-                                                    <div class="image-cancel" data-no="5">x</div>
-                                                    <div class="image-zone">
-
-                                                        <img id="pro-img-5" src="{{asset('storage/' . $image)}}">
-                                                    </div>
+                                <div class="preview-images-zone d-flex" style="flex-wrap:wrap;gap: 20px">
+                                    @if($news->images)
+                                        @foreach($news->images as $image)
+                                            <div style="width: 140px;">
+                                                <img style="width: 140px" id="pro-img-{{ $image->id }}" src="{{ asset('storage/images/' . $image->path) }}">
+                                                <div class="d-flex justify-content-center mt-4">
+                                                    <button type="button" class="btn btn-sm btn-outline-danger delete-image" data-image-id="{{ $image->id }}">Удалить</button>
                                                 </div>
-                                            @endforeach
-                                        @endif
-                                    </div>
-
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                </div>
                             </div>
 
                             <div class="col-12">
@@ -238,50 +160,58 @@
         });
     </script>
 
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script>
+        FilePond.registerPlugin(FilePondPluginImagePreview);
+        const pond = FilePond.create({
+            files: [
+                {
+                    // the server file reference
+                    source: '12345',
+
+                    // set type to limbo to tell FilePond this is a temp file
+                    options: {
+                        type: 'limbo',
+                    },
+                },
+            ],
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function() {
-            document.getElementById('pro-image').addEventListener('change', readImage, false);
+            $('.delete-image').on('click', function() {
+                var imageId = $(this).data('image-id');
 
-            $(".preview-images-zone").sortable();
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    url: '{{ route("admin.news.img.destroy", ["id" => ":id"]) }}'.replace(':id', imageId),
+                    type: 'post',
+                    dataType: 'json',
 
-            $(document).on('click', '.image-cancel', function() {
-                let no = $(this).data('no');
-                $(".preview-image.preview-show-" + no).remove();
+
+                    success: function(response) {
+                        if (response.success) {
+                            // Remove the deleted image container from the DOM
+                            $('#pro-img-' + imageId).parent().remove();
+                        } else {
+                            alert('Failed to delete image.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                        alert('Error occurred while deleting image.');
+                    }
+                });
             });
         });
-
-        var num = 4;
-
-        function readImage() {
-            if (window.File && window.FileList && window.FileReader) {
-                var files = event.target.files; // FileList object
-                var output = $(".preview-images-zone");
-
-                for (let i = 0; i < files.length; i++) {
-                    var file = files[i];
-                    if (!file.type.match('image')) continue;
-
-                    var picReader = new FileReader();
-
-                    picReader.addEventListener('load', function(event) {
-                        var picFile = event.target;
-                        var html = '<div class="preview-image preview-show-' + num + '">' +
-                            '<div class="image-cancel" data-no="' + num + '">x</div>' +
-                            '<div class="image-zone"><img id="pro-img-' + num + '" src="' + picFile.result + '"></div>' +
-                            '<div class="tools-edit-image"></div>' +
-                            '</div>';
-
-                        output.append(html);
-                        num = num + 1;
-                    });
-
-                    picReader.readAsDataURL(file);
-                }
-            } else {
-                console.log('Browser does not support');
-            }
-        }
     </script>
+
 
 
 @endsection

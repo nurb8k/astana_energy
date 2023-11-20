@@ -9,9 +9,7 @@ class News extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    protected $casts = [
-        'images' => 'array'
-    ];
+
 
     public function getTitleAttribute()
     {
@@ -41,6 +39,11 @@ class News extends Model
     public function tags()
     {
          return $this->belongsToMany(Tag::class,'news_tags');
+    }
+
+    public function images(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(NewsImage::class);
     }
 
 

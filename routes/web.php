@@ -7,6 +7,8 @@ use \App\Http\Controllers\NewsController;
 use \App\Http\Controllers\HomeController;
 use \App\Http\Controllers\InfographicController;
 use \App\Http\Controllers\LanguageController;
+use \App\Http\Controllers\FilePoundController;
+use \App\Http\Controllers\TagController;
 use App\Livewire\InfographicComponent;
 use App\Livewire\NewsComponent;
 
@@ -79,6 +81,10 @@ Route::get('/rules',function (){
     return view('pages.documentation.rules');
 })->name('rules');
 
+#Filepound
+Route::post('/upload',[FilePoundController::class,'store']);
+Route::post('/upload/update',[FilePoundController::class,'update']);
+Route::delete('/delete',[FilePoundController::class,'destroy']);
 
 
 Route::get('/news/{id}',[NewsController::class,'show'])->name('news.show');
@@ -96,9 +102,16 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
         Route::get('/create-news',[NewsController::class,'create'])->name('index');
         Route::get('/edit-news/{id}',[NewsController::class,'edit'])->name('edit');
         Route::post('/update-news',[NewsController::class,'update'])->name('update');
+        Route::post('/delete-news',[NewsController::class,'destroy'])->name('destroy');
         Route::get('/list-news',[NewsController::class,'list'])->name('list');
+        Route::post('/delete-img-news/{id}',[NewsController::class,'imgDelete'])->name('img.destroy');
         Route::post('/create-news-post',[NewsController::class,'store'])->name('store');
     });
+
+    Route::prefix('tag')->as('tag.')->group(function () {
+        Route::get('/',[TagController::class,'index'])->name('index');
+    });
+
 
     Route::prefix('infographic')->as('infographic.')->group(function () {
         Route::get('/infographic', [InfographicController::class, 'create'])->name('create');

@@ -22,10 +22,6 @@
     <link rel="stylesheet" href="{{asset('assets/vendor/css/theme-default.css')}}" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{asset('assets/css/demo.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
-    <script src="https://cdn.tiny.cloud/1/xis0mu4j2hn3400rjuju6oa431eum7in53zvdivpu6l5qp8z/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/buffer.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.0/js/plugins/filetype.min.js" type="text/javascript"></script>
-
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
@@ -104,7 +100,7 @@
             <ul class="menu-inner py-1">
                 <!-- Dashboards -->
                 @if( auth()->user()->role_id  == 1)
-                <li class="menu-item {{ \Request::routeIs('admin.news.*') ? 'active open' : ''}}">
+                <li class="menu-item {{ \Request::routeIs('admin.news.*') || \Request::routeIs('admin.tag.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Dashboards">Менеджер новостей</div>
@@ -120,10 +116,14 @@
                                 <div data-i18n="Analytics">Список новостей</div>
                             </a>
                         </li>
+                        <li class="menu-item {{ \Request::route()->getName() == 'admin.tag.index' ? 'active' : ''}}">
+                            <a href="{{route('admin.tag.index')}}" class="menu-link">
+                                <div data-i18n="Analytics">Теги</div>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 @endif
-
                 @if( auth()->user()->role_id  == 2)
                 <li class="menu-item {{ \Request::routeIs('admin.infographic.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
