@@ -114,9 +114,9 @@
                         <div class="news-list">
                             <div class="news-list-left">
                                 <div class="news-item bg-grey">
-                                    <img src="@if(!empty($n->image))  {{asset('storage/' . $n->image)}} @else  {{asset('user/assets/img/news-default.jpg')}} @endif" alt="News preview" class="news-item-preview">
+                                    <img src="@if(!empty($ln->image))  {{asset('storage/' . $ln->image)}} @else  {{asset('user/assets/img/news-default.jpg')}} @endif" alt="News preview" class="news-item-preview">
                                     <div class="news-detail">
-                                        <h4 class="news-detail-title">{{$ln->title}}</h4>
+                                        <h4 class="news-detail-title">{{Str::limit($ln->title, 70, '...')}}   </h4>
                                         <div class="news-detail-date">{{ \Carbon\Carbon::parse($ln->time_publish)->locale('ru_RU')->isoFormat('D MMMM YYYY') }}</div>
                                         <a href="{{route('news.show',$ln->id)}}" class="detail-link">
                                             <span>{{__('messages.open')}}</span>
