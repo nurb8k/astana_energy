@@ -52,6 +52,17 @@
                     </div>
                     <div class="managment-slider swiper">
                         <div class="swiper-wrapper">
+{{--                            @foreach($managers as $m)--}}
+{{--                                <div class="swiper-slide managment-slider-item">--}}
+{{--                                    <div class="managment-slider-item-preview">--}}
+{{--                                        <img src="{{asset($m->image)}}" alt="">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="managment-slider-item-article">--}}
+{{--                                        <h4>{{$m->name}}</h4>--}}
+{{--                                        <p>{{$m->position}}</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
                             <div class="swiper-slide managment-slider-item">
                                 <div class="managment-slider-item-preview">
                                     <img src="{{asset('user/assets/img/seo-1.png')}}" alt="">
@@ -169,7 +180,7 @@
                         <div class="grid-group-left">
                             <div class="grid-group-item bg-grey">
                                 <div class="about-more-comp">
-                                    <div class="about-more-comp-preview" style="background-image: url('{{asset('user/assets/img/comp.png')}}');"></div>
+                                    <div class="about-more-comp-preview" style="background-image: url('{{asset('user/assets/img/compiance_new.jpeg')}}');"></div>
                                     <div class="about-more-article">
                                         <h4>Комплаенс</h4>
                                         @if(app()->getLocale() == 'kz')

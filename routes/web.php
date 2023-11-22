@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ManagerController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Auth\Login;
 use \App\Http\Controllers\Admin\DashboardController;
@@ -39,7 +40,8 @@ Route::get('/contact', function () {
 })->name("contact");
 
 Route::get('/about', function () {
-    return view('pages.about');
+    $managers = \App\Models\Manager::query()->get();
+    return view('pages.about',compact('managers'));
 })->name("about");
 
 Route::get('/compliance',function (){
@@ -112,6 +114,9 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
         Route::get('/',[TagController::class,'index'])->name('index');
     });
 
+    Route::prefix('manager')->as('manager.')->group(function () {
+        Route::get('/',[ManagerController::class,'index'])->name('index');
+    });
 
     Route::prefix('infographic')->as('infographic.')->group(function () {
         Route::get('/infographic', [InfographicController::class, 'create'])->name('create');
