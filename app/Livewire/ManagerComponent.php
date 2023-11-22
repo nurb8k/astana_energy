@@ -50,7 +50,7 @@ class ManagerComponent extends Component
     }
     public function cancelEdit()
     {
-        $this->reset(['id','pos_ru','pos_kz','img']);
+        $this->reset(['id','name','pos_ru','pos_kz','img']);
     }
     public function delete(Manager $m)
     {
@@ -81,7 +81,7 @@ class ManagerComponent extends Component
 
         session()->flash('message', 'Руководитель успешно создан!');
 
-        $this->reset(['id', 'pos_kz','pos_ru','img']);
+        $this->reset(['id', 'name', 'pos_kz','pos_ru','img']);
     }
 
     public function render()

@@ -52,116 +52,17 @@
                     </div>
                     <div class="managment-slider swiper">
                         <div class="swiper-wrapper">
-{{--                            @foreach($managers as $m)--}}
-{{--                                <div class="swiper-slide managment-slider-item">--}}
-{{--                                    <div class="managment-slider-item-preview">--}}
-{{--                                        <img src="{{asset($m->image)}}" alt="">--}}
-{{--                                    </div>--}}
-{{--                                    <div class="managment-slider-item-article">--}}
-{{--                                        <h4>{{$m->name}}</h4>--}}
-{{--                                        <p>{{$m->position}}</p>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            @endforeach--}}
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/seo-1.png')}}" alt="">
+                            @foreach($managers as $m)
+                                <div class="swiper-slide managment-slider-item">
+                                    <div class="managment-slider-item-preview">
+                                        <img src="{{asset($m->image)}}" alt="">
+                                    </div>
+                                    <div class="managment-slider-item-article">
+                                        <h4>{{$m->name}}</h4>
+                                        <p>{{$m->position}}</p>
+                                    </div>
                                 </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Жетписов Сагатбек Идирисович</h4>
-                                    <p>Заместитель Председателя <br> Правления по снабжению</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/seo-2.png')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Гармонщиков Олег Геннадьевич</h4>
-                                    <p>Председатель Правления <br> АО "Астана-Энергия"</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/seo-3.png')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Кажкенов Казбек Алимсуринович</h4>
-                                    <p>Председатель Правления <br> АО "Астана-Энергия"</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/seo-4.png')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Шияпов Аслан Жаскайратович</h4>
-                                    <p>Заместитель Председателя <br> Правления по экономике и финансам</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/seo-5.png')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Мукашев Адильбек Оралбекулы</h4>
-                                    <p>Заместитель Председателя <br> Правления по развитию</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/dir_tec_1.jpeg')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Султанбеков Нурлан Сарсенбекович</h4>
-                                    <p>Директор ТЭЦ-1</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/seo-6.jpeg')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Аскарбеков Уалихан Дайрашевич</h4>
-                                    <p>Директор ТЭЦ-2</p>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/dir_tec_3.jpg')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Есенжолов Еркегалий Темиргалиевич</h4>
-                                    <p>Директор ТЭЦ-3</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/dir_r_k.png')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Актаев Жанайдар Кабашович</h4>
-                                    <p>Директор Районной котельной</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide managment-slider-item">
-                                <div class="managment-slider-item-preview">
-                                    <img src="{{asset('user/assets/img/Eldar.png')}}" alt="">
-                                </div>
-                                <div class="managment-slider-item-article">
-                                    <h4>Мусабиев Эльдар Мусабиевич</h4>
-                                    <p>Директор по внутренней безопасности
-                                    </p>
-                                </div>
-                            </div>
-
-
+                            @endforeach
                         </div>
                         <div class="swiper-button-prev">
                             <img src="{{asset('user/assets/img/left-btn.svg')}}" alt="" class="swiper-button-icon">

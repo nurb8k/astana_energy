@@ -147,10 +147,13 @@
                         </li>
                     </ul>
                 </li>
+
                 @endif
 
-                <li class="menu-header small text-uppercase">
-                    <span class="menu-header-text">Управления кодами</span>
+                <li class="menu-item {{ \Request::route()->getName() == 'admin.manager.index' ? 'active' : ''}}">
+                    <a href="{{route('admin.manager.index')}}" class="menu-link">
+                        <div data-i18n="Analytics">Руководство</div>
+                    </a>
                 </li>
             </ul>
         </aside>
