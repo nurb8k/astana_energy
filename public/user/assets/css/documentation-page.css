@@ -93,6 +93,11 @@
 .gov__description {
     margin-top: 20px;
 }
+
+.gov__description a:hover {
+    color: #1D4189 !important;
+}
+
 .gov__description  p{
     color:  #1B1C25;
     font-size: 16px;

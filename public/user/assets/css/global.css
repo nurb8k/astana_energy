@@ -50,7 +50,6 @@ html * {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .btn:hover,
 button:hover {
     background-color: var(--blue);

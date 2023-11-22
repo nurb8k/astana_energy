@@ -61,6 +61,7 @@
 Туған жерім менің - Қазақстаным!</span></span></span></span></span></p>
 
             </div>
+        <div class="gov__description" >
             <p  style="text-align:center; margin:0 0 10pt">&nbsp;</p>
 
             <p class="text-primary" style="margin:0 0 10pt;"><a class="text-primary" href="https://adilet.zan.kz/rus/docs/U960002797_">Қазақстан Республикасының Мемлекеттік рәміздері туралы</a></p>
@@ -72,7 +73,7 @@
             <p class="text-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/P070000873_">Қазақстан Республикасының Мемлекеттік Туын, Мемлекеттік Елтаңбасын және олардың бейнелерін, сондай-ақ Қазақстан Республикасының Мемлекеттік Гимнінің мәтінін пайдалану (белгілеу, орналастыру) қағидаларын бекіту туралы</a></p>
 
             <p class="text-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/P1500001186">Қазақстан Республикасының Мемлекеттік рәміздері күнін мерекелеу қағидаларын бекіту туралы</a></p>
-
+        </div>
         @else
 
         <div class="gov__description">
@@ -128,17 +129,19 @@
 Туған жерім менің - Қазақстаным!</span></span></span></span></span></p>
 
         </div>
+
         <p  style="text-align:center; margin:0 0 10pt">&nbsp;</p>
+        <div class="gov__description">
+            <p class="text-primary" style="margin:0 0 10pt;"><a class="text-primary" href="https://adilet.zan.kz/rus/docs/U960002797_">О государственных символах Республики Казахстан</a></p>
 
-        <p class="text-primary" style="margin:0 0 10pt;"><a class="text-primary" href="https://adilet.zan.kz/rus/docs/U960002797_">О государственных символах Республики Казахстан</a></p>
+            <p class="text-bg-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/C1500000005/history">Об утверждении Плана по модернизации системы использования и продвижения государственных символов, символики населенных пунктов, городов, районов, гг. Астаны и Алматы, областей на 2015-2016 годы</a></p>
 
-        <p class="text-bg-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/C1500000005/history">Об утверждении Плана по модернизации системы использования и продвижения государственных символов, символики населенных пунктов, городов, районов, гг. Астаны и Алматы, областей на 2015-2016 годы</a></p>
+            <p class="text-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/P070000862_">Об утверждении Правил замены и уничтожения Государственного Флага, Государственного Герба Республики Казахстан, не соответствующих национальным стандартам</a></p>
 
-        <p class="text-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/P070000862_">Об утверждении Правил замены и уничтожения Государственного Флага, Государственного Герба Республики Казахстан, не соответствующих национальным стандартам</a></p>
+            <p class="text-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/P070000873_">Об утверждении Правил использования (установления, размещения) Государственного Флага, Государственного Герба Республики Казахстан и их изображений, а также текста Государственного Гимна Республики Казахстан</a></p>
 
-        <p class="text-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/P070000873_">Об утверждении Правил использования (установления, размещения) Государственного Флага, Государственного Герба Республики Казахстан и их изображений, а также текста Государственного Гимна Республики Казахстан</a></p>
-
-        <p class="text-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/P1500001186">Об утверждении Правил празднования Дня государственных символов Республики Казахстан</a></p>
+            <p class="text-primary" style="margin:0 0 10pt; color:#F29646"><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/P1500001186">Об утверждении Правил празднования Дня государственных символов Республики Казахстан</a></p>
+        </div>
         @endif
     </div>
 

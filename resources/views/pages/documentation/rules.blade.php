@@ -31,7 +31,7 @@
 
                 <p><a class="text-primary" href="https://adilet.zan.kz/rus/docs/Z1500000434" target="_blank">Мемлекеттiк сатып алу туралы</a></p>
 
-                <p><a class="text-primary" href="https://adilet.zan.kz/rus/docs/K1500000414" target="_blank">Трудовой кодекс Республики Казахстан</a></p>
+                <p><a class="text-primary" href="https://adilet.zan.kz/rus/docs/K1500000414" target="_blank">Қазақстан Республикасының Еңбек Кодексі</a></p>
 
                 <p><a  class="text-primary" href="https://adilet.zan.kz/rus/docs/Z1500000410" target="_blank">Сыбайлас жемқорлыққа қарсы күрес туралы</a></p>
 
