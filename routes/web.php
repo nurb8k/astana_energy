@@ -90,8 +90,8 @@ Route::delete('/delete',[FilePoundController::class,'destroy']);
 Route::get('/news/{id}',[NewsController::class,'show'])->name('news.show');
 
 # Admin panels
-Route::get('/admin', [Login::class,'index'])->name('login');
-Route::post('/login', [Login::class, 'create'])->name('login.post');
+Route::get('/admin', [Login::class,'index'])->name('login')->middleware('throttle:5,1');
+Route::post('/login', [Login::class, 'create'])->name('login.post')->middleware('throttle:5,1');
 Route::post('/logout', [Login::class, 'logout'])->name('logout');
 
 Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {

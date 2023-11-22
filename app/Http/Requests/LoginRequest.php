@@ -14,6 +14,7 @@ class LoginRequest extends FormRequest
         return true;
     }
 
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,6 +25,17 @@ class LoginRequest extends FormRequest
         return [
             'email' => 'required|email',
             'password' => 'required|string',
+        ];
+    }
+
+
+    public function messages()
+    {
+        return [
+            'email.required' => 'Поле Email обязательно для заполнения.',
+            'email.email' => 'Поле Email должно содержать корректный адрес электронной почты.',
+            'password.required' => 'Поле Пароль обязательно для заполнения.',
+            'password.min' => 'Поле Пароль должно содержать не менее :min символов.',
         ];
     }
 }

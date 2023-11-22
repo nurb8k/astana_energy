@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Астана Энергия</title>
-
+    <script src="https://cdn.tiny.cloud/1/xis0mu4j2hn3400rjuju6oa431eum7in53zvdivpu6l5qp8z/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

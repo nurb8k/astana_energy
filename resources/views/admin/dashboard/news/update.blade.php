@@ -9,7 +9,7 @@
     <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="py-3 mb-4">
-            <span class="text-muted fw-light">Менеджер новости /</span> Добавить новости
+            <span class="text-muted fw-light">Менеджер новости /</span> Изменить новости
         </h4>
         @if(session('success'))
             <div class="btn btn-success">

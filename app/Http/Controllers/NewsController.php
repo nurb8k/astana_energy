@@ -21,11 +21,20 @@ class NewsController extends Controller
 
     public function list()
     {
+
         return view('admin.dashboard.news.list');
     }
 
     public function create()
     {
+        $temporaryImages = TemporaryImage::all();
+
+        if ($temporaryImages->count() > 0) {
+            foreach ($temporaryImages as $img){
+                \Storage::deleteDirectory('images/tmp/'.$img->folder);
+                $img->delete();
+            }
+        }
         $tags = Tag::query()->get();
         return view('admin.dashboard.news.create',compact('tags'));
     }
@@ -115,7 +124,6 @@ class NewsController extends Controller
                 \Storage::deleteDirectory('images/tmp/'.$img->folder);
                 $img->delete();
             }
-
         }
 
         $validator->validated();

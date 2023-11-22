@@ -96,7 +96,7 @@
                                 <div class="news-day-item bd-primary">
                                     <div class="news-day-report">
                                         <div class="news-day-report-title">
-{{__('messages.rep_text')}}
+                                            {{__('messages.rep_text')}}
                                         </div>
                                         <a href="{{route('infographic')}}" class="btn btn-outline btn-icon-right btn-hover-fil">
                                             <span>{{__('messages.open')}}</span>
@@ -114,7 +114,7 @@
                         <div class="news-list">
                             <div class="news-list-left">
                                 <div class="news-item bg-grey">
-                                    <img src="{{asset('storage/' . $ln->image)}}" alt="News preview" class="news-item-preview">
+                                    <img src="@if(!empty($n->image))  {{asset('storage/' . $n->image)}} @else  {{asset('user/assets/img/news-default.jpg')}} @endif" alt="News preview" class="news-item-preview">
                                     <div class="news-detail">
                                         <h4 class="news-detail-title">{{$ln->title}}</h4>
                                         <div class="news-detail-date">{{ \Carbon\Carbon::parse($ln->time_publish)->locale('ru_RU')->isoFormat('D MMMM YYYY') }}</div>
