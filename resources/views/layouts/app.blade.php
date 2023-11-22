@@ -145,7 +145,7 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-company">
-                    <p class="text-white text-center">АО «Астана-Энергия» | 2022</p>
+                    <p class="text-white text-center">АО «Астана-Энергия» | 2023</p>
                 </div>
             </div>
         </div>
