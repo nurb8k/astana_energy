@@ -79,5 +79,7 @@ return [
     'pagination.next' => 'Следующий',
     'pagination.previous' => 'Предудущий',
     'show.more' => 'Показать еще',
+    'news.notfound' => 'По вашему запросу новостей не найдено',
+    'news.findByTag' => 'Поиск по тегу',
 ];
 ?>

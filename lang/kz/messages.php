@@ -73,5 +73,7 @@ return [
     'pagination.next' => 'Келесі',
     'pagination.previous' => 'Алдыңғы',
     'show.more' => 'Тағы көрсету',
+    'news.notfound' => 'Cіздің сұрауыңызға сәйкес жаңалықтар табылған жоқ',
+    'news.findByTag' => 'Тег арқылы іздеу',
 ];
 ?>

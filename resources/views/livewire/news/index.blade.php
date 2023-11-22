@@ -46,11 +46,11 @@
                         <h3 class="text-blue text-left">{{__('messages.all_news')}}</h3>
                         <div style="display: flex;gap:15px;width: calc(30%)">
                             <select id="tagSelect" wire:model.live="tag" style="background:#fff url({{asset('user/assets/img/icons/tag.svg')}})  85% 50% no-repeat;width: 55%" class="calendar-input bd-primary" >
-                                <option name="tag" value="" selected hidden>Поиск по тегам</option>
+                                <option name="tag" value="" selected hidden> {{__('messages.news.findByTag')}}</option>
                                 @foreach($tags as $tag)
                                     <option name="tag" value="{{$tag->id}}">{{$tag->name}}</option>
                                 @endforeach
-                                <option name="tag" value="">Все новости</option>
+                                <option name="tag" value="">{{__('messages.all_news')}}</option>
                             </select>
                             <input wire:model.live="date" type="date" style="background:#fff url({{asset('user/assets/img/icons/calendar.svg')}})  85% 50% no-repeat ;" class="calendar-input bd-primary" name="date" id="date" />
                         </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="news-list" style="margin-bottom: 0;">
                         @if($other_news->isEmpty())
-                            По вашему запросу новостей не найдено
+                         {{__('messages.news.notfound')}}
                         @endif
                         @foreach($other_news as $n)
                             <div class="news-item bg-grey">
