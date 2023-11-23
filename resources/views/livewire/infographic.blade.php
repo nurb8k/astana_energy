@@ -4,44 +4,47 @@
             <div class="container-md">
                 <div class="graphic-inner">
                     <div class="graphic-top">
-                        <h5 class="graphic-top-title">Информация по отпуску <br> электрической энергии</h5>
+                        <h5 class="graphic-top-title">
+
+                            {!! __('messages.infographic.info')  !!}
+                        </h5>
                         <input wire:model.live="date" type="date" style="background:#fff url({{asset('user/assets/img/icons/calendar.svg')}})  85% 50% no-repeat ;" class="calendar-input bd-primary" name="date" id="date">
                     </div>
                     <div class="graphic-list">
                         <div class="graphic-list-header bg-grey">
                             <div class="graphic-list-item">
-                                <span>Дата</span>
+                                <span>{{__('messages.data')}}</span>
                                 <img src="{{asset('user/assets/img/icons/calendar.svg')}}" alt="sort icon" class="sort-icon">
                             </div>
                             <div class="graphic-list-item">
-                                <span>
-                                    Отпуск с шин <br>
+                                <span> {{__('messages.output')}}
+                                  <br>
                                     <div class="graphic-grey">
-                                        (тыс.кВтч)
+                                        ({{__('messages.perHour')}})
                                     </div>
                                 </span>
                             </div>
                             <div class="graphic-list-item">
                                 <span>
-                                    Законтрактованная <br>
+                                    {{__('messages.zakontrak')}} <br>
                                     <div class="graphic-grey">
-                                        (тыс.кВтч)
+                                        ({{__('messages.perHour')}})
                                     </div>
                                 </span>
                             </div>
                             <div class="graphic-list-item">
                                 <span>
-                                    На централизованные торги<br>
+                                    {{__('messages.centred')}}<br>
                                     <div class="graphic-grey">
-                                        (тыс.кВтч)
+                                        ({{__('messages.perHour')}})
                                     </div>
                                 </span>
                             </div>
                             <div class="graphic-list-item">
                                 <span>
-                                    Свободная <br>
+                                    {{__('messages.free')}} <br>
                                     <div class="graphic-grey">
-                                        (тыс.кВтч)
+                                      ({{__('messages.perHour')}})
                                     </div>
                                 </span>
                             </div>
