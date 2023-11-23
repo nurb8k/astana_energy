@@ -124,7 +124,7 @@
     font-weight: 500;
     line-height: 15px;
     color: #ABACB4;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 
 .managment-inner {

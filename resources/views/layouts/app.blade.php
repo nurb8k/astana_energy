@@ -72,7 +72,7 @@
                 </nav>
                 <div class="header-action">
                     <div class="header-search">
-                        <input type="text" class="header-search-input" placeholder="Поиск">
+                        <input type="text" class="header-search-input" placeholder="{{__('messages.find')}}">
                         <img src="{{asset('user/assets/img/icons/search.svg')}}" alt="Search Icon" class="header-search-icon">
                     </div>
                     <div class="lang-select">
@@ -134,12 +134,12 @@
                     </div>
                     <div class="footer-item">
                         <div class="footer-item-title">{{__('messages.links')}}</div>
-                        <a href="#" class="footer-item-link">Сайт Президента Республики Казахстан</a>
-                        <a href="#" class="footer-item-link">АО «СОЦИАЛЬНО-ПРЕДПРИНИМАТЕЛЬСКАЯ КОРПОРАЦИЯ «ASTANA»</a>
-                        <a href="#" class="footer-item-link">Акимат города Астана</a>
-                        <a href="#" class="footer-item-link">Верховный Суд Республики Казахстан</a>
-                        <a href="#" class="footer-item-link">Казахский агротехнический университет имени С.Сейфуллина</a>
-                        <a href="#" class="footer-item-link">Astana IT University</a>
+                        <a href="#" class="footer-item-link">{{__('messages.president.site')}}</a>
+                        <a href="#" class="footer-item-link">{{__('messages.ao.social.site')}}</a>
+                        <a href="#" class="footer-item-link">{{__('messages.akimat.astana')}}</a>
+                        <a href="#" class="footer-item-link">{{__('messages.court.kz')}}</a>
+                        <a href="#" class="footer-item-link">{{__('messages.uni.agro')}}</a>
+                        <a href="#" class="footer-item-link">{{__('messages.uni.it')}}</a>
                     </div>
                 </div>
             </div>

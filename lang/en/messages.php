@@ -30,6 +30,7 @@ return [
     'reset'=>'Reset ',
     'addQues'=>'Add new question',
     'publish'=>'Publish',
+    'president.site'=>'Website of the President of the Republic of Kazakhstan',
 
 
 
