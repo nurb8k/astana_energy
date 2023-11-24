@@ -98,11 +98,12 @@
     color: #1D4189 !important;
 }
 
-.gov__description  p{
+.gov__description p {
     color:  #1B1C25;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
+    text-align: justify;
     line-height: 140%;
     margin-bottom: 1rem;
 }

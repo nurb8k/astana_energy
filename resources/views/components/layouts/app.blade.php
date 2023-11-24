@@ -68,7 +68,7 @@
                 </nav>
                 <div class="header-action">
                     <div class="header-search">
-                        <input type="text" class="header-search-input" placeholder="Поиск">
+                        <input type="text" class="header-search-input" placeholder="{{__('messages.find')}}">
                         <img src="{{asset('user/assets/img/icons/search.svg')}}" alt="Search Icon" class="header-search-icon">
                     </div>
                     <div class="lang-select">
