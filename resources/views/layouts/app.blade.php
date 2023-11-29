@@ -131,12 +131,12 @@
                     </div>
                     <div class="footer-item">
                         <div class="footer-item-title">{{__('messages.links')}}</div>
-                        <a href="#" class="footer-item-link">{{__('messages.president.site')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.ao.social.site')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.akimat.astana')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.court.kz')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.uni.agro')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.uni.it')}}</a>
+                        <a href="https://www.akorda.kz/kz" class="footer-item-link">{{__('messages.president.site')}}</a>
+                        <a href="https://astana-spk.kz" class="footer-item-link">{{__('messages.ao.social.site')}}</a>
+                        <a href="https://www.gov.kz/memleket/entities/astana?lang=kk" class="footer-item-link">{{__('messages.akimat.astana')}}</a>
+                        <a href="https://sud.gov.kz/" class="footer-item-link">{{__('messages.court.kz')}}</a>
+                        <a href="https://kazatu.edu.kz/" class="footer-item-link">{{__('messages.uni.agro')}}</a>
+                        <a href="https://astanait.edu.kz/" class="footer-item-link">{{__('messages.uni.it')}}</a>
                     </div>
                 </div>
             </div>

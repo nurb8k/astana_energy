@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{asset('user/assets/css/swiper-bundle.min.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/reports-page.css')}}">
     <link rel="icon" href="{{asset('favicon-32x32.png')}}">
+
 </head>
 <body>
 <style>
@@ -131,12 +132,12 @@
                     </div>
                     <div class="footer-item">
                         <div class="footer-item-title">{{__('messages.links')}}</div>
-                        <a href="#" class="footer-item-link">{{__('messages.president.site')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.ao.social.site')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.akimat.astana')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.court.kz')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.uni.agro')}}</a>
-                        <a href="#" class="footer-item-link">{{__('messages.uni.it')}}</a>
+                        <a href="https://www.akorda.kz/kz" class="footer-item-link">{{__('messages.president.site')}}</a>
+                        <a href="https://astana-spk.kz" class="footer-item-link">{{__('messages.ao.social.site')}}</a>
+                        <a href="https://www.gov.kz/memleket/entities/astana?lang=kk" class="footer-item-link">{{__('messages.akimat.astana')}}</a>
+                        <a href="https://sud.gov.kz/" class="footer-item-link">{{__('messages.court.kz')}}</a>
+                        <a href="https://kazatu.edu.kz/" class="footer-item-link">{{__('messages.uni.agro')}}</a>
+                        <a href="https://astanait.edu.kz/" class="footer-item-link">{{__('messages.uni.it')}}</a>
                     </div>
                 </div>
             </div>
@@ -173,6 +174,24 @@
         fontSizeChanged = !fontSizeChanged;
     });
 
+</script>
+<script>
+    function showDatePicker() {
+        var dateInput = document.getElementById('date-input');
+
+        // Open the date picker when the text input is clicked
+        dateInput.type = 'date';
+
+        // Close the date picker after a short delay
+        setTimeout(function () {
+            dateInput.type = 'text';
+        }, 5000);
+    }
+
+    document.getElementById('date-input').addEventListener('input', function() {
+        // Update the placeholder text when a date is selected
+        document.querySelector('.calendar-input').setAttribute('placeholder', 'Choose');
+    });
 </script>
 
 <script src="{{asset('user/assets/js/script.js')}}"></script>
