@@ -30,15 +30,24 @@
         filter: grayscale(100%);
     }
 </style>
-<header class="haeder">
-    <div class="container">
-        <div class="header-inner">
-            <div class="header-top">
+@if((new \Jenssegers\Agent\Agent())->isMobile())
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
 
-                <a href="{{route('home')}}">
-                    <img src="{{asset('user/assets/img/logo.svg')}}" alt="Astana Energy" class="header-logo">
-                </a>
-                <nav class="header-nav">
+                <div class="header-top">
+                    <a href="{{ route('home') }}">
+                        <img src="{{ asset('user/assets/img/logo.svg') }}" alt="Astana Energy" class="header-logo">
+                    </a>
+                    <div class="burger-menu" id="burger-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+
+                <nav class="header-nav"  id="header-nav">
+                    <button class="close-btn" id="close-btn">&times;</button>
                     <ul class="header-nav-list">
                         <li class="header-nav-item">
                             <a href="{{route('about')}}" class="header-nav-link {{ \Request::route()->getName() == 'about' ? 'active' : ''}}">{{__('messages.about')}}</a>
@@ -67,35 +76,104 @@
                         @endauth
                     </ul>
                 </nav>
-                <div class="header-action">
-                    <div class="header-search">
-                        <input type="text" class="header-search-input" placeholder="{{__('messages.find')}}">
-                        <img src="{{asset('user/assets/img/icons/search.svg')}}" alt="Search Icon" class="header-search-icon">
-                    </div>
-                    <div class="lang-select">
-                        <form id="language-form" action="{{ route('lang.switch') }}" method="POST">
-                            @csrf
-                            <select id="language-select" name="locale">
-                                <option @if(Session::get('locale') == 'ru') selected @endif      value="ru">Русский</option>
-                                <option   @if(Session::get('locale') == 'kz') selected @endif   value="kz">Қазақша</option>
-                            </select>
-                        </form>
+                {{--            <div class="header-action">--}}
+                {{--                <div class="header-search">--}}
+                {{--                    <input type="text" class="header-search-input" placeholder="{{__('messages.find')}}">--}}
+                {{--                    <img src="{{asset('user/assets/img/icons/search.svg')}}" alt="Search Icon" class="header-search-icon">--}}
+                {{--                </div>--}}
+                {{--                <div class="lang-select">--}}
+                {{--                    <form id="language-form" action="{{ route('lang.switch') }}" method="POST">--}}
+                {{--                        @csrf--}}
+                {{--                        <select id="language-select" name="locale">--}}
+                {{--                            <option @if(Session::get('locale') == 'ru') selected @endif      value="ru">Русский</option>--}}
+                {{--                            <option   @if(Session::get('locale') == 'kz') selected @endif   value="kz">Қазақша</option>--}}
+                {{--                        </select>--}}
+                {{--                    </form>--}}
+                {{--                </div>--}}
+                {{--            </div>--}}
+                {{--            <div class="header-bottom">--}}
+                {{--                <a href="tel:+77172644059" class="header-phone">--}}
+                {{--                    <img src="{{asset('user/assets/img/icons/phone.svg')}}" alt="Phone Icon" class="header-phone-icon">--}}
+                {{--                    <span>+7 (7172) 64-40-59</span>--}}
+                {{--                </a>--}}
+                {{--                <div class="header-eye">--}}
+                {{--                    <img src="{{asset('user/assets/img/icons/eye.svg')}}" alt="Eye Icon" class="header-eye-icon">--}}
+                {{--                    <span> <a href="#" id="toggleEffect">{{__('messages.bad_vis')}}</a></span>--}}
+                {{--                </div>--}}
+                {{--            </div>--}}
+            </div>
+        </div>
+    </header>
+@elseif((new \Jenssegers\Agent\Agent())->isDesktop())
+    <header class="haeder">
+        <div class="container">
+            <div class="header-inner">
+                <div class="header-top">
+
+                    <a href="{{route('home')}}">
+                        <img src="{{asset('user/assets/img/logo.svg')}}" alt="Astana Energy" class="header-logo">
+                    </a>
+                    <nav class="header-nav">
+                        <ul class="header-nav-list">
+                            <li class="header-nav-item">
+                                <a href="{{route('about')}}" class="header-nav-link {{ \Request::route()->getName() == 'about' ? 'active' : ''}}">{{__('messages.about')}}</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href="{{route('reports')}}" class="header-nav-link {{ \Request::route()->getName() == 'reports' ? 'active' : ''}}">{{__('messages.reports')}}</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href="{{route('documentation.index')}} " class="header-nav-link {{ \Request::route()->getName() == 'documentation.index' ? 'active' : ''}}">{{__('messages.docs')}}</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href="{{route('infographic')}}" class="header-nav-link {{ \Request::route()->getName() == 'infographic' ? 'active' : ''}}">{{__('messages.infog')}}</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href="{{route('news.index')}}" class="header-nav-link {{ \Request::routeIs('news.*') ? 'active' : '' }}">{{__('messages.news')}}</a>
+                            </li>
+                            <li class="header-nav-item">
+                                <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">{{__('messages.contacts')}}</a>
+                            </li>
+                            @auth()
+                                <li class="header-nav-item text-danger" style="color: #007aff">
+                                    <a  style="color: #007aff" href="{{route('admin.dashboard.index')}}">
+                                        <span>Админ панель</span>
+                                    </a>
+                                </li>
+                            @endauth
+                        </ul>
+                    </nav>
+                    <div class="header-action">
+                        <div class="header-search">
+                            <input type="text" class="header-search-input" placeholder="{{__('messages.find')}}">
+                            <img src="{{asset('user/assets/img/icons/search.svg')}}" alt="Search Icon" class="header-search-icon">
+                        </div>
+                        <div class="lang-select">
+                            <form id="language-form" action="{{ route('lang.switch') }}" method="POST">
+                                @csrf
+                                <select id="language-select" name="locale">
+                                    <option @if(Session::get('locale') == 'ru') selected @endif      value="ru">Русский</option>
+                                    <option   @if(Session::get('locale') == 'kz') selected @endif   value="kz">Қазақша</option>
+                                </select>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="header-bottom">
-                <a href="tel:+77172644059" class="header-phone">
-                    <img src="{{asset('user/assets/img/icons/phone.svg')}}" alt="Phone Icon" class="header-phone-icon">
-                    <span>+7 (7172) 64-40-59</span>
-                </a>
-                <div class="header-eye">
-                    <img src="{{asset('user/assets/img/icons/eye.svg')}}" alt="Eye Icon" class="header-eye-icon">
-                    <span> <a href="#" id="toggleEffect">{{__('messages.bad_vis')}}</a></span>
+                <div class="header-bottom">
+                    <a href="tel:+77172644059" class="header-phone">
+                        <img src="{{asset('user/assets/img/icons/phone.svg')}}" alt="Phone Icon" class="header-phone-icon">
+                        <span>+7 (7172) 64-40-59</span>
+                    </a>
+                    <div class="header-eye">
+                        <img src="{{asset('user/assets/img/icons/eye.svg')}}" alt="Eye Icon" class="header-eye-icon">
+                        <span> <a href="#" id="toggleEffect">{{__('messages.bad_vis')}}</a></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+@endif
+
+
 
 @yield('content')
 
@@ -149,6 +227,24 @@
     </div>
 </footer>
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const burgerMenu = document.getElementById('burger-menu');
+        const headerNav = document.getElementById('header-nav');
+        const closeBtn = document.getElementById('close-btn');
+
+        if (!burgerMenu || !headerNav || !closeBtn) {
+            console.error('Burger menu, header nav, or close button not found');
+            return;
+        }
+
+        burgerMenu.addEventListener('click', function () {
+            headerNav.classList.toggle('show');
+        });
+
+        closeBtn.addEventListener('click', function () {
+            headerNav.classList.remove('show');
+        });
+    });
     const languageSelect = document.getElementById('language-select');
     const languageForm = document.getElementById('language-form');
 

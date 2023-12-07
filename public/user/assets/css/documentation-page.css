@@ -155,3 +155,17 @@
     margin-top: 30px;
 }
 
+@media screen and (max-width: 767px) {
+    body {
+
+    }
+    .documentation-list {
+        margin-left: 25px;
+        width: 700px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+}
+
