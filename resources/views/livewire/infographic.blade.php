@@ -11,44 +11,86 @@
                         <input wire:model.live="date" type="date" style="background:#fff url({{asset('user/assets/img/icons/calendar.svg')}})  85% 50% no-repeat ;" class="calendar-input bd-primary" name="date" id="date">
                     </div>
                     <div class="graphic-list">
-                        <div class="graphic-list-header bg-grey">
-                            <div class="graphic-list-item">
-                                <span>{{__('messages.data')}}</span>
-                                <img src="{{asset('user/assets/img/icons/calendar.svg')}}" alt="sort icon" class="sort-icon">
-                            </div>
-                            <div class="graphic-list-item">
-                                <span> {{__('messages.output')}}
+
+                        @if((new \Jenssegers\Agent\Agent())->isMobile())
+                            <div class="graphic-list-header bg-grey">
+                                <div class="graphic-list-item">
+                                    <span>{{__('messages.data')}}</span>
+                                    <img src="{{asset('user/assets/img/icons/calendar.svg')}}" alt="sort icon" class="sort-icon">
+                                </div>
+                                <div class="graphic-list-item">
+                                <span> {!! __('messages.output2')  !!}
                                   <br>
                                     <div class="graphic-grey">
                                         ({{__('messages.perHour')}})
                                     </div>
                                 </span>
-                            </div>
-                            <div class="graphic-list-item">
+                                </div>
+                                <div class="graphic-list-item">
                                 <span>
-                                    {{__('messages.zakontrak')}} <br>
+                                    {!! __('messages.zakontrak2') !!} <br>
                                     <div class="graphic-grey">
                                         ({{__('messages.perHour')}})
                                     </div>
                                 </span>
-                            </div>
-                            <div class="graphic-list-item">
+                                </div>
+                                <div class="graphic-list-item">
                                 <span>
-                                    {{__('messages.centred')}}<br>
+                                    {!! __('messages.centred2') !!}<br>
                                     <div class="graphic-grey">
                                         ({{__('messages.perHour')}})
                                     </div>
                                 </span>
-                            </div>
-                            <div class="graphic-list-item">
+                                </div>
+                                <div class="graphic-list-item">
                                 <span>
                                     {{__('messages.free')}} <br>
                                     <div class="graphic-grey">
                                       ({{__('messages.perHour')}})
                                     </div>
                                 </span>
+                                </div>
                             </div>
-                        </div>
+                        @else
+                            <div class="graphic-list-header bg-grey">
+                                <div class="graphic-list-item">
+                                    <span>{{__('messages.data')}}</span>
+                                    <img src="{{asset('user/assets/img/icons/calendar.svg')}}" alt="sort icon" class="sort-icon">
+                                </div>
+                                <div class="graphic-list-item">
+                                <span> {{__('messages.output')}}
+                                  <br>
+                                    <div class="graphic-grey">
+                                        ({{__('messages.perHour')}})
+                                    </div>
+                                </span>
+                                </div>
+                                <div class="graphic-list-item">
+                                <span>
+                                    {{__('messages.zakontrak')}} <br>
+                                    <div class="graphic-grey">
+                                        ({{__('messages.perHour')}})
+                                    </div>
+                                </span>
+                                </div>
+                                <div class="graphic-list-item">
+                                <span>
+                                    {{__('messages.centred')}}<br>
+                                    <div class="graphic-grey">
+                                        ({{__('messages.perHour')}})
+                                    </div>
+                                </span>
+                                </div>
+                                <div class="graphic-list-item">
+                                <span>
+                                    {{__('messages.free')}} <br>
+                                    <div class="graphic-grey">
+                                      ({{__('messages.perHour')}})
+                                    </div>
+                                </span>
+                                </div>
+                            </div>
+                        @endif
                         <div class="graphic-list-content">
                             @foreach($data as $item)
                                 <div class="graphic-list-row">
@@ -61,7 +103,7 @@
                                         {{$item->output}}
                                     </div>
                                     <div class="graphic-list-item">
-                                       {{$item->contacted}}
+                                        {{$item->contacted}}
                                     </div>
                                     <div class="graphic-list-item">
                                         {{$item->centred}}
@@ -78,5 +120,4 @@
             </div>
         </section>
     </main>
-
 </div>

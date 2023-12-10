@@ -166,6 +166,13 @@
         flex-wrap: wrap;
         flex-direction: column;
     }
+    .flag-kz {
+        width: 100%;
+
+    }
+    .govs-inner {
+        padding: 0 15px;
+    }
 
 }
 
