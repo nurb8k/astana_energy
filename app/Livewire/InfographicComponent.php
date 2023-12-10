@@ -15,6 +15,7 @@ class InfographicComponent extends Component
 
     public function render()
     {
+
         $query = Infographic::query()
             ->orderBy('date', 'desc');
 
@@ -26,4 +27,5 @@ class InfographicComponent extends Component
 
         return view('livewire.infographic', ['data' => $data]);
     }
+
 }
