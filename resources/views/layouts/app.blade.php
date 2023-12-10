@@ -76,31 +76,6 @@
                         @endauth
                     </ul>
                 </nav>
-                {{--            <div class="header-action">--}}
-                {{--                <div class="header-search">--}}
-                {{--                    <input type="text" class="header-search-input" placeholder="{{__('messages.find')}}">--}}
-                {{--                    <img src="{{asset('user/assets/img/icons/search.svg')}}" alt="Search Icon" class="header-search-icon">--}}
-                {{--                </div>--}}
-                {{--                <div class="lang-select">--}}
-                {{--                    <form id="language-form" action="{{ route('lang.switch') }}" method="POST">--}}
-                {{--                        @csrf--}}
-                {{--                        <select id="language-select" name="locale">--}}
-                {{--                            <option @if(Session::get('locale') == 'ru') selected @endif      value="ru">Русский</option>--}}
-                {{--                            <option   @if(Session::get('locale') == 'kz') selected @endif   value="kz">Қазақша</option>--}}
-                {{--                        </select>--}}
-                {{--                    </form>--}}
-                {{--                </div>--}}
-                {{--            </div>--}}
-                {{--            <div class="header-bottom">--}}
-                {{--                <a href="tel:+77172644059" class="header-phone">--}}
-                {{--                    <img src="{{asset('user/assets/img/icons/phone.svg')}}" alt="Phone Icon" class="header-phone-icon">--}}
-                {{--                    <span>+7 (7172) 64-40-59</span>--}}
-                {{--                </a>--}}
-                {{--                <div class="header-eye">--}}
-                {{--                    <img src="{{asset('user/assets/img/icons/eye.svg')}}" alt="Eye Icon" class="header-eye-icon">--}}
-                {{--                    <span> <a href="#" id="toggleEffect">{{__('messages.bad_vis')}}</a></span>--}}
-                {{--                </div>--}}
-                {{--            </div>--}}
             </div>
         </div>
     </header>

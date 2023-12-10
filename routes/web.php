@@ -26,8 +26,16 @@ use App\Livewire\NewsComponent;
 */
 
 # Livewire components
-Route::get('/infographic', InfographicComponent::class)->name('infographic');;
-Route::get('/news',NewsComponent::class)->name('news.index');
+Route::get('/infographic', function () {
+    return view('pages.infographic');
+})->name('infographic');
+
+//Route::get('/news',NewsComponent::class)->name('news.index');
+
+Route::get('/news', function () {
+    return view('pages.news');
+})->name('news.index');
+
 
 Route::post('locale',[LanguageController::class,'switch'])->name('lang.switch');
 
@@ -101,7 +109,7 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
     Route::prefix('news')->as('news.')->group(function () {
-        Route::get('/create-news',[NewsController::class,'create'])->name('index');
+//        Route::get('/create-news',[NewsController::class,'create'])->name('index');
         Route::get('/edit-news/{id}',[NewsController::class,'edit'])->name('edit');
         Route::post('/update-news',[NewsController::class,'update'])->name('update');
         Route::post('/delete-news',[NewsController::class,'destroy'])->name('destroy');

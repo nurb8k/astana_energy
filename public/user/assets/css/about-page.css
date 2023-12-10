@@ -233,3 +233,124 @@
 :root {
     --swiper-navigation-top-offset: 65%;
 }
+/* for about history */
+@media screen and (max-width: 767px) {
+    main {
+        padding: 0 15px;
+    }
+    .about-history {
+        padding: 10px 0 40px 0;
+    }
+
+    .about-history-inner {
+        flex-direction: column;
+    }
+
+    .about-history-item {
+        margin: 0 0 22px 0;
+    }
+
+    .about-history-item h2 {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about-history-item p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+/* for managment */
+
+@media screen and (max-width: 767px) {
+    .managment-slider {
+        padding: 0 15px !important;
+    }
+
+    .managment-slider-item.swiper-slide-prev .managment-slider-item-preview,
+    .managment-slider-item.swiper-slide-next .managment-slider-item-preview {
+        width: 100px;
+        height: 100px;
+    }
+
+    .managment-slider-item:not(.swiper-slide-next, .swiper-slide-prev, .swiper-slide-active) .managment-slider-item-preview {
+        width: 80px;
+        height: 80px;
+    }
+
+    .managment-slider-item-article h4 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .managment-slider-item-article p {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .managment-slider-item {
+        padding: 0 10px;
+    }
+}
+
+/* for about more */
+@media screen and (max-width: 767px) {
+    .grid-group {
+        flex-direction: column;
+    }
+
+    .grid-group-left,
+    .grid-group-right {
+        width: 100%;
+    }
+
+    .grid-group-left {
+        margin-right: 0;
+    }
+
+    .grid-group-item {
+        margin-bottom: 20px;
+    }
+
+    .about-more-comp {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-more-comp-preview {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-more-article > *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .about-more-article h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .about-more-article ul {
+        padding-left: 12px;
+    }
+
+    .about-more-article ul li {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .grid-group-right {
+        padding: 0 10px;
+    }
+
+    .about-more-link {
+        padding: 20px;
+    }
+
+
+}
+

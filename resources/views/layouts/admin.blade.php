@@ -98,7 +98,7 @@
 
             <ul class="menu-inner py-1">
                 <!-- Dashboards -->
-                @if( auth()->user()->role_id  == 1)
+                @if( auth()->user()->role_id  == 3)
                 <li class="menu-item {{ \Request::routeIs('admin.news.*') || \Request::routeIs('admin.tag.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
@@ -120,15 +120,11 @@
                                 <div data-i18n="Analytics">Теги</div>
                             </a>
                         </li>
-                        <li class="menu-item {{ \Request::route()->getName() == 'admin.manager.index' ? 'active' : ''}}">
-                            <a href="{{route('admin.manager.index')}}" class="menu-link">
-                                <div data-i18n="Analytics">Руководство</div>
-                            </a>
-                        </li>
+
                     </ul>
                 </li>
                 @endif
-                @if( auth()->user()->role_id  == 2)
+                @if( auth()->user()->role_id  == 3)
                 <li class="menu-item {{ \Request::routeIs('admin.infographic.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>

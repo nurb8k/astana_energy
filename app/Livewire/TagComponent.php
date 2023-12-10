@@ -18,23 +18,23 @@ class TagComponent extends Component
     }
 
     public function updateInfo()
-    {
-        $this->validate([
-            'name_kz' => 'required|string',
-            'name_ru' => 'required|string',
-        ],[
-            'name_kz.*' => 'Название на казахском обязательно для заполнения и должно быть строкой',
-            'name_ru.*' => 'Название на русском обязательно для заполнения и должно быть строкой',
-        ]);
+{
+    $this->validate([
+        'name_kz' => 'required|string',
+        'name_ru' => 'required|string',
+    ],[
+        'name_kz.*' => 'Название на казахском обязательно для заполнения и должно быть строкой',
+        'name_ru.*' => 'Название на русском обязательно для заполнения и должно быть строкой',
+    ]);
 
 
-        Tag::query()->findOrFail($this->tagID)->update([
-            'name_kz' => $this->name_kz,
-            'name_ru' => $this->name_ru
-        ]);
-        session()->flash('message', 'Тег успешно обновлен!');
-        $this->cancelEdit();
-    }
+    Tag::query()->findOrFail($this->tagID)->update([
+        'name_kz' => $this->name_kz,
+        'name_ru' => $this->name_ru
+    ]);
+    session()->flash('message', 'Тег успешно обновлен!');
+    $this->cancelEdit();
+}
     public function cancelEdit()
     {
         $this->reset(['tagID','name_kz','name_ru']);
@@ -68,7 +68,7 @@ class TagComponent extends Component
 
     public function render()
     {
-      $tags = Tag::query()->get();
-      return view('livewire.admin.tag-component',compact('tags')  );
+        $tags = Tag::query()->get();
+        return view('livewire.admin.tag-component',compact('tags')  );
     }
 }

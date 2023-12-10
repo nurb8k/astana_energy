@@ -113,3 +113,72 @@
 .tab__active {
     color: #F29646;
 }
+
+/* for reports page */
+@media screen and (max-width: 767px) {
+    .report {
+        padding: 50px 0;
+    }
+
+    .reports__items {
+        flex-direction: column;
+    }
+
+    .reports__item {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+    }
+
+    .reports__item-text {
+        font-size: 16px;
+    }
+
+    .reports__item-contents {
+        padding-left: 0;
+    }
+
+    .reports__item-content {
+        padding-left: 20px;
+    }
+
+    .report__year-text {
+        font-size: 14px;
+    }
+
+    .report__files {
+        padding-left: 20px;
+    }
+
+    .report__file {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .report__file-text {
+        font-size: 14px;
+    }
+
+    .year-content__block {
+        width: 60px;
+    }
+
+    .reports__tabs {
+        flex-direction: row;
+    }
+
+    .reports__tab {
+        font-size: 16px;
+    }
+
+    .report__files {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .docs__title {
+        font-size: 12px;
+    }
+    .docs__file-text {
+        font-size: 10px;
+    }
+}

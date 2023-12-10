@@ -194,7 +194,7 @@
     });
 </script>
 
-<script src="{{asset('user/assets/js/script.js')}}"></script>
+{{--<script src="{{asset('user/assets/js/script.js')}}"></script>--}}
 <script src="{{asset('user/assets/js/swiper-bundle.min.js')}}"></script>
 </body>
 </html>

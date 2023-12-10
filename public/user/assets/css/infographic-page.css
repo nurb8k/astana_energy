@@ -222,3 +222,30 @@
 [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
+
+@media screen and (max-width: 767px) {
+    .graphic {
+        padding: 0  0  60px 0;
+    }
+    .graphic-date {
+        padding: 5px;
+    }
+    .graphic-list-header .graphic-list-item .sort-icon {
+        margin-left: 10px;
+    }
+    .graphic-list-item > * {
+        font-size: 12px;
+    }
+    .graphic-top-title {
+        font-size: 18px;
+    }
+    .calendar-input {
+    }
+    .graphic-list-header {
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .graphic-list-item {
+        padding: 0 10px;
+    }
+}

@@ -8,8 +8,7 @@
                 <div class="first-slide-inner text-white">
                     <div class="first-slide-left">
                         <h1>{{__('messages.astana_ao')}}</h1>
-
-                        <a href="{{route('structure')}}" class="btn">{{__('messages.struc')}}</a>
+                        <a href="{{route('structure')}}" class="btn company-btn">{{__('messages.struc')}}</a>
                     </div>
                     <div class="first-slide-right">
                         <p>
@@ -110,7 +109,7 @@
                         </div>
                     </div>
                     <div class="news-last">
-                        <h3 class="text-blue text-center">{{__('messages.last_news')}}</h3>
+                        <h3 class="text-blue last-news-text  text-center">{{__('messages.last_news')}}</h3>
                         <div class="news-list">
                             <div class="news-list-left">
                                 <div class="news-item bg-grey">
@@ -145,7 +144,6 @@
                         </div>
                         <a href="{{route('news.index')}}" class="btn">{{__('messages.all_news')}}</a>
                     </div>
-
                 </div>
             </div>
         </section>

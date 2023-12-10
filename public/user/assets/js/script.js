@@ -11,4 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('[data-animate]').forEach(el => {
         Obs.observe(el, obsOptions);
     });
+
+
+
 })
