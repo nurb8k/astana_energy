@@ -124,7 +124,7 @@
                     </ul>
                 </li>
                 @endif
-                @if( auth()->user()->role_id  == 3)
+                @if( auth()->user()->role_id  == 2)
                 <li class="menu-item {{ \Request::routeIs('admin.infographic.*') ? 'active open' : ''}}">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
