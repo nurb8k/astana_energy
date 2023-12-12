@@ -2,13 +2,12 @@
 @section('title', 'Контакты')
 
 @section('content')
-
     <main>
         <section class="contact">
             <div class="contact-inner">
                 <div class="contact-left">
                     <div class="contact-article">
-                        <p class="contact-addr">"Астана-Энергия" акционерлік қоғамы</p>
+                        <p class="contact-addr">{{__('messages.astana_ao')}}</p>
                         <p class="contact-description">{{__('messages.address')}}</p>
                     </div>
                     <div class="contact-map">

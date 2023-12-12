@@ -69,3 +69,27 @@
     border-radius: 10px;
     overflow: hidden;
 }
+/* for contacts adaptive */
+@media screen and (max-width: 767px) {
+    .contact-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-inner {
+        padding-top: 0;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-left {
+        margin-bottom: 30px;
+    }
+
+    .contact-form .form-group input {
+        max-width: 100%;
+    }
+}
