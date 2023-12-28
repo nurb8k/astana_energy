@@ -600,6 +600,10 @@
         height: 12px;
     }
 
+    .news-last h3 {
+        margin-bottom: 10px;
+    }
+
 
     .news-detail-title {
         font-size: 12px;
@@ -737,7 +741,7 @@
         line-height: 20px;
     }
     .news-last {
-        padding-top: 30px;
+        padding-top: 10px;
     }
     .last-news-text {
         font-size: 18px;
@@ -823,4 +827,3 @@
     }
 
 }
-

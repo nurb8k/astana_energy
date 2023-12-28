@@ -7,6 +7,4 @@
             <img class="flag-kz" src="{{asset('user/assets/img/astana_ao_kz2023.png')}}" style="width: 1200px" alt="Flag of QAZAQSTAN">
         </div>
     </div>
-
-
 @endsection

@@ -5,6 +5,9 @@
             <div class="container-md">
                 <div class="single-news-inner">
                     <div class="single-news-preview"  style="background-image: @if(!empty($latest->image))  url({{asset('storage/' . $latest->image)}}); @else  url({{asset('user/assets/img/news-default.jpg')}}) @endif"></div>
+                    @if((new \Jenssegers\Agent\Agent())->isMobile())
+                        <img  src="@if(!empty($latest->image)){{asset('storage/' . $latest->image)}}@else{{asset('user/assets/img/news-default.jpg')}}@endif">
+                    @endif
                     <div class="single-news-article">
                         <h3>{{$latest->title}}</h3>
                         <div class="single-news-date">{{__('messages.published')}}: {{ $latest->publish }} г.</div>
@@ -44,7 +47,7 @@
                 <div class="news-inner">
                     <div class="graphic-top">
                         <h3 class="text-blue text-left">{{__('messages.all_news')}}</h3>
-                        <div style="display: flex;gap:15px;width: calc(30%)">
+                        <div style="display: flex;gap:15px;width: calc(30%)" class="graph">
                             <select id="tagSelect" wire:model.live="tag" style="background:#fff url({{asset('user/assets/img/icons/tag.svg')}})  85% 50% no-repeat;width: 55%" class="calendar-input bd-primary" >
                                 <option name="tag" value="" selected hidden> {{__('messages.news.findByTag')}}</option>
                                 @foreach($tags as $tag)
@@ -80,6 +83,9 @@
                 </div>
             </div>
         </section>
+        @if((new \Jenssegers\Agent\Agent())->isDesktop())
+
+
         <section class="news" style="padding-top: 0;">
             <div class="container-md" style="border-top: 1px solid #abacb4;">
                 <div class="news-inner">
@@ -112,6 +118,7 @@
                 </div>
             </div>
         </section>
+        @endif
     </main>
     <script src="{{asset('user/assets/js/slider.js')}}"></script>
 </div>

@@ -5,13 +5,11 @@
                 <div class="graphic-inner">
                     <div class="graphic-top">
                         <h5 class="graphic-top-title">
-
                             {!! __('messages.infographic.info')  !!}
                         </h5>
                         <input wire:model.live="date" type="date" style="background:#fff url({{asset('user/assets/img/icons/calendar.svg')}})  85% 50% no-repeat ;" class="calendar-input bd-primary" name="date" id="date">
                     </div>
                     <div class="graphic-list">
-
                         @if((new \Jenssegers\Agent\Agent())->isMobile())
                             <div class="graphic-list-header bg-grey">
                                 <div class="graphic-list-item">

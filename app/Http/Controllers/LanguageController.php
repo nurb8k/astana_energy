@@ -14,4 +14,15 @@ class LanguageController extends Controller
         \Session::put("locale",$lang);
         return redirect()->back();
     }
+
+    public function switchGet()
+    {
+        $current = \Session::get('locale') ?? null;
+        if ($current) {
+            if ($current == 'ru')
+                \App::setLocale('kz');
+            else
+                \App::setLocale('ru');
+        }
+    }
 }

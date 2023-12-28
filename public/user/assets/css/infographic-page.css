@@ -248,4 +248,87 @@
     .graphic-list-item {
         padding: 0 10px;
     }
+    .graphic-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .graphic-list-content {
+        padding: 0;
+        max-height: 400px; /* Set a maximum height */
+        overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
+    }
+
+    .graphic-list-row {
+        flex-shrink: 0; /* Ensure rows do not shrink to fit */
+    }
+
+}
+.graphic-list-row {
+    display: flex;
+    padding: 20px 0 20px 0;
+    overflow-x: auto; /* Enable horizontal scrollbar if cells overflow */
+}
+
+.graphic-list-row .graphic-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Ensure cells do not shrink to fit */
+    min-width: 100px; /* Set a minimum width for each cell */
+    padding: 10px; /* Add padding to each cell */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+.graphic-list-content {
+    border-left: 1px solid #153AFE1A;
+    border-right: 1px solid #153AFE1A;
+    border-bottom: 1px solid #153AFE1A;
+    border-radius: 0 0 20px 20px;
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds the height */
+    max-height: 400px; /* Set a maximum height */
+}
+
+@media screen and (max-width: 767px) {
+    .graphic-list-row .vacancy-list-item {
+        display: block;
+    }
+    .graphic-list-row {
+        flex-wrap: nowrap; /* Prevent rows from wrapping */
+    }
+    .vacancy-list-item {
+        overflow: scroll;
+    }
+    .graphic-top-title {
+        margin-bottom: 10px;
+    }
+}
+
+.graphic-list-header {
+    display: flex;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    overflow-x: auto; /* Enable horizontal scrollbar if cells overflow */
+}
+
+.graphic-list-header .graphic-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    flex-shrink: 0; /* Ensure cells do not shrink to fit */
+    min-width: 100px; /* Set a minimum width for each cell */
+    padding: 10px; /* Add padding to each cell */
+    box-sizing: border-box; /* Include padding and border in the total width and height */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+@media screen and (max-width: 767px) {
+    .graphic-list-header {
+        flex-wrap: nowrap; /* Prevent cells from wrapping */
+    }
 }

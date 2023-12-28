@@ -74,12 +74,25 @@
                                 </a>
                             </li>
                         @endauth
+                        <form id="language-form" style="margin-top: 20px;" action="{{ route('lang.switch') }}" method="POST">
+                            @csrf
+                            <input type="hidden" value="{{Session::get('locale') == 'ru' ? 'kz' : 'ru'}}" name="locale">
+                            @if(Session::get('locale')== 'ru')
+                                <li class="header-nav-item" style="font-weight: 500;">
+                                    <button type="submit" href="#" class="header-nav-link">Қазақша</button>
+                                </li>
+                            @elseif(Session::get('locale') == 'kz')
+                                <li class="header-nav-item" style="font-weight: 500;">
+                                    <button type="submit" href="#" class="header-nav-link"> Русский</button>
+                                </li>
+                            @endif
+                        </form>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-@elseif((new \Jenssegers\Agent\Agent())->isDesktop())
+@else((new \Jenssegers\Agent\Agent())->isDesktop())
     <header class="haeder">
         <div class="container">
             <div class="header-inner">
