@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ManagerController;
+use App\Http\Controllers\TarifController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Auth\Login;
 use \App\Http\Controllers\Admin\DashboardController;
@@ -29,6 +30,9 @@ use App\Livewire\NewsComponent;
 Route::get('/infographic', function () {
     return view('pages.infographic');
 })->name('infographic');
+
+Route::get('/tarify', [TarifController::class, 'index'])->name('tarify.index');
+
 
 //Route::get('/news',NewsComponent::class)->name('news.index');
 
@@ -126,6 +130,7 @@ Route::prefix('admin')->as('admin.')->middleware('auth')->group(function () {
     Route::prefix('manager')->as('manager.')->group(function () {
         Route::get('/',[ManagerController::class,'index'])->name('index');
     });
+    Route::get('/tarify', [TarifController::class, 'create'])->name('tarify.create');
 
     Route::prefix('infographic')->as('infographic.')->group(function () {
         Route::get('/infographic', [InfographicController::class, 'create'])->name('create');

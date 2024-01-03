@@ -119,6 +119,9 @@
                                 <a href="{{route('news.index')}}" class="header-nav-link {{ \Request::routeIs('news.*') ? 'active' : '' }}">{{__('messages.news')}}</a>
                             </li>
                             <li class="header-nav-item">
+                                <a href="{{route('tarify.index')}}" class="header-nav-link {{ \Request::routeIs('tarify.*') ? 'active' : '' }}">{{__('messages.tarify')}}</a>
+                            </li>
+                            <li class="header-nav-item">
                                 <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">{{__('messages.contacts')}}</a>
                             </li>
                             @auth()

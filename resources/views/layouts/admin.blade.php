@@ -151,6 +151,11 @@
                         <div data-i18n="Analytics">Руководство</div>
                     </a>
                 </li>
+                <li class="menu-item {{ \Request::route()->getName() == 'admin.tarify.create' ? 'active' : ''}}">
+                    <a href="{{route('admin.tarify.create')}}" class="menu-link">
+                        <div data-i18n="Analytics">Тарифы</div>
+                    </a>
+                </li>
             </ul>
         </aside>
         <!-- / Menu -->
