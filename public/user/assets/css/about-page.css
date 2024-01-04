@@ -233,6 +233,80 @@
 :root {
     --swiper-navigation-top-offset: 65%;
 }
+
+
+/* for managment */
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 767px) {
+    .swiper-slide {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .managment-slider-item {
+        margin: 0;
+    }
+
+    .managment {
+        padding: 10px 0;
+    }
+
+    .managment-slider {
+        padding: 0 10px !important;
+    }
+
+    .managment-inner {
+        padding: 15px 0;
+    }
+
+    .managment-article {
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 24px;
+        height: 24px;
+        margin: 0 5px;
+    }
+
+    .managment-slider-item-preview {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    .managment-slider-item-article h4 {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 5px;
+    }
+
+    .managment-slider-item-article p {
+        font-size: 10px;
+        line-height: 13px;
+        margin-bottom: 10px;
+    }
+
+    /* Additional styles for pagination */
+    .swiper-button-prev img,
+    .swiper-button-next img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+
+
 /* for about history */
 @media screen and (max-width: 767px) {
     main {
@@ -259,39 +333,6 @@
     .about-history-item p {
         font-size: 16px;
         line-height: 19px;
-    }
-}
-
-/* for managment */
-
-@media screen and (max-width: 767px) {
-    .managment-slider {
-        padding: 0 15px !important;
-    }
-
-    .managment-slider-item.swiper-slide-prev .managment-slider-item-preview,
-    .managment-slider-item.swiper-slide-next .managment-slider-item-preview {
-        width: 100px;
-        height: 100px;
-    }
-
-    .managment-slider-item:not(.swiper-slide-next, .swiper-slide-prev, .swiper-slide-active) .managment-slider-item-preview {
-        width: 80px;
-        height: 80px;
-    }
-
-    .managment-slider-item-article h4 {
-        font-size: 14px;
-        line-height: 18px;
-    }
-
-    .managment-slider-item-article p {
-        font-size: 10px;
-        line-height: 13px;
-    }
-
-    .managment-slider-item {
-        padding: 0 10px;
     }
 }
 

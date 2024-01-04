@@ -67,6 +67,9 @@
                         <li class="header-nav-item">
                             <a href="{{route('contact')}}" class="header-nav-link {{ \Request::route()->getName() == 'contact' ? 'active' : ''}}">{{__('messages.contacts')}}</a>
                         </li>
+                        <li class="header-nav-item">
+                            <a href="{{route('tarify.index')}}" class="header-nav-link {{ \Request::route()->getName() == 'tarify.index' ? 'active' : ''}}">{{__('messages.tarify')}}</a>
+                        </li>
                         @auth()
                             <li class="header-nav-item text-danger" style="color: #007aff">
                                 <a  style="color: #007aff" href="{{route('admin.dashboard.index')}}">
@@ -78,12 +81,12 @@
                             @csrf
                             <input type="hidden" value="{{Session::get('locale') == 'ru' ? 'kz' : 'ru'}}" name="locale">
                             @if(Session::get('locale')== 'ru')
-                                <li class="header-nav-item" style="font-weight: 500;">
-                                    <button type="submit" href="#" class="header-nav-link">Қазақша</button>
+                                <li class="header-nav-item" style="font-weight: 500; color: #1B1C25">
+                                    <button type="submit" href="#">Қазақша</button>
                                 </li>
                             @elseif(Session::get('locale') == 'kz')
                                 <li class="header-nav-item" style="font-weight: 500;">
-                                    <button type="submit" href="#" class="header-nav-link"> Русский</button>
+                                    <button type="submit" href="#" > Русский</button>
                                 </li>
                             @endif
                         </form>

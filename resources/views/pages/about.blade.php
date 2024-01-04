@@ -150,19 +150,40 @@
     </main>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            let managmentSlider = new Swiper(".managment-slider",{
-                direction: "horizontal",
-                loop: false,
-                slidesPerView: 5,
-                centeredSlides: true,
-                initialSlide: 2,
-                spaceBetween: 40,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                }
-            });
-        })
+            let managmentSlider;
+
+            if (window.innerWidth <= 767) {
+                // Mobile configuration
+                managmentSlider = new Swiper(".managment-slider", {
+                    direction: "horizontal",
+                    loop: false,
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    initialSlide: 0,
+                    spaceBetween: 20,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }
+                });
+            } else {
+                // Desktop configuration
+                managmentSlider = new Swiper(".managment-slider", {
+                    direction: "horizontal",
+                    loop: false,
+                    slidesPerView: 5,
+                    centeredSlides: true,
+                    initialSlide: 2,
+                    spaceBetween: 40,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }
+                });
+            }
+        });
+
+
     </script>
     </html>
 @endsection
