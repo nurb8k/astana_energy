@@ -143,7 +143,12 @@
                         </li>
                     </ul>
                 </li>
-
+                @elseif( auth()->user()->role_id  == 3)
+                    <li class="menu-item {{ \Request::route()->getName() == 'admin.tarify.create' ? 'active' : ''}}">
+                        <a href="{{route('admin.tarify.create')}}" class="menu-link">
+                            <div data-i18n="Analytics">Тарифы</div>
+                        </a>
+                    </li>
                 @endif
 
                 <li class="menu-item {{ \Request::route()->getName() == 'admin.manager.index' ? 'active' : ''}}">
@@ -151,11 +156,7 @@
                         <div data-i18n="Analytics">Руководство</div>
                     </a>
                 </li>
-                <li class="menu-item {{ \Request::route()->getName() == 'admin.tarify.create' ? 'active' : ''}}">
-                    <a href="{{route('admin.tarify.create')}}" class="menu-link">
-                        <div data-i18n="Analytics">Тарифы</div>
-                    </a>
-                </li>
+
             </ul>
         </aside>
         <!-- / Menu -->
