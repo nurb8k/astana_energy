@@ -28,22 +28,20 @@
                                     <div class="graphic-list-item">
                                         <span>{{__('messages.tarif.doc')}}</span>
                                     </div>
-
                                 </div>
                             @else
                                 <div class="graphic-list-header bg-grey">
-                                    <div class="graphic-list-item">
-                                        <span>{{__('messages.tarif.name')}}</span>
+                                    <div class="vacancy-list-item" style="text-align: center">
+                                        <span style="text-align: center">{{__('messages.tarif.name')}}</span>
                                     </div>
-                                    <div class="graphic-list-item">
+                                    <div class="vacancy-list-item" style="text-align: center">
                                         <span> Период </span>
-                                        <img src="{{asset('user/assets/img/icons/calendar.svg')}}" alt="sort icon" class="sort-icon">
                                     </div>
-                                    <div class="graphic-list-item">
-                                        <span>{{__('messages.tarif.tarif')}}</span>
+                                    <div class="vacancy-list-item" style="text-align: center">
+                                        <span style="text-align: center">{{__('messages.tarif.tarif')}}</span>
                                     </div>
-                                    <div class="graphic-list-item">
-                                        <span>{{__('messages.tarif.doc')}}</span>
+                                    <div style="text-align: center" class="vacancy-list-item">
+                                        <span style="text-align: center">{{__('messages.tarif.doc')}}</span>
                                     </div>
 
                                 </div>
@@ -51,21 +49,19 @@
                             <div class="graphic-list-content">
                                 @foreach($data as $item)
                                     <div class="graphic-list-row">
-
-                                        <div class="graphic-list-item">
+                                        <div class="vacancy-list-item">
                                             {{$item->name}}
                                         </div>
-                                        <div class="graphic-list-item">
+                                        <div class="vacancy-list-item">
                                             {{$item->date}}
                                         </div>
-                                        <div class="graphic-list-item">
+                                        <div class="vacancy-list-item">
                                             {{$item->tarif}}
                                         </div>
-                                        <div class="graphic-list-item">
+                                        <div class="vacancy-list-item">
                                             <div class="graphic-date">
                                                 <a href=" {{$item->doc}}">{{__('messages.download')}}</a>
                                             </div>
-
                                         </div>
 
                                     </div>
