@@ -101,13 +101,16 @@ class TarifComponent extends Component
             'tarif.*' => 'Тариф обязательно для заполнения и должно быть строкой',
         ]);
 
+        // store in storage doc_kz doc_Ru and save
+        $name_kz = $this->doc_kz->store('public/tarifs');
+        $name_ru = $this->doc_ru->store('public/tarifs');
+
+
         Tarif::create([
             'name_kz' => $this->name_kz,
             'name_ru' => $this->name_ru,
-
-            'doc_kz' =>'storage/'.$this->doc_kz->store('manager','public'),
-            'doc_ru' =>'storage/'.$this->doc_ru->store('manager','public'),
-
+            'doc_kz' => $name_kz,
+            'doc_ru' => $name_ru,
             'date_kz' => $this->date_kz,
             'date_ru' => $this->date_ru,
 

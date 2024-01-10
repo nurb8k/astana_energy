@@ -60,7 +60,7 @@
                                         </div>
                                         <div class="vacancy-list-item">
                                             <div class="graphic-date">
-                                                <a href="{{asset($item->doc)}}">{{__('messages.download')}}</a>
+                                                <a href="{{asset('/storage/'.$item->doc)}}">{{__('messages.download')}}</a>
                                             </div>
                                         </div>
 
