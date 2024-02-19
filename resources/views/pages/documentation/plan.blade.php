@@ -12,7 +12,7 @@
                 <div class="docs">
                     <img src="{{asset('user/assets/img/excel.jpg')}}" style="width: 26px;height: 26px">
                     <div class="docs__property">
-                        <a class="docs__title" href="{{asset('user/assets/files/changes.xlsx')}}">План государственных закупок с учетом изменений и дополнений на 23.09.2022</a>
+                        <a class="docs__title" href="{{asset('user/assets/files/План государственных закупок на 2024г.xlsx')}}">План государственных закупок на 2024 г</a>
                         <p class="docs__file-text">XLSX (914 KB)</p>
                     </div>
                 </div>
